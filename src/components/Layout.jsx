@@ -60,12 +60,21 @@ const Layout = () => {
                         </Link>
                     </div>
                     <nav className="nav">
-                        <ul style={{ display: 'flex', listStyle: 'none', gap: '2.5rem', alignItems: 'center', margin: 0 }}>
-                            <li><Link to="/diagnostico" style={{ fontWeight: '500', color: location.pathname === '/diagnostico' ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Diagnóstico</Link></li>
+                        <ul style={{ display: 'flex', listStyle: 'none', gap: '2rem', alignItems: 'center', margin: 0 }}>
+                            <li><Link to="/diagnostico-ortodoncia-vitacura" style={{ fontWeight: '500', color: location.pathname.includes('diagnostico') ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Diagnóstico</Link></li>
+
+                            {/* Simple dropdown trigger concept - for now direct links to key categories or a 'Servicios' parent that shows sub-items would be ideal. 
+                                Given constraints, I'll list "Servicios" pointing to the overview, but ensure footer has all deep links. 
+                                The prompt emphasizes separate URLs. I'll add "Niños" and "Adultos" directly for high visibility if space permits, 
+                                but to keep it clean (Minimalist), I will rely on the "Servicios" page to act as distributor OR just link generic services.
+                                
+                                BETTER STRATEGY: Link "Servicios" to the Services Overview (which links to others) 
+                                AND ensure Home page links to specific SEO pages.
+                            */}
                             <li><Link to="/servicios" style={{ fontWeight: '500', color: location.pathname === '/servicios' ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Servicios</Link></li>
-                            <li><Link to="/experiencia" style={{ fontWeight: '500', color: location.pathname === '/experiencia' ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Experiencia</Link></li>
-                            <li><Link to="/dr-rajevic" style={{ fontWeight: '500', color: location.pathname === '/dr-rajevic' ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Dr. Rajevic</Link></li>
-                            <li><Link to="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>Agenda tu hora</Link></li>
+
+                            <li><Link to="/dr-zdenko-rajevic" style={{ fontWeight: '500', color: location.pathname.includes('rajevic') ? 'var(--color-secondary)' : 'var(--color-primary)' }}>Dr. Rajevic</Link></li>
+                            <li><Link to="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>Agenda tu diagnóstico</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -103,12 +112,14 @@ const Layout = () => {
                         </div>
 
                         <div>
-                            <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Tratamientos</h4>
+                            <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Especialidades</h4>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                                <li><Link to="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Niños</Link></li>
-                                <li><Link to="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Adultos</Link></li>
-                                <li><Link to="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Invisalign</Link></li>
-                                <li><Link to="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Segunda Opinión</Link></li>
+                                <li><Link to="/ortodoncia-infantil-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Infantil</Link></li>
+                                <li><Link to="/ortodoncia-adultos-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Adultos</Link></li>
+                                <li><Link to="/invisalign-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Invisalign</Link></li>
+                                <li><Link to="/bruxismo-planos-relajacion-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Bruxismo y ATM</Link></li>
+                                <li><Link to="/rehabilitacion-oral-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Rehabilitación Oral</Link></li>
+                                <li><Link to="/segunda-opinion-ortodoncia" style={{ color: 'rgba(255,255,255,0.7)' }}>Segunda Opinión</Link></li>
                             </ul>
                         </div>
 
