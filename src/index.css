@@ -18,17 +18,17 @@
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
+  /* Spacing - Editorial Calm */
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 3rem;
+  --spacing-lg: 6rem;
+  --spacing-xl: 10rem; /* Increased for "Mucho espacio en blanco" */
 
   /* Layout */
-  --container-width: 1200px;
-  --header-height: 90px;
-  --border-radius: 12px;
+  --container-width: 1280px; /* Slightly wider for modern editorial feel */
+  --header-height: 100px;
+  --border-radius: 8px; /* Slightly sharper than 12px for more authority */
 }
 
 * {
@@ -41,7 +41,7 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.7; /* Increased line-height for readability */
   -webkit-font-smoothing: antialiased;
 }
 

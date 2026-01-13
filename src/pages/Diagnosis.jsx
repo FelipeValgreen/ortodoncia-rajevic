@@ -1,67 +1,82 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BsCheckCircle } from 'react-icons/bs';
 
 const Diagnosis = () => {
     return (
         <>
-            <section className="section" style={{ backgroundColor: 'var(--color-bg-alt)', padding: '6rem 0' }}>
+            <section style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '6rem 0' }}>
                 <div className="container">
-                    <span style={{ display: 'block', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', marginBottom: '1rem', color: 'var(--color-accent)' }}>
-                        Nuestra Filosofía
-                    </span>
-                    <h1 style={{ marginBottom: '2rem', maxWidth: '20ch' }}>El diagnóstico es la diferencia entre un resultado temporal y uno definitivo.</h1>
-                    <p className="lead" style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', maxWidth: '65ch' }}>
-                        En Ortodoncia Rajevic, nunca comenzamos un tratamiento sin antes entender profundamente la anatomía y función de cada paciente.
+                    <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem', color: 'var(--color-accent)' }}>Nuestro Enfoque Principal</span>
+                    <h1 style={{ fontSize: '3.5rem', marginTop: '1rem', maxWidth: '800px', color: 'white' }}>
+                        El Diagnóstico es el Tratamiento.
+                    </h1>
+                    <p style={{ fontSize: '1.2rem', marginTop: '2rem', maxWidth: '700px', opacity: '0.9', lineHeight: '1.6' }}>
+                        Un aparato bien colocado en un diagnóstico incorrecto solo lleva más rápido al fracaso.
+                        Por eso, nuestra inversión principal está en entender antes de actuar.
                     </p>
                 </div>
             </section>
 
             <section className="section">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '5rem' }}>
                         <div>
-                            <h2 style={{ marginBottom: '1.5rem', fontSize: '1.8rem' }}>¿Por qué el 90% del éxito ocurre antes de poner los brackets?</h2>
-                            <p style={{ marginBottom: '1.5rem' }}>
-                                Muchos pacientes llegan a nuestra consulta con tratamientos fallidos o recidivas (los dientes se volvieron a chuecar).
-                                Casi siempre, la causa no fue el aparato utilizado, sino un diagnóstico que no consideró la raíz del problema.
+                            <h2 style={{ fontSize: '2.2rem', marginBottom: '2rem' }}>Lo que no se ve, no se cura</h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                                Muchos pacientes llegan a nuestra consulta buscando "frenillos" o "alineadores". Sin embargo, estos son solo dispostivos de fuerza. Quien decide dónde aplicar esa fuerza y por qué, es el ortodoncista.
                             </p>
-                            <p style={{ marginBottom: '1.5rem' }}>
-                                Un diente chueco es solo un síntoma. El problema real puede estar en la estructura ósea, la musculatura, la respiración o la articulación.
-                                Si solo movemos dientes sin corregir la causa, el problema volverá.
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
+                                En Ortodoncia Rajevic, el proceso diagnóstico no es un trámite administrativo de 15 minutos. Es una fase de ingeniería clínica donde analizamos:
                             </p>
-                        </div>
-                        <div style={{ backgroundColor: '#f0f0f0', padding: '2rem', borderRadius: '4px' }}>
-                            <h3 style={{ marginBottom: '1.5rem' }}>Nuestro Proceso Diagnóstico</h3>
-                            <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
-                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-accent)', fontWeight: 'bold' }}>01.</span>
-                                    <span>Análisis Clínico y Funcional completo.</span>
+
+                            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1.5rem', marginTop: '3rem' }}>
+                                <li style={{ display: 'flex', gap: '1.5rem' }}>
+                                    <div style={{ color: 'var(--color-secondary)', fontSize: '1.5rem' }}>01</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Salud Articular (ATM)</h4>
+                                        <p style={{ color: 'var(--color-text-light)', fontSize: '0.95rem' }}>Antes de mover dientes, debemos asegurar que la articulación de la mandíbula esté estable y sana. Ignorar esto es la causa #1 de dolores y recidivas.</p>
+                                    </div>
                                 </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-accent)', fontWeight: 'bold' }}>02.</span>
-                                    <span>Estudio de imágenes (Radiografías, Escáner, Fotos).</span>
+                                <li style={{ display: 'flex', gap: '1.5rem' }}>
+                                    <div style={{ color: 'var(--color-secondary)', fontSize: '1.5rem' }}>02</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Soporte Óseo y Periodontal</h4>
+                                        <p style={{ color: 'var(--color-text-light)', fontSize: '0.95rem' }}>Los dientes se mueven a través del hueso. Evaluamos la densidad y calidad de sus tejidos para asegurar movimientos seguros.</p>
+                                    </div>
                                 </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-accent)', fontWeight: 'bold' }}>03.</span>
-                                    <span>Montaje en articulador (si es necesario) para evaluar la mordida real.</span>
-                                </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-accent)', fontWeight: 'bold' }}>04.</span>
-                                    <span>Planificación Digital y presentación del caso al paciente.</span>
+                                <li style={{ display: 'flex', gap: '1.5rem' }}>
+                                    <div style={{ color: 'var(--color-secondary)', fontSize: '1.5rem' }}>03</div>
+                                    <div>
+                                        <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Función y Estética Facial</h4>
+                                        <p style={{ color: 'var(--color-text-light)', fontSize: '0.95rem' }}>No solo miramos dientes rectos. Miramos cómo su sonrisa se integra con su rostro y cómo funciona al hablar y comer.</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            <section className="section" style={{ borderTop: '1px solid var(--color-border)' }}>
-                <div className="container text-center">
-                    <h3 style={{ marginBottom: '1.5rem' }}>No adivine. Diagnostique.</h3>
-                    <p style={{ marginBottom: '2rem', color: 'var(--color-text-light)' }}>
-                        La certeza tiene un valor incalculable en salud.
-                    </p>
-                    <Link to="/contacto" className="btn btn-primary">Solicita un diagnóstico profesional</Link>
+                        <div style={{ backgroundColor: 'var(--color-bg-alt)', padding: '3rem', borderRadius: '8px' }}>
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Nuestra Evaluación</h3>
+                            <p style={{ marginBottom: '2rem', fontSize: '0.95rem' }}>
+                                Para emitir un diagnóstico responsable, realizamos un estudio completo que incluye:
+                            </p>
+                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1rem' }}>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><BsCheckCircle color="var(--color-secondary)" /> Escáner Intraoral 3D</li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><BsCheckCircle color="var(--color-secondary)" /> Fotografías Clínicas</li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><BsCheckCircle color="var(--color-secondary)" /> Radiografías Digitales</li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><BsCheckCircle color="var(--color-secondary)" /> Montaje en Articulador (si aplica)</li>
+                            </ul>
+
+                            <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--color-border)' }}>
+                                <p style={{ fontSize: '0.9rem', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+                                    "Un diagnóstico correcto ahorra años de tratamientos fallidos."
+                                </p>
+                                <Link to="/contacto" className="btn btn-primary" style={{ width: '100%' }}>
+                                    Solicitar Evaluación Diagnóstica
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
