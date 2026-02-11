@@ -61,7 +61,7 @@ const Diagnosis = () => {
                             color: 'white',
                             textShadow: '0 2px 4px rgba(0,0,0,0.9)'
                         }}>
-                            Diagnóstico de Ortodoncia <br /> en Vitacura
+                            Diagnóstico Clínico <br /> de Precisión
                         </h1>
 
                         {/* 2. SUBHEAD EDUCATIVO */}
