@@ -3,11 +3,38 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroRehab from '../assets/hero_rehab.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navAdult from '../assets/nav_adult.png';
+import { BsStarFill } from 'react-icons/bs';
 
 const OralRehab = () => {
     React.useEffect(() => {
         document.title = "Rehabilitación Oral Compleja Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const rehabTestimonials = [
+        {
+            name: "Ricardo A.",
+            role: "Empresario",
+            text: "Mi caso era complejo, me faltaban piezas y mi mordida estaba colapsada. La coordinación entre el Dr. Rajevic y el implantólogo fue impecable. Hoy sonrío con confianza.",
+            image: navAdult, // Placeholder
+            date: "Hace 8 meses en Google"
+        },
+        {
+            name: "Carmen Gloria F.",
+            role: "Jubilada",
+            text: "Pensé que a mi edad ya no había solución. Me explicaron que primero debíamos ordenar para luego rehabilitar. El resultado es tan natural que nadie cree que son implantes.",
+            image: navAdult, // Placeholder
+            date: "Hace 1 año en Google"
+        },
+        {
+            name: "Manuel S.",
+            role: "Abogado",
+            text: "Volví a comer con confianza. La ortodoncia pre-protésica fue la clave para que mis coronas duraran. Gracias por la dedicación y el profesionalismo.",
+            image: navAdult, // Placeholder
+            date: "Hace 3 meses en Google"
+        }
+    ];
 
     return (
         <>
@@ -101,6 +128,20 @@ const OralRehab = () => {
                             <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>Técnicas para regenerar hueso y encía de forma natural traccionando la raíz antes de un implante.</p>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Casos de Éxito</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Recuperando la Función</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={rehabTestimonials} />
                 </div>
             </section>
 

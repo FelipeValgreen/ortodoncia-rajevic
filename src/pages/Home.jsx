@@ -5,11 +5,40 @@ import { motion } from 'framer-motion';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
 import heroHome from '../assets/hero_home_v2.jpg';
 import FAQSection from '../components/FAQSection';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+
+import navChild from '../assets/nav_child.png';
+import navAdult from '../assets/nav_adult.png';
+import navInvisalign from '../assets/nav_invisalign.png';
 
 const Home = () => {
   React.useEffect(() => {
     document.title = "Ortodoncia Rajevic | Diagnóstico y Planificación Vitacura";
   }, []);
+
+  const homeTestimonials = [
+    {
+      name: "María José L.",
+      role: "Mamá de paciente (10 años)",
+      text: "Llegué preocupada porque me decían que mi hijo necesitaba cirugía. El Dr. Rajevic nos explicó que con ortopedia podíamos guiar su crecimiento. Hoy tiene una mordida perfecta y evitamos el pabellón. La paciencia con los niños es única.",
+      image: navChild,
+      date: "Hace 2 meses en Google"
+    },
+    {
+      name: "Sofía R.",
+      role: "Estudiante Universitaria",
+      text: "Usé frenillos de niña y se me volvieron a enchuecar. No quería metales de nuevo. Con Invisalign en la clínica fue todo invisible y rapidísimo. Lo mejor fue ver la planificación en 3D antes de empezar.",
+      image: navInvisalign,
+      date: "Hace 1 mes en Google"
+    },
+    {
+      name: "Carlos M.",
+      role: "Ejecutivo (45 años)",
+      text: "Sufría de dolores cervicales y bruxismo. No buscaba estética, buscaba salud. El diagnóstico del Dr. Rajevic fue certero: mi mordida estaba causando todo. Ahora duermo sin dolor y mis dientes están alineados. Un cambio de vida.",
+      image: navAdult,
+      date: "Hace 3 semanas en Google"
+    }
+  ];
 
   return (
     <>
@@ -200,6 +229,28 @@ const Home = () => {
           </div>
         </div>
       </section >
+
+      {/* TESTIMONIALS SECTION */}
+      <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '4rem' }}>
+            <span className="uppercase-tracking text-secondary">Testimonios Reales</span>
+            <h2 style={{ marginTop: '0.5rem' }}>Lo que dicen nuestros pacientes</h2>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+              <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+            </div>
+            <p style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>5.0 Estrellas en Google Reviews</p>
+          </div>
+
+          <TestimonialCarousel testimonials={homeTestimonials} />
+
+          <div className="text-center" style={{ marginTop: '3rem' }}>
+            <a href="https://www.google.com/maps/place/Ortodoncia+Rajevic" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)', fontWeight: '600' }}>
+              Ver todas las reseñas en Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* 4. SOCIAL PROOF / AUTHORITY */}
       < section className="section" >

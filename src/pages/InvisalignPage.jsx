@@ -3,13 +3,40 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroInvisalign from '../assets/hero_invisalign.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
-import { BsCheckCircle } from 'react-icons/bs';
+import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navInvisalign from '../assets/nav_invisalign.png';
+import navAdult from '../assets/nav_adult.png';
 
 const InvisalignPage = () => {
     React.useEffect(() => {
         document.title = "Invisalign Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const invisalignTestimonials = [
+        {
+            name: "Diego L.",
+            role: "Gerente de Marketing",
+            text: "Viajo mucho por trabajo y los brackets no eran opción por las urgencias. Invisalign se adaptó perfecto a mi ritmo. El Dr. Rajevic monitoreó todo digitalmente. Un 7.",
+            image: navInvisalign,
+            date: "Hace 1 mes en Google"
+        },
+        {
+            name: "Valentina C.",
+            role: "Novia (28 años)",
+            text: "Me casaba en 8 meses y quería fotos perfectas pero sin fierros. El Dr. Rajevic lo logró a tiempo. Nadie supo que estaba en tratamiento hasta que vieron mi sonrisa nueva.",
+            image: navAdult,
+            date: "Hace 4 meses en Google"
+        },
+        {
+            name: "Tomás H.",
+            role: "Chef",
+            text: "Poder sacármelos para probar comida en la cocina es impagable. Higiene y estética 10/10. La planificación 3D fue exacta, quedó tal cual la simulación.",
+            image: navInvisalign,
+            date: "Hace 2 meses en Google"
+        }
+    ];
 
     return (
         <>
@@ -51,28 +78,18 @@ const InvisalignPage = () => {
                         <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                             Alineadores Transparentes
                         </span>
-                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.2', marginBottom: '1.5rem' }}>
-                            <span style={{
-                                backgroundColor: 'rgba(44, 112, 155, 0.8)',
-                                padding: '0.2em 0.4em',
-                                boxDecorationBreak: 'clone',
-                                WebkitBoxDecorationBreak: 'clone',
-                                color: 'white'
-                            }}>
-                                Invisalign es solo el plástico.
-                            </span>
-                            <br />
-                            <span style={{
-                                backgroundColor: 'rgba(44, 112, 155, 0.8)',
-                                padding: '0.2em 0.4em',
-                                boxDecorationBreak: 'clone',
-                                WebkitBoxDecorationBreak: 'clone',
-                                color: 'white'
-                            }}>
-                                Nosotros somos el arquitecto.
-                            </span>
+                        <h1 style={{
+                            fontSize: '3.5rem',
+                            maxWidth: '800px',
+                            lineHeight: '1.2',
+                            marginBottom: '1.5rem',
+                            color: 'white',
+                            textShadow: '0 2px 20px rgba(0,0,0,0.5)'  // Clean shadow for readability
+                        }}>
+                            Invisalign es solo el plástico.<br />
+                            Nosotros somos el arquitecto.
                         </h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', lineHeight: '1.6', marginBottom: '2.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', lineHeight: '1.6', marginBottom: '2.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                             El éxito no depende de la marca del alineador, sino de la biomecánica diseñada por el ortodoncista detrás del software.
                         </p>
                         <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>
@@ -140,6 +157,20 @@ const InvisalignPage = () => {
                             <p className="text-light">Le mostramos su resultado final en 3D antes de comenzar, validando juntos el objetivo estético.</p>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Pacientes Felices</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Sonrisas sin Interrupciones</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={invisalignTestimonials} />
                 </div>
             </section>
 

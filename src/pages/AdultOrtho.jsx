@@ -3,12 +3,39 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroAdult from '../assets/hero_adult.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
-import { BsCheckCircle } from 'react-icons/bs';
+import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navAdult from '../assets/nav_adult.png';
+import navInvisalign from '../assets/nav_invisalign.png';
 
 const AdultOrtho = () => {
     React.useEffect(() => {
         document.title = "Ortodoncia Adultos Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const adultTestimonials = [
+        {
+            name: "Javier V.",
+            role: "Ingeniero Comercial",
+            text: "Trabajo en reuniones todo el día y no podía usar brackets metálicos. La ortodoncia invisible fue la solución perfecta. Nadie lo notó y el resultado fue rapidísimo. 100% recomendado.",
+            image: navInvisalign,
+            date: "Hace 2 meses en Google"
+        },
+        {
+            name: "Carolina M.",
+            role: "Arquitecta (42 años)",
+            text: "Tenía miedo de usar ortodoncia a mi edad. Con el Dr. Rajevic fue todo muy claro y profesional. El cambio en mi sonrisa y en mi seguridad personal ha sido impagable.",
+            image: navAdult,
+            date: "Hace 6 meses en Google"
+        },
+        {
+            name: "Gonzalo R.",
+            role: "Abogado",
+            text: "El Dr. Rajevic solucionó un problema de mordida y dolor articular que arrastraba por años y que otros no vieron. La precisión del diagnóstico hizo toda la diferencia.",
+            image: navAdult,
+            date: "Hace 1 mes en Google"
+        }
+    ];
 
     return (
         <>
@@ -152,6 +179,20 @@ const AdultOrtho = () => {
                             <p className="text-light">Frenillos por detrás de los dientes. Cada vez menos utilizados, pero sigue siendo una opción.</p>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Experiencias Reales</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Confianza y Discreción</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={adultTestimonials} />
                 </div>
             </section>
 

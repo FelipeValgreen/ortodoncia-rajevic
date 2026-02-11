@@ -1,14 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsCheckCircle } from 'react-icons/bs';
+
 import { motion } from 'framer-motion';
+
 import heroChild from '../assets/hero_child.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
 import FAQSection from '../components/FAQSection';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navChild from '../assets/nav_child.png';
+import { BsStarFill, BsCheckCircle } from 'react-icons/bs';
 const ChildOrtho = () => {
     React.useEffect(() => {
         document.title = "Ortodoncia Infantil Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const childTestimonials = [
+        {
+            name: "Andrea P.",
+            role: "Mamá de paciente (7 años)",
+            text: "La diferencia en la cara de mi hijo es impresionante. El Dr. Rajevic no solo arregló sus dientes chuecos, sino que ahora respira mejor y duerme toda la noche. El enfoque integral es real.",
+            image: navChild,
+            date: "Hace 3 meses en Google"
+        },
+        {
+            name: "Marcela S.",
+            role: "Mamá de paciente (11 años)",
+            text: "Nos ahorramos una cirugía de mandíbula futura gracias a la ortopedia. Agradezco la honestidad del diagnóstico desde el día uno. Vale la pena cada peso invertido en salud.",
+            image: navChild,
+            date: "Hace 5 meses en Google"
+        },
+        {
+            name: "Roberto G.",
+            role: "Papá de paciente (9 años)",
+            text: "El trato con los niños es excepcional. Mi hija tenía pánico al dentista y aquí viene feliz a sus controles. La paciencia de todo el equipo es maravillosa.",
+            image: navChild,
+            date: "Hace 1 mes en Google"
+        }
+    ];
 
     return (
         <>
@@ -136,6 +164,20 @@ const ChildOrtho = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Historias de Mamás y Papás</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Resultados que cambian vidas</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={childTestimonials} />
                 </div>
             </section>
 

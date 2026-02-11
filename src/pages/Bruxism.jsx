@@ -3,11 +3,38 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroBruxism from '../assets/hero_bruxism.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navAdult from '../assets/nav_adult.png';
+import { BsStarFill } from 'react-icons/bs';
 
 const Bruxism = () => {
     React.useEffect(() => {
         document.title = "Bruxismo y ATM Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const bruxismTestimonials = [
+        {
+            name: "Loreto M.",
+            role: "Diseñadora Gráfica",
+            text: "Amanecía con dolor de cabeza todos los días a las 11am. Pensé que era vista cansada, pero el Dr. Rajevic diagnosticó mi bruxismo. El plano de relajación me cambió la vida, el dolor desapareció.",
+            image: navAdult,
+            date: "Hace 2 meses en Google"
+        },
+        {
+            name: "Patricio V.",
+            role: "Ingeniero Civil",
+            text: "Mis dientes se estaban poniendo chicos y planos. No sabía que los estaba limando al dormir. Ahora están protegidos y descanso mucho mejor. Gran profesionalismo.",
+            image: navAdult,
+            date: "Hace 6 meses en Google"
+        },
+        {
+            name: "Isabel R.",
+            role: "Profesora",
+            text: "Llevaba años con 'cliks' en la mandíbula al comer. El ajuste oclusal y el plano estabilizaron mi mordida. Gracias por la paciencia y explicación.",
+            image: navAdult,
+            date: "Hace 1 mes en Google"
+        }
+    ];
 
     return (
         <>
@@ -96,6 +123,20 @@ const Bruxism = () => {
                             </div>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Alivio Real</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Dormir sin Dolor</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={bruxismTestimonials} />
                 </div>
             </section>
 

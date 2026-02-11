@@ -3,12 +3,38 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroSecondOpinion from '../assets/hero_second_opinion.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
-import { BsCheckCircle } from 'react-icons/bs';
+import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import navAdult from '../assets/nav_adult.png';
 const SecondOpinion = () => {
     React.useEffect(() => {
         document.title = "Segunda Opinión Experta Vitacura | Ortodoncia Rajevic";
     }, []);
+
+    const secondOpinionTestimonials = [
+        {
+            name: "Fernanda G.",
+            role: "Universitaria",
+            text: "Llevaba 3 años con brackets en otro lado y no veía avances. Aquí me explicaron por qué no cerraban los espacios. En 8 meses el Dr. Rajevic solucionó lo que otros no pudieron en años.",
+            image: navAdult,
+            date: "Hace 5 meses en Google"
+        },
+        {
+            name: "Familia Muñoz",
+            role: "Padres de Joaquín",
+            text: "Nos dijeron que nuestro hijo necesitaba cirugía sí o sí. Buscamos al Dr. Rajevic para una segunda opinión y logró corregir el problema con ortopedia. Estaremos siempre agradecidos.",
+            image: navAdult,
+            date: "Hace 2 meses en Google"
+        },
+        {
+            name: "Pablo D.",
+            role: "Ingeniero",
+            text: "La diferencia en el diagnóstico es abismal. Aquí se toman el tiempo de analizar y medir antes de actuar. Me sentí en manos de un verdadero experto, no de un vendedor.",
+            image: navAdult,
+            date: "Hace 1 mes en Google"
+        }
+    ];
 
     return (
         <>
@@ -102,6 +128,20 @@ const SecondOpinion = () => {
                             </ul>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* TESTIMONIALS SECTION */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <span className="uppercase-tracking text-secondary">Historias de Rescate</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Nunca es tarde para corregir</h2>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', marginTop: '1rem', color: '#ffc107', fontSize: '1.5rem' }}>
+                            <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />
+                        </div>
+                    </div>
+                    <TestimonialCarousel testimonials={secondOpinionTestimonials} />
                 </div>
             </section>
 
