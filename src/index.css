@@ -361,3 +361,156 @@ img {
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+/* Mobile: All grids to single column + footer fixes */
+@media (max-width: 900px) {
+
+  /* Hero banner specific - move text RIGHT and reduce size */
+  section[style*="height: 90vh"] .container {
+    padding: 0 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    /* Align content to right */
+  }
+
+  section[style*="height: 90vh"] h1 {
+    font-size: 1.75rem !important;
+    max-width: 280px !important;
+    margin-bottom: 1rem !important;
+    text-align: right !important;
+    margin-left: auto !important;
+    /* Push to right */
+  }
+
+  section[style*="height: 90vh"] p {
+    font-size: 0.95rem !important;
+    max-width: 300px !important;
+    margin-bottom: 1.5rem !important;
+    text-align: right !important;
+    margin-left: auto !important;
+    /* Push to right */
+  }
+
+  section[style*="height: 90vh"] .btn {
+    font-size: 0.95rem !important;
+    padding: 0.875rem 1.75rem !important;
+    margin-left: auto !important;
+    /* Push to right */
+  }
+
+  /* Container padding reduction */
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Section padding reduction */
+  .section {
+    padding: 3rem 0;
+  }
+
+  /* Grid to single column on mobile (override inline styles) */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Hero sections mobile fix */
+  section[style*="height: 90vh"] {
+    min-height: 500px !important;
+    height: auto !important;
+    padding: 4rem 0 !important;
+  }
+
+  /* Typography scaling */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Footer specific fixes - force single column */
+  footer .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: left !important;
+  }
+
+  footer [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer h3,
+  footer h4 {
+    font-size: 1.1rem !important;
+  }
+
+  /* Mobile menu */
+  .mobile-nav-link {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem !important;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Tablet: 2-column layouts */
+@media (min-width: 768px) and (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  footer .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Small mobile: Extra compact */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.875rem !important;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  footer {
+    padding-top: 3rem !important;
+  }
+
+  footer .container>div:first-child {
+    padding-bottom: 2rem !important;
+  }
+}

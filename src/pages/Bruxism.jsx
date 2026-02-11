@@ -1,139 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import heroBruxism from '../assets/hero_bruxism.png';
+import drRajevicImg from '../assets/dr-rajevic.jpg';
 
 const Bruxism = () => {
+    React.useEffect(() => {
+        document.title = "Bruxismo y ATM Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section">
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroBruxism} alt="Bruxismo y Relajación Mandibular" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking text-secondary">
-                            Salud Articular (ATM)
-                        </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            Bruxismo y Planos en Vitacura: <br />
-                            <span className="text-secondary">Proteja su articulación y sus dientes.</span>
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>Salud Articular & Dolor Orofacial</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.2', marginBottom: '1.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            Despierte sin dolor.<br />
+                            Proteja sus dientes hoy.
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: '1.6' }}>
-                            El dolor mandibular y el desgaste dentario son señales de un sistema en estrés. No normalice el dolor. Un plano de relajación bien ajustado es la primera línea de defensa.
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', opacity: '0.9', lineHeight: '1.6', marginBottom: '2.5rem' }}>
+                            El bruxismo no solo desgasta los dientes: colapsa el sistema muscular. Un plano de relajación médico es la única forma de detener el daño.
                         </p>
-                        <Link to="/contacto" className="btn btn-primary">
-                            Agenda tu diagnóstico
+                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
+                            Agendar evaluación ATM
                         </Link>
                     </motion.div>
                 </div>
             </section>
 
-            {/* The Real Problem */}
-            <section className="section section-alt">
+            {/* PROBLEM & PIVOT */}
+            <section className="section">
                 <div className="container">
-                    <div className="grid-2">
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 style={{ fontSize: '2.2rem', marginBottom: '1.5rem' }}>Más que "rechinar" los dientes</h2>
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
-                                El bruxismo no tratado puede llevar a consecuencias irreversibles: fracturas de dientes, retracción de encías, dolores de cabeza crónicos y daño permanente en la Articulación Temporomandibular (ATM).
+                            <h2 style={{ marginBottom: '2rem' }}>El enemigo silencioso</h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                                El estrés moderno se canaliza a través de la mandíbula. Durante el sueño, podemos ejercer hasta 200kg de fuerza sobre nuestros molares.
                             </p>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                                Esto no solo rompe dientes. Genera:
+                            </p>
+                            <ul style={{ listStyle: 'none', padding: 0, marginTop: '1.5rem' }}>
+                                <li style={{ marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: 'red', fontWeight: 'bold' }}>✖</span> Cefaleas tensionales matutinas</li>
+                                <li style={{ marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: 'red', fontWeight: 'bold' }}>✖</span> Desgaste de bordes dentales</li>
+                                <li style={{ marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: 'red', fontWeight: 'bold' }}>✖</span> Ruido articular (click)</li>
+                            </ul>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            style={{ backgroundColor: 'white', padding: '2rem', borderRadius: 'var(--border-radius)', border: '1px solid var(--color-border)' }}
+                            className="card section-alt"
+                            style={{ padding: '3rem', border: 'none' }}
                         >
-                            <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--color-secondary)' }}>Síntomas frecuentes:</h3>
-                            <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', fontSize: '1.05rem', color: 'var(--color-text-light)' }}>
-                                <li style={{ marginBottom: '0.5rem' }}>Dolor o cansancio muscular al despertar.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Dificultad para abrir la boca por completo.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Chasquidos o "conejos" en la mandíbula.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Desgaste visible en los bordes de los dientes.</li>
-                            </ul>
+                            <span className="uppercase-tracking text-secondary">Solución Médica</span>
+                            <h3 style={{ marginBottom: '1rem', marginTop: '0.5rem' }}>El Plano de Relajación "Míchigan"</h3>
+                            <p style={{ color: 'var(--color-text-light)', marginBottom: '2rem' }}>
+                                No confunda un plano médico con un protector bucal comercial. El plano Míchigan es de acrílico rígido, diseñado a medida para desprogramar la musculatura y guiar la mandíbula a una posición de descanso real ("Relación Céntrica").
+                            </p>
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                <div style={{ height: '4px', width: '40px', backgroundColor: 'var(--color-secondary)' }}></div>
+                                <span style={{ fontStyle: 'italic', color: 'var(--color-text-light)' }}>Estándar de Oro en Odontología</span>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Diagnosis & Method */}
-            <section className="section">
-                <div className="container">
-                    <div className="text-center" style={{ marginBottom: '4rem' }}>
-                        <h2 style={{ marginBottom: '1.5rem' }}>El Plano de Relajación: Un Dispositivo de Precisión</h2>
-                        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
-                            Un plano no es un simple pedazo de acrílico. Es una órtesis que debe ser ajustada micra a micra para desprogramar la musculatura y permitir que la articulación descanse en su posición fisiológica.
-                        </p>
-                    </div>
-
-                    <div className="grid-2" style={{ gap: '3rem' }}>
-                        <motion.div
-                            className="card section-alt"
-                            style={{ border: 'none' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem', fontWeight: 'bold' }}>Diseño Rígido y Ajustado</h4>
-                            <p style={{ color: 'var(--color-text-light)' }}>Utilizamos acrílico termocurado rígido (no de silicona blanda), que es el estándar de oro médico para dar estabilidad real a la mandíbula.</p>
-                        </motion.div>
-                        <motion.div
-                            className="card section-alt"
-                            style={{ border: 'none' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                            <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem', fontWeight: 'bold' }}>Control de Contactos</h4>
-                            <p style={{ color: 'var(--color-text-light)' }}>El Dr. Rajevic ajusta los puntos de contacto para asegurar que su mordida sea balanceada y no provoque más tensión muscular.</p>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Differentiation */}
+            {/* AUTHORITY */}
             <section className="section section-alt">
-                <div className="container" style={{ textAlign: 'center' }}>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>¿Por qué evitar los planos "blandos" o de farmacia?</h2>
-                        <p style={{ fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', color: 'var(--color-text-light)' }}>
-                            Los dispositivos blandos o prefabricados suelen incentivar el "masticamiento" inconsciente durante la noche, empeorando la fatiga muscular y pudiendo alterar irreversiblemente su mordida.
-                        </p>
-                    </motion.div>
+                <div className="container">
+                    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', maxWidth: '800px', margin: '0 auto', backgroundColor: 'white', padding: '3rem', borderRadius: 'var(--border-radius)', boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
+                        <div style={{ flex: '0 0 120px' }}>
+                            <img src={drRajevicImg} alt="Dr. Rajevic" style={{ borderRadius: '50%', width: '120px', height: '120px', objectFit: 'cover' }} />
+                        </div>
+                        <div>
+                            <h4 style={{ marginBottom: '0.5rem' }}>Especialista en Oclusión</h4>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                                "No saco dientes del bruxismo, trato el sistema masticatorio. Un plano mal ajustado puede ser peor que no tener nada. El ajuste oclusal es un arte de precisión."
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section style={{ padding: '6rem 0', textAlign: 'center' }}>
+            {/* FINAL CTA */}
+            <section className="section text-center">
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Recupere su calidad de sueño</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', marginBottom: '3rem' }}>
-                            Un diagnóstico articular correcto es el primer paso para vivir sin dolor.
-                        </p>
-                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
-                            Agenda tu evaluación de ATM
-                        </Link>
-                    </motion.div>
+                    <h2 style={{ marginBottom: '1.5rem' }}>Deje de desgastar su vida.</h2>
+                    <p style={{ maxWidth: '600px', margin: '0 auto 2.5rem', fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                        El tratamiento es no invasivo y le protegerá por años.
+                    </p>
+                    <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
+                        Evaluación de Bruxismo
+                    </Link>
                 </div>
             </section>
         </>

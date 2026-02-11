@@ -11,7 +11,7 @@ import OralRehab from './pages/OralRehab';
 import SecondOpinion from './pages/SecondOpinion';
 import Profile from './pages/Profile';
 import Contact from './pages/Contact';
-import Services from './pages/Services'; // Keeping generic one as fallback or overview if needed, but SEO pages are primary
+import Services from './pages/Services';
 
 function App() {
     return (
@@ -21,8 +21,6 @@ function App() {
 
                 {/* SEO Defined Routes */}
                 <Route path="diagnostico-ortodoncia-vitacura" element={<Diagnosis />} />
-                <Route path="diagnostico" element={<Diagnosis />} /> {/* Alias for backward compatibility */}
-
                 <Route path="ortodoncia-infantil-vitacura" element={<ChildOrtho />} />
                 <Route path="ortodoncia-adultos-vitacura" element={<AdultOrtho />} />
                 <Route path="invisalign-vitacura" element={<InvisalignPage />} />
@@ -31,13 +29,10 @@ function App() {
                 <Route path="segunda-opinion-ortodoncia" element={<SecondOpinion />} />
 
                 <Route path="dr-zdenko-rajevic" element={<Profile />} />
-                <Route path="dr-rajevic" element={<Profile />} /> {/* Alias */}
-
                 <Route path="contacto" element={<Contact />} />
 
                 {/* Legacy/Overview */}
                 <Route path="servicios" element={<Services />} />
-                <Route path="experiencia" element={<Services />} />
             </Route>
         </Routes>
     );

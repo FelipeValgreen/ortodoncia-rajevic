@@ -1,36 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import drRajevicAnalysis from '../assets/dr-rajevic-analysis.jpg';
+import heroInvisalign from '../assets/hero_invisalign.png';
+import drRajevicImg from '../assets/dr-rajevic.jpg';
+import { BsCheckCircle } from 'react-icons/bs';
+import FAQSection from '../components/FAQSection';
 
 const InvisalignPage = () => {
+    React.useEffect(() => {
+        document.title = "Invisalign Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section section-alt">
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroInvisalign} alt="Invisalign en Vitacura" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.7) 50%, rgba(16, 24, 40, 0.4) 100%)'
+                    }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking text-secondary">
-                            Ortodoncia Digital
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            Alineadores Transparentes
                         </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            Invisalign en Vitacura: <br />
-                            <span className="text-secondary">El diseño lo hace el doctor, no el plástico.</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.2', marginBottom: '1.5rem' }}>
+                            <span style={{
+                                backgroundColor: 'rgba(44, 112, 155, 0.8)',
+                                padding: '0.2em 0.4em',
+                                boxDecorationBreak: 'clone',
+                                WebkitBoxDecorationBreak: 'clone',
+                                color: 'white'
+                            }}>
+                                Invisalign es solo el plástico.
+                            </span>
+                            <br />
+                            <span style={{
+                                backgroundColor: 'rgba(44, 112, 155, 0.8)',
+                                padding: '0.2em 0.4em',
+                                boxDecorationBreak: 'clone',
+                                WebkitBoxDecorationBreak: 'clone',
+                                color: 'white'
+                            }}>
+                                Nosotros somos el arquitecto.
+                            </span>
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: '1.6' }}>
-                            Invisalign es la herramienta más avanzada del mundo, pero sigue siendo solo una herramienta. En Ortodoncia Rajevic, el éxito no viene de la marca de los alineadores, sino de la planificación clínica del Dr. Rajevic.
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', lineHeight: '1.6', marginBottom: '2.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            El éxito no depende de la marca del alineador, sino de la biomecánica diseñada por el ortodoncista detrás del software.
                         </p>
-                        <Link to="/contacto" className="btn btn-primary">
-                            Agenda tu diagnóstico
+                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>
+                            Evaluar factibilidad Invisalign
                         </Link>
                     </motion.div>
                 </div>
             </section>
 
-            {/* The Real Problem */}
+            {/* PROBLEM & PIVOT */}
             <section className="section">
                 <div className="container">
                     <motion.div
@@ -38,38 +90,15 @@ const InvisalignPage = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
+                        style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
                     >
-                        <h2 style={{ marginBottom: '2rem' }}>Cualquiera puede escanear, pocos saben planificar.</h2>
+                        <h2 style={{ marginBottom: '2rem' }}>"Me hice Invisalign y no quedó bien"</h2>
+                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8' }}>
+                            Lamentablemente, muchos tratamientos fallan porque se confía ciegamente en la propuesta automática del software.
+                            <br /><br />
+                            En Ortodoncia Rajevic, <strong>nosotros movemos cada diente digitalmente</strong>, no el algoritmo. Controlamos la fuerza, el torque y la secuencia para asegurar que lo que se ve en la pantalla ocurra realmente en su boca.
+                        </p>
                     </motion.div>
-
-                    <div className="grid-2">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                        >
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                Hoy en día, es fácil encontrar ofertas de "Invisalign Rápido". El peligro es creer que el software hace todo el trabajo.
-                            </p>
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                Un plan automatizado puede alinear los dientes en la pantalla, pero si no respeta el hueso y la articulación, el resultado clínico será inestable o dañino.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            className="card section-alt"
-                            style={{ padding: '2.5rem', border: 'none' }}
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        >
-                            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontWeight: 'bold' }}>La diferencia Rajevic:</h4>
-                            <p style={{ fontSize: '1.05rem', marginBottom: '1rem', color: 'var(--color-text-light)' }}>
-                                Nosotros no aprobamos el "Plan Automático" de Invisalign. El Dr. Rajevic modifica cada punto de presión, cada attachment y cada secuencia de movimiento basándose en su radiografía y examen clínico real.
-                            </p>
-                        </motion.div>
-                    </div>
                 </div>
             </section>
 
@@ -125,7 +154,7 @@ const InvisalignPage = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <div style={{ borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-                                <img src={drRajevicAnalysis} alt="Dr. Rajevic planificando tratamiento Invisalign" style={{ width: '100%', display: 'block' }} />
+                                <img src={drRajevicImg} alt="Dr. Rajevic planificando tratamiento Invisalign" style={{ width: '100%', display: 'block' }} />
                             </div>
                         </motion.div>
                         <motion.div
@@ -162,6 +191,28 @@ const InvisalignPage = () => {
                     </motion.div>
                 </div>
             </section>
+            {/* FAQs Section */}
+            <FAQSection
+                title="Preguntas Frecuentes sobre Invisalign"
+                faqs={[
+                    {
+                        question: "¿Cuánto cuesta Invisalign en Chile?",
+                        answer: "El costo de Invisalign varía según la complejidad del caso y la duración del tratamiento. En promedio, puede ir desde $2.500.000 a $4.500.000 CLP. Durante la evaluación inicial le entregaremos un presupuesto detallado. Aceptamos pago con Isapre, tarjetas de crédito y ofrecemos facilidades de pago."
+                    },
+                    {
+                        question: "¿Invisalign funciona para casos complejos?",
+                        answer: "Sí. Con los avances tecnológicos actuales, Invisalign puede tratar la mayoría de los casos complejos incluyendo apiñamiento severo, mordidas abiertas, sobremordida y maloclusiones. Sin embargo, cada caso requiere evaluación individual para determinar si es el tratamiento más adecuado."
+                    },
+                    {
+                        question: "¿Cuánto dura el tratamiento con Invisalign?",
+                        answer: "La duración promedio es de 12 a 18 meses, aunque casos simples pueden resolverse en 6-9 meses y casos complejos pueden extenderse hasta 24 meses. El tiempo exacto depende de la complejidad de su caso y la disciplina en el uso de los alineadores (22 horas diarias)."
+                    },
+                    {
+                        question: "¿Es verdad que Invisalign es más rápido que los brackets?",
+                        answer: "No necesariamente. La velocidad del tratamiento depende más de la biomecánica y planificación que del sistema utilizado. En algunos casos Invisalign puede ser igual o más rápido, pero en otros los brackets tradicionales pueden ser más eficientes. Lo importante es elegir el tratamiento correcto para su caso específico."
+                    }
+                ]}
+            />
         </>
     );
 };

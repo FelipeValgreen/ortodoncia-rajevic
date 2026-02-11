@@ -1,27 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import heroRehab from '../assets/hero_rehab.png';
+import drRajevicImg from '../assets/dr-rajevic.jpg';
 
 const OralRehab = () => {
+    React.useEffect(() => {
+        document.title = "Rehabilitación Oral Compleja Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section section-alt">
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroRehab} alt="Rehabilitación Oral Compleja" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking text-secondary">
-                            Trabajo Interdisciplinario
-                        </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            Rehabilitación Oral en Vitacura: <br />
-                            <span className="text-secondary">La base de una restauración perfecta.</span>
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>Rehabilitación Multidisciplinaria</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.2', marginBottom: '1.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            Recupere la función completa<br />
+                            de su boca.
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: '1.6' }}>
-                            Antes de colocar implantes, carillas o coronas, los cimientos deben estar alineados. Trabajamos junto a su rehabilitador para optimizar el espacio y la posición de sus dientes.
-                        </p>
                         <Link to="/contacto" className="btn btn-primary">
                             Agenda tu diagnóstico
                         </Link>

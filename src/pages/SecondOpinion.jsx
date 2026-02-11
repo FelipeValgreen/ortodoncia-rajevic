@@ -1,152 +1,194 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import heroSecondOpinion from '../assets/hero_second_opinion.png';
+import drRajevicImg from '../assets/dr-rajevic.jpg';
+import { BsCheckCircle } from 'react-icons/bs';
+import FAQSection from '../components/FAQSection';
 const SecondOpinion = () => {
+    React.useEffect(() => {
+        document.title = "Segunda Opinión Experta Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section" style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroSecondOpinion} alt="Segunda Opinión Ortodoncia" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)' }}>
-                            Casos Complejos y Retratamientos
-                        </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1', color: 'white' }}>
-                            Segunda Opinión en Ortodoncia: <br />
-                            <span style={{ opacity: '0.8' }}>Recupere el control de su tratamiento.</span>
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>Diagnóstico de Alta Complejidad</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.2', marginBottom: '1.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            ¿Lleva años en tratamiento<br />
+                            sin ver el final?
                         </h1>
-                        <p style={{ fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '750px', opacity: '0.9', lineHeight: '1.6' }}>
-                            Si sus dientes se volvieron a mover o lleva años sin terminar, necesita un diagnóstico de rescate.
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', opacity: '0.9', lineHeight: '1.6', marginBottom: '2.5rem' }}>
+                            El 40% de nuestros pacientes llegan derivados de otros centros por tratamientos estancados. Detenga la inercia clínica con un diagnóstico preciso.
                         </p>
-                        <Link to="/contacto" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }}>
-                            Agenda tu revisión de caso
+                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
+                            Solicitar Auditoría de Caso
                         </Link>
                     </motion.div>
                 </div>
             </section>
 
-            {/* The Problem */}
+            {/* PROBLEM & PIVOT */}
             <section className="section">
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ marginBottom: '2rem' }}>¿Por qué fallan los tratamientos?</h2>
-                        <p style={{ fontSize: '1.1rem', marginBottom: '3rem', maxWidth: '800px', color: 'var(--color-text-light)' }}>
-                            El 90% de los fracasos no son por "falta de cooperación", sino por <strong>error en el diagnóstico inicial</strong>.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid-2" style={{ gap: '4rem' }}>
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
+                            transition={{ duration: 0.8 }}
                         >
-                            <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--color-secondary)' }}>Falta de objetivos claros</h4>
-                            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-light)' }}>Se empezaron a mover dientes sin visualizar dónde debían terminar, resultando en mordidas inestables que "nunca encajan".</p>
+                            <h2 style={{ marginBottom: '2rem' }}>La "Fatiga de Tratamiento"</h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                                Es frustrante. Pasan los meses, usted paga las mensualidades, pero los espacios no cierran, la mordida no encaja y el doctor parece estar improvisando en cada cita.
+                            </p>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                                <strong>La verdad dura:</strong> Si un tratamiento de ortodoncia no muestra progreso claro en 6 meses, el plan inicial probablemente estaba equivocado.
+                            </p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="card section-alt"
+                            style={{ padding: '3rem', border: 'none' }}
                         >
-                            <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--color-secondary)' }}>Ignorar la biología</h4>
-                            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-light)' }}>Se intentó forzar dientes en un hueso insuficiente, provocando recesión de encías (dientes largos) o reabsorción de raíces.</p>
+                            <h3 style={{ marginBottom: '1.5rem' }}>¿Cuándo pedir una segunda opinión?</h3>
+                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
+                                    <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
+                                    <span>Antes de partir si no le han explicado bien su diagnostico las opciones de tratamiento, las opciones de frenillos, los tiempos concretos de duración y presupuesto total de su tratamiento.</span>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
+                                    <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
+                                    <span>Su tratamiento se ha "frenado" y no avanza hace meses.</span>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
+                                    <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
+                                    <span>Siente dolor articular o molestias que antes no tenía.</span>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
+                                    <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
+                                    <span>Le sugirieron cirugía ortognática y quiere confirmar si es la única opción.</span>
+                                </li>
+                            </ul>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Differentiation */}
+            {/* METHOD */}
             <section className="section section-alt">
                 <div className="container">
-                    <motion.h2
-                        className="text-center"
-                        style={{ marginBottom: '3rem' }}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        ¿Qué hacemos diferente en una Segunda Opinión?
-                    </motion.h2>
-                    <motion.div
-                        style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', padding: '3rem', borderRadius: 'var(--border-radius)', border: '1px solid var(--color-border)' }}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <ol style={{ listStyle: 'none', counterReset: 'item', padding: 0 }}>
-                            <li style={{ position: 'relative', paddingLeft: '3rem', marginBottom: '2rem' }}>
-                                <span style={{ position: 'absolute', left: 0, fontWeight: 'bold', color: 'var(--color-secondary)', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>1.</span>
-                                <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem' }}>Pausa y Análisis:</strong>
-                                <span className="text-light">No seguimos simplemente "apretando". Nos detenemos a re-evaluar con radiografías nuevas el estado actual de sus raíces y articulación.</span>
-                            </li>
-                            <li style={{ position: 'relative', paddingLeft: '3rem', marginBottom: '2rem' }}>
-                                <span style={{ position: 'absolute', left: 0, fontWeight: 'bold', color: 'var(--color-secondary)', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>2.</span>
-                                <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem' }}>Diagnóstico de Causa:</strong>
-                                <span className="text-light">Identificamos por qué se detuvo el avance. ¿Hay contacto prematuro? ¿Anquilosis? ¿Hábito lingual?</span>
-                            </li>
-                            <li style={{ position: 'relative', paddingLeft: '3rem' }}>
-                                <span style={{ position: 'absolute', left: 0, fontWeight: 'bold', color: 'var(--color-secondary)', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>3.</span>
-                                <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.1rem' }}>Plan de Salida:</strong>
-                                <span className="text-light">Diseñamos una estrategia realista para terminar el caso de forma eficiente y segura, o para estabilizar lo logrado.</span>
-                            </li>
-                        </ol>
-                    </motion.div>
+                    <div className="text-center" style={{ marginBottom: '4rem' }}>
+                        <h2 style={{ marginBottom: '1rem' }}>Nuestra Metodología de Rescate</h2>
+                        <p style={{ color: 'var(--color-text-light)', maxWidth: '700px', margin: '0 auto' }}>No adivinamos ni improvisamos. Re estudiamos su caso con evidencia cientifica y clínica.</p>
+                    </div>
+
+                    <div className="grid-3" style={{ gap: '2rem' }}>
+                        <div style={{ padding: '2rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                            <span style={{ fontSize: '3rem', color: 'var(--color-secondary)', fontWeight: 'bold', display: 'block', marginBottom: '1rem', lineHeight: 1 }}>01</span>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>Re-Diagnóstico Total</h4>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
+                                Ignoramos el plan anterior. Tomamos registros nuevos para ver la realidad actual y todas las posibilidades correctas y rapidas para terminar el caso.
+                            </p>
+                        </div>
+                        <div style={{ padding: '2rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                            <span style={{ fontSize: '3rem', color: 'var(--color-secondary)', fontWeight: 'bold', display: 'block', marginBottom: '1rem', lineHeight: 1 }}>02</span>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>Identificación del Error</h4>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
+                                Detectamos mecánicas contradictorias o diagnósticos incompletos (ej: tratar como dental un problema que es esquelético).
+                            </p>
+                        </div>
+                        <div style={{ padding: '2rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                            <span style={{ fontSize: '3rem', color: 'var(--color-secondary)', fontWeight: 'bold', display: 'block', marginBottom: '1rem', lineHeight: 1 }}>03</span>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>Propuesta Honesta</h4>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
+                                Le diremos si podemos corregir el rumbo o si es necesario retirar la aparatología actual y empezar desde una base limpia.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Dr Authority */}
+            {/* AUTHORITY */}
             <section className="section">
-                <div className="container" style={{ textAlign: 'center' }}>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ marginBottom: '1.5rem' }}>Honestidad Profesional</h2>
-                        <p style={{ fontSize: '1.2rem', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem', color: 'var(--color-text-light)' }}>
-                            El Dr. Rajevic es conocido por su criterio ético. Si su tratamiento actual va bien y solo requiere paciencia, se lo diremos. Si requiere un cambio de rumbo urgente, le explicaremos por qué con evidencia clínica.
-                        </p>
-                        <Link to="/dr-zdenko-rajevic" className="text-primary" style={{ fontWeight: '600', textDecoration: 'underline' }}>
-                            Ver credenciales del Dr. Rajevic
-                        </Link>
-                    </motion.div>
+                <div className="container">
+                    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <img src={drRajevicImg} alt="Dr. Rajevic" style={{ borderRadius: '50%', width: '150px', height: '150px', objectFit: 'cover' }} />
+                        <div>
+                            <h3>El "Juez" Clínico</h3>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                                El Dr. Rajevic es frecuentemente consultado para resolver casos que han llegado a un punto muerto. Su enfoque no es comercial; es puramente resolutivo.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section style={{ padding: '6rem 0', textAlign: 'center', backgroundColor: 'var(--color-bg-alt)' }}>
+            {/* FINAL CTA */}
+            <section className="section text-center" style={{ backgroundColor: '#f8fafc' }}>
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>No se resigne a un mal resultado</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', marginBottom: '3rem' }}>
-                            Una mirada experta puede destrabar años de frustración.
-                        </p>
-                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
-                            Solicita revisión de caso
-                        </Link>
-                    </motion.div>
+                    <h2 style={{ marginBottom: '1.5rem' }}>No pierda más tiempo ni dinero.</h2>
+                    <p style={{ maxWidth: '600px', margin: '0 auto 2.5rem', fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                        Una consulta a tiempo puede salvar sus dientes y su inversión.
+                    </p>
+                    <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
+                        Agendar Segunda Opinión
+                    </Link>
                 </div>
             </section>
+
+            {/* FAQs Section */}
+            <FAQSection
+                title="Preguntas Frecuentes sobre Segunda Opinión"
+                faqs={[
+                    {
+                        question: "¿Cuándo debo pedir una segunda opinión en ortodoncia?",
+                        answer: "Debería considerar una segunda opinión si: lleva más de 3 años en tratamiento sin progresos visibles, le han propuesto extracciones dentarias sin explicación clara, siente dolor constante en la ATM (articulación temporomandibular), su mordida empeoró durante el tratamiento, o simplemente tiene dudas sobre el diagnóstico o plan de tratamiento. Una segunda opinión nunca está de más cuando se trata de su salud."
+                    },
+                    {
+                        question: "¿Qué incluye la evaluación de segunda opinión?",
+                        answer: "Incluye un examen clínico completo, análisis de sus radiografías y registros previos, evaluación de la articulación temporomandibular (ATM), revisión del plan de tratamiento actual, y diagnóstico honesto sobre el estado real de su caso. Le entregaremos un informe detallado con opciones realistas para continuar, corregir o replantear su tratamiento."
+                    },
+                    {
+                        question: "¿Se cobra por la segunda opinión?",
+                        answer: "La consulta de segunda opinión tiene un valor diferenciado que incluye el tiempo de análisis profundo de su caso, revisión de imágenes previas y entrega de informe escrito. Si decide continuar el tratamiento con nosotros, este valor se descuenta del costo total. En casos de complejidad extrema o rescate de tratamientos fallidos, evaluamos cada situación individualmente."
+                    },
+                    {
+                        question: "¿Qué pasa si mi tratamiento actual está mal planificado?",
+                        answer: "Si detectamos problemas en la planificación o ejecución del tratamiento actual, le explicaremos honestamente las opciones: continuar con ajustes menores, replantear completamente el enfoque, o en casos severos, evaluar si es necesario revertir algunos movimientos antes de proceder correctamente. Nuestro compromiso es con su salud bucal, no con validar tratamientos incorrectos."
+                    }
+                ]}
+            />
         </>
     );
 };

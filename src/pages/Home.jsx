@@ -1,203 +1,252 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsCheckCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
+import heroHome from '../assets/hero_home_v2.jpg';
+import FAQSection from '../components/FAQSection';
 
 const Home = () => {
+  React.useEffect(() => {
+    document.title = "Ortodoncia Rajevic | Diagnóstico y Planificación Vitacura";
+  }, []);
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="section-alt" style={{ minHeight: '85vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+      {/* 1. HERO MANIFESTO */}
+      <section style={{
+        position: 'relative',
+        height: '90vh',
+        minHeight: '650px',
+        display: 'flex',
+        alignItems: 'center',
+        overflow: 'hidden',
+        backgroundColor: '#f8fafc', // Light background as fallback
+        color: 'var(--color-primary)' // Default text to dark blue
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 1
+        }}>
+          <img src={heroHome} alt="Ortodoncia Rajevic - Sonrisas Reales" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '85% center' }} />
+          {/* Strategic overlay: transparent left, solid white right for text */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(to left, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.4) 55%, rgba(255, 255, 255, 0) 75%)'
+          }}></div>
+        </div>
+
+        {/* Content Container (Text) */}
+        <div className="container" style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            style={{ maxWidth: '800px' }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            style={{ maxWidth: '550px', textAlign: 'right' }}
           >
-            <span className="uppercase-tracking text-secondary" style={{ display: 'block', marginBottom: '1.5rem', borderBottom: '1px solid var(--color-secondary)', paddingBottom: '0.5rem', width: 'fit-content' }}>
-              Ortodoncia Clínica & Estratégica
+            <span className="uppercase-tracking" style={{
+              color: 'var(--color-secondary)',
+              fontWeight: 700,
+              display: 'inline-block',
+              marginBottom: '1rem',
+              borderBottom: '2px solid var(--color-secondary)',
+              paddingBottom: '2px',
+              textAlign: 'right'
+            }}>
+              Clínica de Especialidad
             </span>
-            <h1 style={{ marginBottom: '1.5rem', lineHeight: '1.1' }}>
-              El eje ordena. <br />
-              <span style={{ color: 'var(--color-text-light)', fontStyle: 'italic', fontWeight: '400' }}>El vacío permite decidir.</span>
+            <h1 style={{
+              fontSize: 'clamp(1.875rem, 5vw, 4.2rem)',
+              lineHeight: '1.1',
+              marginBottom: '1.5rem',
+              maxWidth: '550px',
+              marginLeft: 'auto',
+              color: 'var(--color-primary)', // Strong Dark Blue
+              textShadow: '0 2px 20px rgba(255,255,255,0.8)' // Light glow for readability
+            }}>
+              Clínica Ortodoncia en Vitacura
             </h1>
-            <p style={{ fontSize: '1.25rem', marginBottom: '3rem', fontWeight: '300' }}>
-              En ortodoncia, el eje no es el aparato. El verdadero tratamiento es el <strong>diagnóstico</strong>, la <strong>planificación</strong> y el <strong>criterio clínico</strong>.
+            <p style={{
+              fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+              marginBottom: '2rem',
+              maxWidth: '480px',
+              marginLeft: 'auto',
+              opacity: '1',
+              lineHeight: '1.6',
+              fontWeight: '500',
+              color: 'var(--color-primary)'
+            }}>
+              Porque mover dientes sin un diagnóstico integral y sin entender la articulación no es un tratamiento, es un riesgo.
             </p>
-            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <Link to="/diagnostico" className="btn btn-primary">
-                Solicita un diagnóstico
-              </Link>
-              <Link to="/dr-rajevic" className="btn btn-outline" style={{ border: 'none' }}>
-                Conoce al Dr. Rajevic <BsArrowRight />
+            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+              <Link to="/diagnostico-ortodoncia-vitacura" className="btn btn-primary" style={{ padding: '1.2rem 2.5rem', backgroundColor: 'var(--color-primary)', color: 'white', borderColor: 'var(--color-primary)', fontWeight: 'bold' }}>
+                Conozca el Método de Diagnóstico
               </Link>
             </div>
           </motion.div>
         </div>
+      </section >
 
-        {/* Abstract Visual Element */}
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: '100%', opacity: 0.3 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          style={{
-            position: 'absolute',
-            top: '0',
-            right: '15%',
-            width: '1px',
-            background: 'linear-gradient(to bottom, transparent, var(--color-secondary), transparent)',
-          }}
-        />
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="section">
+      {/* 2. THE PROBLEM (Why we exist) */}
+      < section className="section" >
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'start' }}>
+          <div className="grid-2" style={{ gap: '5rem', alignItems: 'center' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 style={{ marginBottom: '2rem' }}>
-                Cuando el eje es incorrecto, <br />
-                el tratamiento pierde dirección.
-              </h2>
-              <div style={{ width: '80px', height: '4px', backgroundColor: 'var(--color-secondary)', marginBottom: '2rem' }}></div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+              <h2 style={{ marginBottom: '2rem' }}>El peligro de la "invisibilidad"</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
-                La mayoría de los problemas en ortodoncia no ocurren durante el tratamiento, sino <strong>antes de comenzar</strong>. Ocurren cuando se prioriza la herramienta (brackets, alineadores) por sobre la anatomía.
+                Hoy en día, se puede comprar un tratamiento de ortodoncia casi como un producto de supermercado. Alineadores por correo, franquicias de paso rápido, diagnósticos por selfie.
               </p>
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
-                No competimos por rapidez ni por precio. Nuestra promesa es diferente: <strong>estabilidad, salud y resultados predecibles</strong> a largo plazo.
-              </p>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.05rem' }}>
-                  <span className="text-secondary">—</span> No vendemos "brackets", diseñamos oclusiones.
+              <h4 style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1rem' }}>Lo que nadie dice:</h4>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+                  <BsCheckCircle style={{ color: 'var(--color-alert)', flexShrink: 0, fontSize: '1.2rem', marginTop: '3px' }} />
+                  <span>Unos lindos dientes recién enderezados pueden durar muy poco derechos si no hay detrás una buena mordida funcional.</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.05rem' }}>
-                  <span className="text-secondary">—</span> No buscamos volumen, buscamos precisión.
+                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+                  <BsCheckCircle style={{ color: 'var(--color-alert)', flexShrink: 0, fontSize: '1.2rem', marginTop: '3px' }} />
+                  <span>Una mala mordida puede volver a enchuecar los dientes y afectar su articulación mandibular si no es funcional.</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.05rem' }}>
-                  <span className="text-secondary">—</span> No hacemos ofertas, damos certezas.
+                <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+                  <BsCheckCircle style={{ color: 'var(--color-alert)', flexShrink: 0, fontSize: '1.2rem', marginTop: '3px' }} />
+                  <span>La evaluación de las encías y del hueso donde se insertan los dientes es primordial: Mover dientes en encías enfermas puede causar la pérdida de piezas dentarias.</span>
                 </li>
               </ul>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology Preview */}
-      <section className="section section-alt">
-        <div className="container">
-          <div className="text-center" style={{ maxWidth: '800px', margin: '0 auto 4rem' }}>
-            <span className="uppercase-tracking text-light">Nuestra Metodología</span>
-            <h2 style={{ marginTop: '1rem', marginBottom: '0' }}>Una forma de decidir</h2>
-          </div>
-
-          <div className="grid-3" style={{ gap: '2px', backgroundColor: 'var(--color-border)', border: '1px solid var(--color-border)' }}>
-            {/* Card 1 */}
-            <motion.div
-              className="card"
-              style={{ borderRadius: 0, border: 'none' }}
-              whileHover={{ backgroundColor: '#fafbfc' }}
-            >
-              <div style={{ fontSize: '4rem', color: 'var(--color-accent)', fontFamily: 'var(--font-heading)', marginBottom: '1rem', lineHeight: 1 }}>I</div>
-              <h3>Niños y Avance</h3>
-              <p className="text-light">Guía de crecimiento esquelético (Ortopedia). Es el momento de las bases.</p>
-              <Link to="/ortodoncia-infantil-vitacura" className="text-secondary" style={{ fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline' }}>
-                Ver Ortodoncia Infantil
-              </Link>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              className="card"
-              style={{ borderRadius: 0, border: 'none' }}
-              whileHover={{ backgroundColor: '#fafbfc' }}
-            >
-              <div style={{ fontSize: '4rem', color: 'var(--color-secondary)', fontFamily: 'var(--font-heading)', marginBottom: '1rem', lineHeight: 1 }}>II</div>
-              <h3>Adultos y Estética</h3>
-              <p className="text-light">Corrección invisible y cuidado periodontal. Soluciones discretas y eficientes.</p>
-              <Link to="/ortodoncia-adultos-vitacura" className="text-secondary" style={{ fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline' }}>
-                Ver Ortodoncia Adultos
-              </Link>
-            </motion.div>
-
-            {/* Card 3 */}
-            <motion.div
-              className="card"
-              style={{ borderRadius: 0, border: 'none' }}
-              whileHover={{ backgroundColor: '#fafbfc' }}
-            >
-              <div style={{ fontSize: '4rem', color: 'var(--color-primary)', fontFamily: 'var(--font-heading)', marginBottom: '1rem', lineHeight: 1 }}>III</div>
-              <h3>Casos Complejos</h3>
-              <p className="text-light">Segundas opiniones y rehabilitación oral. Cuando el caso no avanza.</p>
-              <Link to="/segunda-opinion-ortodoncia" className="text-secondary" style={{ fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline' }}>
-                Ver Casos Complejos
-              </Link>
-            </motion.div>
-          </div>
-
-          <div className="text-center" style={{ marginTop: '4rem' }}>
-            <Link to="/diagnostico" className="btn btn-primary">
-              Conoce nuestro proceso de Diagnóstico <BsArrowRight />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Dr. Rajevic Showcase */}
-      <section className="section">
-        <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center' }}>
-            <motion.div
-              style={{ position: 'relative' }}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div style={{ width: '100%', aspectRatio: '4/5', backgroundColor: '#e2e8f0', borderRadius: '4px', overflow: 'hidden' }}>
-                <img
-                  src={drRajevicImg}
-                  alt="Dr. Zdenko Rajevic"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(0%)' }}
-                />
-              </div>
-            </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              style={{ backgroundColor: '#f0f4f8', padding: '3rem', borderRadius: 'var(--border-radius)' }}
             >
-              <h2 style={{ marginBottom: '1rem' }}>Dr. Zdenko Rajevic</h2>
-              <h3 style={{ fontSize: '1rem', fontWeight: '600', color: 'var(--color-secondary)', marginBottom: '2rem', textTransform: 'uppercase', letterSpacing: '2px' }}>
-                Director Clínico
-              </h3>
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
-                Con más de 35 años de experiencia clínica, el Dr. Rajevic ha construido una práctica basada en la resolución de casos complejos y la honestidad profesional.
+              <h3 style={{ marginBottom: '1.5rem' }}>Nuestra promesa:</h3>
+              <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+                Usamos escáneres 3D, software avanzado y simuladores de mordida.
               </p>
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '2.5rem' }}>
-                "El éxito de un tratamiento no se mide el día que se retiran los aparatos, sino 10 años después. Esa estabilidad solo se logra con un diagnóstico que respeta la biología del paciente."
+              <p style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>
+                Medir y pensar antes de actuar.
               </p>
-              <Link to="/dr-rajevic" className="btn btn-outline" style={{ borderRadius: '4px', padding: '0.8rem 2rem' }}>
-                Ver trayectoria
+              <Link to="/dr-rajevic" style={{ marginTop: '2rem', display: 'inline-block', textDecoration: 'underline', color: 'var(--color-primary)' }}>
+                Conozca al Dr. Zdenko Rajevic &rarr;
               </Link>
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
+
+      {/* 3. CORE SERVICES (Direct Access) */}
+      < section className="section section-alt" >
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '4rem' }}>
+            <span className="uppercase-tracking text-light">Enfoque Integral</span>
+            <h2 style={{ marginTop: '1rem' }}>Áreas de Experticia</h2>
+          </div>
+
+          <div className="grid-3" style={{ gap: '2rem' }}>
+            {/* Child */}
+            <motion.div
+              className="card"
+              whileHover={{ y: -5 }}
+              style={{ padding: '2.5rem' }}
+            >
+              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>01</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Ortodoncia infantil</h3>
+              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                No esperamos que salgan todos los dientes. Mientras los niños crecen, guiamos el desarrollo de los huesos y la erupción dentaria para evitar futuros tratamientos complicados con extracciones o cirugías.
+              </p>
+              <Link to="/ortodoncia-infantil-vitacura" className="btn-link">Ver Tratamiento &rarr;</Link>
+            </motion.div>
+
+            {/* Adult */}
+            <motion.div
+              className="card"
+              whileHover={{ y: -5 }}
+              style={{ padding: '2.5rem' }}
+            >
+              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>02</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Adultos & Estética</h3>
+              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                Alineadores invisibles y frenillos de zafiro. Porque corregir su sonrisa no tiene que interrumpir su vida personal y profesional.
+              </p>
+              <Link to="/ortodoncia-adultos-vitacura" className="btn-link">Ver Opciones &rarr;</Link>
+            </motion.div>
+
+            {/* Complex */}
+            <motion.div
+              className="card"
+              whileHover={{ y: -5 }}
+              style={{ padding: '2.5rem' }}
+            >
+              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>03</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Casos Complejos</h3>
+              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                Casos de cirugías maxilofaciales (ortognáticas), rehabilitaciones orales complejas, bruxismo severo, disfunción temporomandibular y segundas opiniones de casos complicados.
+              </p>
+              <Link to="/segunda-opinion-ortodoncia" className="btn-link">Ver Soluciones &rarr;</Link>
+            </motion.div>
+          </div>
+        </div>
+      </section >
+
+      {/* 4. SOCIAL PROOF / AUTHORITY */}
+      < section className="section" >
+        <div className="container">
+          <div className="grid-2" style={{ alignItems: 'center', gap: '4rem' }}>
+            <div style={{ position: 'relative' }}>
+              <img src={drRajevicImg} alt="Dr Rajevic en Consulta" style={{ borderRadius: 'var(--border-radius)', width: '100%', filter: 'grayscale(100%)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'grayscale(0%)'} onMouseOut={(e) => e.currentTarget.style.filter = 'grayscale(100%)'} />
+            </div>
+            <div>
+              <h2 style={{ marginBottom: '1.5rem' }}>35 Años de "Bocas Difíciles"</h2>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                El Dr. Zdenko Rajevic no es solo un ortodoncista; es un profesional con años de experiencia, muy cercano y empatico con sus pacientes. Más de 5000 casos tratados con exito.
+              </p>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
+                "La paciencia es nuestra herramienta más valiosa. Hay casos en que un tratamiento lento y estable es preferible a uno rápido que fracasa en el tiempo."
+              </p>
+              <Link to="/contacto" className="btn btn-outline">
+                Agendar Hora
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section >
+
+      {/* FAQs Section */}
+      < FAQSection
+        title="Preguntas Frecuentes"
+        faqs={
+          [
+            {
+              question: "¿Cuánto dura un tratamiento de ortodoncia?",
+              answer: "La duración varía según la complejidad del caso. Un tratamiento simple puede durar entre 12-18 meses, mientras que casos más complejos pueden extenderse hasta 24-30 meses. Durante la evaluación inicial, le entregaremos un plan de tratamiento con tiempos realistas basados en su diagnóstico específico."
+            },
+            {
+              question: "¿Atienden con convenio Isapre?",
+              answer: "Sí, trabajamos con todas las isapres. Emitimos bonos electrónicos y le ayudamos con la gestión para maximizar su cobertura. También aceptamos pago con tarjetas de crédito y débito."
+            },
+            {
+              question: "¿Desde qué edad pueden empezar los niños con ortodoncia?",
+              answer: "La edad ideal para una primera evaluación es alrededor de los 6-7 años. En algunos casos, la ortopedia maxilar puede iniciarse desde los 4 años para guiar el crecimiento de los huesos. La intervención temprana puede prevenir tratamientos más complejos en el futuro."
+            },
+            {
+              question: "¿Cómo funciona la evaluación inicial?",
+              answer: "La primera consulta incluye un examen clínico completo, análisis de mordida, evaluación articular (ATM) y una explicación detallada del diagnóstico. Si es necesario, solicitamos radiografías y fotografías para crear un plan de tratamiento personalizado. La duración aproximada es de 30-45 minutos."
+            }
+          ]}
+      />
     </>
   );
 };

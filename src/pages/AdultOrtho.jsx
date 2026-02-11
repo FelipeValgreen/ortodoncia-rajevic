@@ -1,28 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import heroAdult from '../assets/hero_adult.png';
+import drRajevicImg from '../assets/dr-rajevic.jpg';
+import { BsCheckCircle } from 'react-icons/bs';
 
 const AdultOrtho = () => {
+    React.useEffect(() => {
+        document.title = "Ortodoncia Adultos Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section">
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroAdult} alt="Ortodoncia Estética Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.7) 50%, rgba(16, 24, 40, 0.4) 100%)'
+                    }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking text-secondary">
-                            Estética y Función
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            Ortodoncia Estética & Invisible
                         </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            Ortodoncia Adultos en Vitacura: <br />
-                            <span className="text-secondary">Precisión en estructuras maduras.</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.1', marginBottom: '1.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            Corrección sin interrupción <br /> de su vida personal
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: '1.6' }}>
-                            Nunca es tarde, pero el adulto requiere cuidado periodontal superior. Priorizamos su salud gingival y hueso.
-                        </p>
-                        <Link to="/contacto" className="btn btn-primary">
+                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>
                             Agenda tu diagnóstico
                         </Link>
                     </motion.div>
@@ -49,10 +80,10 @@ const AdultOrtho = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                A diferencia de los niños, los adultos ya no están creciendo. Además, es común encontrar dientes con restauraciones previas, implantes o encías retraídas.
+                                A diferencia de los niños, los adultos ya no están creciendo y en la mayoría se ha producido un desgaste o daño funcional o estético.
                             </p>
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                Tratar a un adulto como si fuera un niño grande es un error clínico grave que puede causar pérdida de hueso o reabsorción de raíces.
+                                Tratar a un adulto sin un completo análisis diagnóstico puede ser un error clínico grave que puede causar pérdida de hueso, reabsorción de raíces o daño articular irreparable.
                             </p>
                         </motion.div>
                         <motion.div
@@ -66,10 +97,10 @@ const AdultOrtho = () => {
                                 <strong>Biomecánica Específica:</strong> Usamos fuerzas más ligeras y continuas para proteger sus raíces y encías.
                             </p>
                             <p style={{ fontSize: '1.05rem', marginBottom: '1rem', color: 'var(--color-text-light)' }}>
-                                <strong>Estética Invisible:</strong> Entendemos que su imagen profesional es vital. Ofrecemos Invisalign y ortodoncia lingual para que el tratamiento no interfiera con su vida laboral.
+                                <strong>Estética Invisible:</strong> Entendemos que su imagen personal es vital. Ofrecemos alineadores invisibles y la más moderna y eficiente ortodoncia con brackets (transparente) para que el tratamiento no interfiera con su vida personal ni laboral.
                             </p>
                             <p style={{ fontSize: '1.05rem', color: 'var(--color-text-light)' }}>
-                                <strong>Interdisciplina:</strong> Trabajamos coordinados con su rehabilitador si necesita implantes o carillas posteriores.
+                                <strong>Interdisciplina:</strong> Trabajamos coordinados con rehabilitadores, periodoncistas y cirujanos maxilofaciales.
                             </p>
                         </motion.div>
                     </div>
@@ -96,7 +127,7 @@ const AdultOrtho = () => {
                             transition={{ duration: 0.5 }}
                         >
                             <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)' }}>Alineadores (Invisalign)</h3>
-                            <p className="text-light">La opción preferida por nuestros pacientes adultos. Removible, transparente y facilita la higiene.</p>
+                            <p className="text-light">La opción preferida por nuestros pacientes adultos. Invisibles, cómodos, removibles y altamente eficientes.</p>
                         </motion.div>
                         <motion.div
                             className="card section-alt"
@@ -118,7 +149,7 @@ const AdultOrtho = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)' }}>Ortodoncia Lingual</h3>
-                            <p className="text-light">Sistema incógnito adherido detrás de los dientes. 100% invisible desde el exterior.</p>
+                            <p className="text-light">Frenillos por detrás de los dientes. Cada vez menos utilizados, pero sigue siendo una opción.</p>
                         </motion.div>
                     </div>
                 </div>
@@ -138,7 +169,6 @@ const AdultOrtho = () => {
                         <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', opacity: '0.9', lineHeight: '1.6' }}>
                             El Dr. Rajevic planifica personalmente cada caso de adultos, evaluando cuidadosamente la condición periodontal y articular antes de aplicar cualquier fuerza. La seguridad biológica es nuestra prioridad n°1.
                         </p>
-                        <Link to="/dr-zdenko-rajevic" style={{ color: 'var(--color-accent)', textDecoration: 'underline', fontSize: '1.1rem' }}>Conocer al Doctor</Link>
                     </motion.div>
                 </div>
             </section>

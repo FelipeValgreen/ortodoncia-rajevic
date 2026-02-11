@@ -2,36 +2,68 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsCheckCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+import heroChild from '../assets/hero_child.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
-
+import FAQSection from '../components/FAQSection';
 const ChildOrtho = () => {
+    React.useEffect(() => {
+        document.title = "Ortodoncia Infantil Vitacura | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section section-alt">
-                <div className="container" style={{ maxWidth: '900px' }}>
+            {/* 1. HERO CLINICAL */}
+            <section style={{
+                position: 'relative',
+                height: '80vh',
+                minHeight: '600px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroChild} alt="Ortopedia maxilar infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.7) 50%, rgba(16, 24, 40, 0.4) 100%)'
+                    }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="uppercase-tracking text-secondary">
-                            Ortopedia Maxilar & Ortodoncia
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            Ortopedia & Crecimiento
                         </span>
-                        <h1 style={{ marginTop: '1rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            Ortodoncia Infantil en Vitacura: <br />
-                            <span className="text-secondary">Guía de crecimiento temprano.</span>
+                        <h1 style={{ fontSize: '3.5rem', maxWidth: '800px', lineHeight: '1.1', marginBottom: '1.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            Guíe el rostro de su hijo <br /> antes de que sea tarde.
                         </h1>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '750px', lineHeight: '1.6' }}>
-                            Detectar a tiempo evita cirugías. Guiamos el desarrollo óseo de niños entre 6 y 11 años para corregir problemas antes de que sean permanentes.
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', lineHeight: '1.6', marginBottom: '2.5rem', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            La ventana de oportunidad clínica es entre los 4 y 9 años. Esperar a que muden todos los dientes es el error más costoso que cometen algunos padres.
                         </p>
-                        <Link to="/contacto" className="btn btn-primary">
-                            Agenda tu diagnóstico
+                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', boxShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>
+                            Agendar evaluación preventiva
                         </Link>
                     </motion.div>
                 </div>
             </section>
 
-            {/* The Real Problem */}
+            {/* PROBLEM & PIVOT */}
             <section className="section">
                 <div className="container">
                     <motion.div
@@ -39,195 +71,130 @@ const ChildOrtho = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
+                        style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
                     >
-                        <h2 style={{ marginBottom: '2rem' }}>El problema no son solo los "dientes chuecos"</h2>
-                    </motion.div>
-                    <div className="grid-2">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                        >
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
-                                Muchos padres esperan a que muden todos los dientes. <strong>Ese es el error más común.</strong>
-                            </p>
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
-                                Los problemas de hueso (mandíbulas retraídas o paladares angostos) deben corregirse en el "peak de crecimiento" (6-11 años). Esperar puede significar cirugía futura.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            className="card section-alt"
-                            style={{ border: 'none' }}
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        >
-                            <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', fontWeight: 'bold' }}>Señales de alerta en niños:</h4>
-                            <ul style={{ listStyle: 'none', padding: 0 }}>
-                                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}><span style={{ color: 'var(--color-secondary)' }}>•</span> Respiración bucal (duerme con la boca abierta).</li>
-                                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}><span style={{ color: 'var(--color-secondary)' }}>•</span> Chupete o succión de dedo más allá de los 3 años.</li>
-                                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}><span style={{ color: 'var(--color-secondary)' }}>•</span> Mandíbula que se desvía al cerrar.</li>
-                                <li style={{ marginBottom: '0.8rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}><span style={{ color: 'var(--color-secondary)' }}>•</span> Dientes apiñados o falta de espacio evidente.</li>
-                            </ul>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Diagnosis Importance */}
-            <section className="section" style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'white' }}>¿Por qué el diagnóstico es urgente?</h2>
-                        <p style={{ fontSize: '1.2rem', maxWidth: '800px', marginBottom: '4rem', opacity: '0.9', lineHeight: '1.6' }}>
-                            Porque el hueso es maleable solo durante la infancia. Un diagnóstico certero a los 7 años nos permite usar el propio crecimiento del niño a nuestro favor, logrando resultados más estables y tratamientos más cortos en el futuro.
+                        <h2 style={{ marginBottom: '2rem' }}>El mito de "Esperar a que crezca"</h2>
+                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8' }}>
+                            Si la mandíbula es pequeña o el paladar es estrecho, esperar solo consolida el problema. A los 7 años, el hueso es maleable; a los 12, la estructura ya está casi rígida.
+                            <br /><br />
+                            <strong style={{ color: 'var(--color-primary)' }}>Corregir hueso temprano es más fácil. Corregir dientes y mordidas sobre hueso deformado es difícil.</strong>
                         </p>
                     </motion.div>
-
-                    <div className="grid-3" style={{ gap: '2rem' }}>
-                        <motion.div
-                            style={{ background: 'rgba(255,255,255,0.08)', padding: '2rem', borderRadius: 'var(--border-radius)' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Evita extracciones</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: '0.8' }}>Generamos espacio expandiendo el paladar, no sacando dientes sanos.</p>
-                        </motion.div>
-                        <motion.div
-                            style={{ background: 'rgba(255,255,255,0.08)', padding: '2rem', borderRadius: 'var(--border-radius)' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                            <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Mejora la respiración</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: '0.8' }}>Un paladar más ancho mejora el flujo de aire nasal y el sueño.</p>
-                        </motion.div>
-                        <motion.div
-                            style={{ background: 'rgba(255,255,255,0.08)', padding: '2rem', borderRadius: 'var(--border-radius)' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                        >
-                            <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Perfil Armónico</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: '0.8' }}>Guiamos el mentón y el maxilar para una estética facial balanceada.</p>
-                        </motion.div>
-                    </div>
                 </div>
             </section>
 
-            {/* Rajevic Method */}
-            <section className="section">
-                <div className="container">
-                    <motion.div
-                        className="text-center"
-                        style={{ marginBottom: '4rem' }}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ marginBottom: '1rem' }}>Método Clínico Rajevic: Ortopedia Funcional</h2>
-                        <p style={{ maxWidth: '750px', margin: '0 auto', color: 'var(--color-text-light)', fontSize: '1.1rem' }}>
-                            No nos limitamos a pegar brackets. Usamos aparatos ortopédicos funcionales que estimulan o frenan el crecimiento óseo según sea necesario.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid-3" style={{ gap: '2rem' }}>
-                        <motion.div
-                            className="card"
-                            whileHover={{ y: -5 }}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <div style={{ fontSize: '1.5rem', color: 'var(--color-secondary)', marginBottom: '1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)' }}>1. Estudio</div>
-                            <p className="text-light">Radiografías de mano (carpales) para determinar la edad ósea exacta y el potencial de crecimiento restante.</p>
-                        </motion.div>
-                        <motion.div
-                            className="card"
-                            whileHover={{ y: -5 }}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                            <div style={{ fontSize: '1.5rem', color: 'var(--color-secondary)', marginBottom: '1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)' }}>2. Diseño</div>
-                            <p className="text-light">Selección del aparato específico (Disyuntores, Máscaras faciales, Pistas) según el patrón genético del niño.</p>
-                        </motion.div>
-                        <motion.div
-                            className="card"
-                            whileHover={{ y: -5 }}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                        >
-                            <div style={{ fontSize: '1.5rem', color: 'var(--color-secondary)', marginBottom: '1rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)' }}>3. Monitoreo</div>
-                            <p className="text-light">Controles periódicos para ajustar la fuerza a medida que el niño crece. Acompañamiento cercano.</p>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Dr. Authority & Differentiation */}
+            {/* METHOD */}
             <section className="section section-alt">
                 <div className="container">
-                    <div className="grid-1-2" style={{ gap: '4rem', alignItems: 'center' }}>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <img src={drRajevicImg} alt="Dr. Zdenko Rajevic" style={{ borderRadius: '50%', width: '250px', height: '250px', objectFit: 'cover', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Expertise del Dr. Rajevic</h3>
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)', fontStyle: 'italic' }}>
-                                "Tratar a un niño es una responsabilidad mayor que tratar a un adulto, porque estamos definiendo su rostro para toda la vida. Por eso no delegamos; cada control es supervisado clínicamente."
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
+                        <div>
+                            <span className="uppercase-tracking text-secondary">Metodología Rajevic</span>
+                            <h2 style={{ marginBottom: '1.5rem', marginTop: '0.5rem' }}>No son solo "frenillos"</h2>
+                            <p style={{ color: 'var(--color-text-light)', marginBottom: '2rem' }}>
+                                Utilizamos aparatos de <strong>Ortopedia Funcional</strong>. Estos dispositivos no mueven dientes, sino que estimulan el crecimiento del hueso maxilar, "desbloqueando" el potencial genético de crecimiento del niño.
                             </p>
-                            <Link to="/dr-zdenko-rajevic" className="text-secondary" style={{ fontWeight: '600', textDecoration: 'underline' }}>Conocer trayectoria</Link>
-                        </motion.div>
+                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '0.8rem' }}>
+                                    <BsCheckCircle className="text-secondary" style={{ marginTop: '0.3rem' }} />
+                                    <div>
+                                        <strong>Expansión Palatina:</strong> Mejora no solo la mordida, sino la respiración nasal y el sueño.
+                                    </div>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '0.8rem' }}>
+                                    <BsCheckCircle className="text-secondary" style={{ marginTop: '0.3rem' }} />
+                                    <div>
+                                        <strong>Avance Mandibular:</strong> Corrige el perfil "perfil de pajarito" (mentón retraído) sin cirugía.
+                                    </div>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '0.8rem' }}>
+                                    <BsCheckCircle className="text-secondary" style={{ marginTop: '0.3rem' }} />
+                                    <div>
+                                        Control de crecimiento mandibular excesivo (mentón prominente)
+                                    </div>
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', gap: '0.8rem' }}>
+                                    <BsCheckCircle className="text-secondary" style={{ marginTop: '0.3rem' }} />
+                                    <div>
+                                        <strong>Guía de Erupción:</strong> Hacemos espacio para que los dientes definitivos salgan derechos solos.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style={{ backgroundColor: 'white', padding: '2rem', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }}>
+                            <h4 style={{ marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>Señales de alerta (4 y 9 años)</h4>
+                            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
+                                <li style={{ marginBottom: '0.8rem' }}>• Respira por la boca o ronca (Duerme con la boca abierta)</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Bruxa o rechina los dientes (Dientes chicos o gastados)</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Muerde chueco o cruzado (la mandíbula se va hacia un lado)</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Dientes montados o muy separados</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Pérdida temprana de dientes de leche</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Malos hábitos bucales (succión de dedo, chupetes y otros objetos en la boca)</li>
+                                <li style={{ marginBottom: '0.8rem' }}>• Frenillo del labio o de la lengua corto</li>
+                            </ul>
+                            <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                                <Link to="/contacto" className="btn btn-outline" style={{ width: '100%' }}>Agendar Chequeo</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section style={{ padding: '6rem 0', textAlign: 'center' }}>
+            {/* AUTHORITY */}
+            <section className="section">
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>¿Tiene dudas sobre la mordida de su hijo?</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem' }}>
-                            Una evaluación temprana (7 años) no significa necesariamente comenzar tratamiento, pero sí entrega tranquilidad y control.
-                        </p>
-                        <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
-                            Agenda una evaluación preventiva
-                        </Link>
-                    </motion.div>
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
+                        <div style={{ position: 'relative' }}>
+                            <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100px', height: '100px', backgroundColor: 'var(--color-secondary)', opacity: 0.1, borderRadius: '50%' }}></div>
+                            <img src={drRajevicImg} alt="Dr. Rajevic con paciente" style={{ width: '100%', borderRadius: 'var(--border-radius)', position: 'relative', zIndex: 1 }} />
+                        </div>
+                        <div>
+                            <h2>Responsabilidad Clínica</h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                                "Tratar a un niño es una responsabilidad inmensa. Estamos definiendo su rostro, su respiración y su autoestima para los próximos 80 años. Por eso en mi clínica, la planificación del tratamiento y del crecimiento la hago yo personalmente."
+                            </p>
+                            <Link to="/dr-zdenko-rajevic" style={{ color: 'var(--color-primary)', fontWeight: 'bold', textDecoration: 'underline' }}>
+                                Conozca al Dr. Zdenko Rajevic
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            {/* FINAL CTA */}
+            <section className="section text-center" style={{ backgroundColor: '#f8fafc' }}>
+                <div className="container">
+                    <h2 style={{ marginBottom: '1.5rem' }}>Más temprano, más fácil</h2>
+                    <p style={{ maxWidth: '600px', margin: '0 auto 2.5rem', fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
+                        No deje pasar la ventana de crecimiento. Una consulta a tiempo puede evitar cirugías ortognáticas en el futuro.
+                    </p>
+                    <Link to="/contacto" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
+                        Solicitar Evaluación de Crecimiento
+                    </Link>
+                </div>
+            </section>
+
+            {/* FAQs Section */}
+            <FAQSection
+                title="Preguntas Frecuentes sobre Ortodoncia Infantil"
+                faqs={[
+                    {
+                        question: "¿Cuál es la edad ideal para empezar ortodoncia en niños?",
+                        answer: "La primera evaluación debería realizarse alrededor de los 6-7 años, cuando erupcionan los primeros molares permanentes. En algunos casos, la ortopedia maxilar puede iniciarse desde los 4 años para guiar el crecimiento óseo. La intervención temprana puede prevenir problemas más complejos en la adolescencia y reducir significativamente los tiempos de tratamiento futuros."
+                    },
+                    {
+                        question: "¿Qué es la ortopedia maxilar y por qué es importante?",
+                        answer: "La ortopedia maxilar trabaja sobre el crecimiento de los huesos, no solo sobre la posición de los dientes. Durante la infancia, los huesos aún están en desarrollo y son moldeables, lo que permite corregir problemas como paladar estrecho, mandíbula pequeña o mordidas cruzadas. Este tipo de tratamiento solo es efectivo durante la etapa de crecimiento."
+                    },
+                    {
+                        question: "¿Cuánto tiempo dura el tratamiento de ortodoncia infantil?",
+                        answer: "Depende del tipo de tratamiento. La ortopedia maxilar (Fase 1) suele durar 12-18 meses. Si posteriormente se requiere ortodoncia con brackets (Fase 2), puede durar 18-24 meses adicionales. Sin embargo, al intervenir tempranamente, muchos casos se resuelven solo con la primera fase o con tratamientos más cortos en la adolescencia."
+                    },
+                    {
+                        question: "¿Mi hijo necesita ortodoncia incluso si tiene dientes de leche?",
+                        answer: "Sí, en algunos casos es necesario. Problemas como mordida cruzada, hábitos de succión del pulgar, respiración bucal o paladar estrecho deben tratarse durante la dentición mixta (dientes de leche y permanentes). Esperar a que caigan todos los dientes de leche puede hacer que el tratamiento sea más complejo, largo y costoso."
+                    }
+                ]}
+            />
         </>
     );
 };

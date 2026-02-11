@@ -16,10 +16,10 @@ const Contact = () => {
             "telephone": "+56933427916",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Av. Vitacura 2909, Oficina 505",
-                "addressLocality": "Las Condes",
+                "streetAddress": "Las Hualtatas 8999",
+                "addressLocality": "Vitacura",
                 "addressRegion": "RM",
-                "postalCode": "7550000",
+                "postalCode": "7630000",
                 "addressCountry": "CL"
             },
             "geo": {
@@ -114,7 +114,7 @@ const Contact = () => {
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Teléfono:</strong> <span className="text-light">+56 9 3342 7916</span></li>
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>WhatsApp:</strong> <span className="text-light">+56 9 3342 7916</span></li>
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Correo:</strong> <span className="text-light">ortodonciarajevic@gmail.com</span></li>
-                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Dirección:</strong> <span className="text-light">Av. Vitacura 2909, Oficina 505, Las Condes.</span></li>
+                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Dirección:</strong> <span className="text-light">Las Hualtatas 8999. Vitacura. Santiago.</span></li>
                                 </ul>
                             </div>
 

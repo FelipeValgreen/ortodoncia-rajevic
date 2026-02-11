@@ -1,20 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import alignmentSchematic from '../assets/alignment-schematic.png';
+import childOrthoSchematic from '../assets/child_ortho_growth_schematic.png';
+
+import heroServices from '../assets/hero_diagnosis_real.jpg';
 
 const Services = () => {
+    React.useEffect(() => {
+        document.title = "Servicios Clínicos | Ortodoncia Rajevic";
+    }, []);
+
     return (
         <>
-            <section className="section section-alt">
-                <div className="container">
+            {/* Hero Section */}
+            <section style={{
+                position: 'relative',
+                height: '70vh',
+                minHeight: '500px',
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                overflow: 'hidden'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1
+                }}>
+                    <img src={heroServices} alt="Servicios Clínicos Ortodoncia Rajevic" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }} />
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.85) 0%, rgba(16, 24, 40, 0.5) 100%)'
+                    }}></div>
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 style={{ marginBottom: '1.5rem' }}>Servicios Clínicos</h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '700px', color: 'var(--color-text-light)', lineHeight: '1.6' }}>
-                            Nuestra práctica se divide por áreas de necesidad clínica, no por productos comerciales.
+                        <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            Áreas de Especialidad
+                        </span>
+                        <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', maxWidth: '800px', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.9)' }}>
+                            Servicios Clínicos
+                        </h1>
+                        <p style={{ fontSize: '1.25rem', maxWidth: '650px', lineHeight: '1.6', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                            Nuestra práctica se divide por áreas de necesidad clínica, no por productos comerciales.<br />
                             Adaptamos la técnica a la biología de cada paciente.
                         </p>
                     </motion.div>
@@ -32,7 +73,9 @@ const Services = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div style={{ width: '100%', height: '400px', backgroundColor: '#f0f4f8', borderRadius: 'var(--border-radius)' }}></div>
+                            <div style={{ width: '100%', borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
+                                <img src={childOrthoSchematic} alt="Esquema de guía de crecimiento maxilar" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                            </div>
                         </motion.div>
                         <motion.div
                             style={{ order: 1 }}
@@ -47,9 +90,11 @@ const Services = () => {
                                 La "Ortopedia Maxilar" es la oportunidad única de guiar el crecimiento de los huesos. Intervenir en el momento correcto (niñez temprana) puede evitar cirugías o extracciones en la adultez.
                             </p>
                             <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
-                                <li style={{ marginBottom: '0.5rem' }}>Corrección de mordidas cruzadas y abiertas.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Guía de erupción dental.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Control de hábitos (succión de dedo, respiración bucal).</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Corrección temprana y prevencion de malas mordidas.</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Tratamiento de mordidas cruzadas y abiertas</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Guia de erupción</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Control de malos hábitos (succión de dedo, chupete y respiración bucal).</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Manejo de bruxismo en niños</li>
                             </ul>
                         </motion.div>
                     </div>
@@ -66,7 +111,9 @@ const Services = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div style={{ width: '100%', height: '400px', backgroundColor: '#e2e8f0', borderRadius: 'var(--border-radius)' }}></div>
+                            <div style={{ width: '100%', borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
+                                <img src={alignmentSchematic} alt="Esquema de alineación dental y biomecánica" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
@@ -80,9 +127,10 @@ const Services = () => {
                                 Nunca es tarde para corregir la función y la estética. En adultos, el desafío es mover dientes en un hueso maduro, muchas veces con desgastes o pérdidas previas. Requiere una planificación biomecánica de precisión.
                             </p>
                             <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
+                                <li style={{ marginBottom: '0.5rem' }}>Alineacion estetica en corto tiempo y de alta discreción</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Preparación para implantes y rehabilitación.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Alineación estética de alta discreción.</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Manejo de enfermedad periodontal.</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Tratamiento de bruxismo y difunción mandibular</li>
                             </ul>
                         </motion.div>
                     </div>
