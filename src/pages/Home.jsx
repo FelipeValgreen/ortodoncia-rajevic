@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
       {/* 1. HERO MANIFESTO */}
-      <section style={{
+      <section className="hero-section" style={{
         position: 'relative',
         height: '90vh',
         minHeight: '650px',

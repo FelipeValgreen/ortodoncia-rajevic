@@ -12,8 +12,8 @@ const Diagnosis = () => {
 
     return (
         <>
-            {/* 1. HERO CLINICAL */}
-            <section style={{
+            {/* 1. HERO MANIFESTO */}
+            <section className="hero-section" style={{
                 position: 'relative',
                 height: '80vh',
                 minHeight: '600px',

@@ -370,37 +370,51 @@ img {
 @media (max-width: 900px) {
 
   /* Hero banner specific - move text RIGHT and reduce size */
-  section[style*="height: 90vh"] .container {
-    padding: 0 1rem !important;
+  /* Hero banner specific - Standardized for all pages */
+  .hero-section .container {
+    padding: 0 1.5rem !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important;
-    /* Align content to right */
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
-  section[style*="height: 90vh"] h1 {
-    font-size: 1.75rem !important;
-    max-width: 280px !important;
+  .hero-section h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem) !important;
+    max-width: 100% !important;
     margin-bottom: 1rem !important;
-    text-align: right !important;
+    text-align: center !important;
     margin-left: auto !important;
-    /* Push to right */
+    margin-right: auto !important;
+    line-height: 1.1 !important;
   }
 
-  section[style*="height: 90vh"] p {
-    font-size: 0.95rem !important;
-    max-width: 300px !important;
-    margin-bottom: 1.5rem !important;
-    text-align: right !important;
+  .hero-section p {
+    font-size: 1.1rem !important;
+    max-width: 100% !important;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
     margin-left: auto !important;
-    /* Push to right */
+    margin-right: auto !important;
   }
 
-  section[style*="height: 90vh"] .btn {
-    font-size: 0.95rem !important;
-    padding: 0.875rem 1.75rem !important;
+  .hero-section .btn {
+    font-size: 1rem !important;
+    padding: 1rem 2rem !important;
     margin-left: auto !important;
-    /* Push to right */
+    margin-right: auto !important;
+    width: auto !important;
+    /* Let button size to content, not full width */
+  }
+
+  .hero-section span.uppercase-tracking {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    border-bottom: none !important;
+    /* Remove border if present on mobile for cleaner look */
   }
 
   /* Container padding reduction */
@@ -422,16 +436,17 @@ img {
   }
 
   /* Hero sections mobile fix */
-  section[style*="height: 90vh"] {
-    min-height: 500px !important;
+  .hero-section {
+    min-height: auto !important;
     height: auto !important;
-    padding: 4rem 0 !important;
+    padding: 6rem 0 4rem 0 !important;
+    /* More top padding for nav */
   }
 
   /* Typography scaling */
   h1 {
     font-size: clamp(2rem, 8vw, 3rem) !important;
-    line-height: 1.2 !important;
+    line-height: 1.1 !important;
   }
 
   h2 {

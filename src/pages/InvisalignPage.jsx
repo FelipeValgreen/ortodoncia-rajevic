@@ -41,7 +41,7 @@ const InvisalignPage = () => {
     return (
         <>
             {/* 1. HERO CLINICAL */}
-            <section style={{
+            <section className="hero-section" style={{
                 position: 'relative',
                 height: '80vh',
                 minHeight: '600px',
