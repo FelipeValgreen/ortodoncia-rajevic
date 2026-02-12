@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BsArrowRight, BsCheckCircle } from 'react-icons/bs';
+import { BsArrowRight, BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
 import heroHome from '../assets/hero_home_v2.jpg';
