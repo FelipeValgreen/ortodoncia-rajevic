@@ -33,35 +33,48 @@ const CookieConsent = () => {
                         left: 0,
                         width: '100%',
                         backgroundColor: 'white',
-                        boxShadow: '0 -4px 20px rgba(0,0,0,0.1)',
+                        boxShadow: '0 -2px 10px rgba(0,0,0,0.05)',
                         zIndex: 9999,
-                        padding: '1.5rem',
+                        padding: '0.5rem 0', // Thinner padding
                         borderTop: '1px solid var(--color-border)'
                     }}
                 >
-                    <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', maxWidth: '1000px', margin: '0 auto' }}>
-                        <div style={{ textAlign: 'center' }}>
-                            <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Uso de Cookies</h4>
-                            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)', maxWidth: '800px', margin: '0 auto' }}>
-                                Utilizamos cookies propias y de terceros para mejorar su experiencia de navegación y analizar el tráfico del sitio.
-                                Al continuar navegando, usted acepta nuestra <Link to="/politica-de-cookies" style={{ textDecoration: 'underline', color: 'var(--color-secondary)' }}>Política de Cookies</Link>.
+                    <div className="container" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto', flexWrap: 'wrap' }}>
+                        <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
+                            <p style={{ fontSize: '0.8rem', color: 'var(--color-text-light)', margin: 0, lineHeight: '1.2' }}>
+                                Usamos cookies para mejorar su experiencia. Al navegar, acepta nuestra <Link to="/politica-de-cookies" style={{ textDecoration: 'underline', color: 'var(--color-secondary)' }}>Política de Cookies</Link>.
                             </p>
                         </div>
-                        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>
                             <button
                                 onClick={handleAccept}
-                                className="btn btn-primary"
-                                style={{ padding: '0.6rem 2rem', fontSize: '0.9rem' }}
+                                style={{
+                                    padding: '0.4rem 1rem',
+                                    fontSize: '0.75rem',
+                                    backgroundColor: 'var(--color-primary)',
+                                    color: 'white',
+                                    border: 'none',
+                                    borderRadius: '4px',
+                                    cursor: 'pointer',
+                                    fontWeight: '600'
+                                }}
                             >
-                                Aceptar Todo
+                                Aceptar
                             </button>
-                            <Link
-                                to="/politica-de-privacidad"
-                                className="btn btn-outline"
-                                style={{ padding: '0.6rem 2rem', fontSize: '0.9rem' }}
+                            <button
+                                onClick={() => setIsVisible(false)} // Allow dismissing without accept for UI
+                                style={{
+                                    padding: '0.4rem 1rem',
+                                    fontSize: '0.75rem',
+                                    backgroundColor: 'transparent',
+                                    color: 'var(--color-text-light)',
+                                    border: '1px solid var(--color-border)',
+                                    borderRadius: '4px',
+                                    cursor: 'pointer'
+                                }}
                             >
-                                Ver Políticas
-                            </Link>
+                                Cerrar
+                            </button>
                         </div>
                     </div>
                 </motion.div>

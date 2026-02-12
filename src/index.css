@@ -447,8 +447,9 @@ img {
   .hero-section.hero-home .container {
     align-items: flex-end !important;
     text-align: right !important;
-    padding-left: 2rem !important;
-    /* Push text slightly right */
+    padding-left: 35% !important;
+    /* Force text to right 65% of screen */
+    padding-right: 1.5rem !important;
   }
 
   .hero-section.hero-home h1,
@@ -461,8 +462,9 @@ img {
   }
 
   .hero-section.hero-home h1 {
-    max-width: 90% !important;
-    /* Allow it to be wider but aligned right */
+    max-width: 100% !important;
+    font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+    /* Slightly smaller to fit */
   }
 
   /* Typography scaling */

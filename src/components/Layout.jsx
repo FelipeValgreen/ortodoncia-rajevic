@@ -216,6 +216,8 @@ const Layout = () => {
                             <Link to="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Privacidad</Link>
                             <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
                             <Link to="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Cookies</Link>
+                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
+                            <Link to="/politica-de-reembolso" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Reembolso</Link>
                         </div>
                     </div>
                 </div>
