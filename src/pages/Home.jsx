@@ -195,42 +195,57 @@ const Home = () => {
             <motion.div
               className="card"
               whileHover={{ y: -5 }}
-              style={{ padding: '2.5rem' }}
+              style={{ padding: '0', overflow: 'hidden' }}
             >
-              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>01</div>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Ortodoncia infantil</h3>
-              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
-                No esperamos que salgan todos los dientes. Mientras los niños crecen, guiamos el desarrollo de los huesos y la erupción dentaria para evitar futuros tratamientos complicados con extracciones o cirugías.
-              </p>
-              <Link to="/ortodoncia-infantil-vitacura" className="btn-link">Ver Tratamiento &rarr;</Link>
+              <div style={{ height: '200px', overflow: 'hidden' }}>
+                <img src={navChild} alt="Ortodoncia Infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '2rem' }}>
+                <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>01</div>
+                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Ortodoncia infantil</h3>
+                <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                  No esperamos que salgan todos los dientes. Guiamos el desarrollo de los huesos para evitar tratamientos futuros con cirugías.
+                </p>
+                <Link to="/ortodoncia-infantil-vitacura" className="btn-link">Ver Tratamiento &rarr;</Link>
+              </div>
             </motion.div>
 
             {/* Adult */}
             <motion.div
               className="card"
               whileHover={{ y: -5 }}
-              style={{ padding: '2.5rem' }}
+              style={{ padding: '0', overflow: 'hidden' }}
             >
-              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>02</div>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Adultos & Estética</h3>
-              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
-                Alineadores invisibles y frenillos de zafiro. Porque corregir su sonrisa no tiene que interrumpir su vida personal y profesional.
-              </p>
-              <Link to="/ortodoncia-adultos-vitacura" className="btn-link">Ver Opciones &rarr;</Link>
+              <div style={{ height: '200px', overflow: 'hidden' }}>
+                <img src={navAdult} alt="Ortodoncia Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '2rem' }}>
+                <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>02</div>
+                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Adultos & Estética</h3>
+                <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                  Alineadores invisibles y frenillos de zafiro. Corregir su sonrisa no tiene que interrumpir su vida personal y profesional.
+                </p>
+                <Link to="/ortodoncia-adultos-vitacura" className="btn-link">Ver Opciones &rarr;</Link>
+              </div>
             </motion.div>
 
             {/* Complex */}
             <motion.div
               className="card"
               whileHover={{ y: -5 }}
-              style={{ padding: '2.5rem' }}
+              style={{ padding: '0', overflow: 'hidden' }}
             >
-              <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>03</div>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Casos Complejos</h3>
-              <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
-                Casos de cirugías maxilofaciales (ortognáticas), rehabilitaciones orales complejas, bruxismo severo, disfunción temporomandibular y segundas opiniones de casos complicados.
-              </p>
-              <Link to="/segunda-opinion-ortodoncia" className="btn-link">Ver Soluciones &rarr;</Link>
+              <div style={{ height: '200px', overflow: 'hidden' }}>
+                <img src={drRajevicImg} alt="Casos Complejos" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+              </div>
+              <div style={{ padding: '2rem' }}>
+                <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>03</div>
+                <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Casos Complejos</h3>
+                <p style={{ color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
+                  Rehabilitaciones orales, bruxismo severo, disfunción ATM y segundas opiniones. Soluciones donde otros solo ven problemas.
+                </p>
+                <Link to="/segunda-opinion-ortodoncia" className="btn-link">Ver Soluciones &rarr;</Link>
+              </div>
             </motion.div>
           </div>
         </div>

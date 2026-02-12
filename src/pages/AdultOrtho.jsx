@@ -101,12 +101,20 @@ const AdultOrtho = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 style={{ fontSize: '2.2rem', marginBottom: '2rem' }}>El desafío de la ortodoncia en adultos</h2>
+                        <h2 style={{ fontSize: '2.2rem', marginBottom: '3rem', textAlign: 'center' }}>El desafío de la ortodoncia en adultos</h2>
                     </motion.div>
 
-                    <div className="grid-2">
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src={navAdult} alt="Ortodoncia Adultos Profesional" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -114,22 +122,16 @@ const AdultOrtho = () => {
                             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
                                 A diferencia de los niños, los adultos ya no están creciendo y en la mayoría se ha producido un desgaste o daño funcional o estético.
                             </p>
-                            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
-                                Tratar a un adulto sin un completo análisis diagnóstico puede ser un error clínico grave que puede causar pérdida de hueso, reabsorción de raíces o daño articular irreparable.
+                            <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+                                Tratar a un adulto sin un completo análisis diagnóstico puede ser un error clínico grave.
                             </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        >
+
                             <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', fontWeight: 'bold' }}>Nuestra diferenciación clínica:</h4>
                             <p style={{ fontSize: '1.05rem', marginBottom: '1rem', color: 'var(--color-text-light)' }}>
                                 <strong>Biomecánica Específica:</strong> Usamos fuerzas más ligeras y continuas para proteger sus raíces y encías.
                             </p>
                             <p style={{ fontSize: '1.05rem', marginBottom: '1rem', color: 'var(--color-text-light)' }}>
-                                <strong>Estética Invisible:</strong> Entendemos que su imagen personal es vital. Ofrecemos alineadores invisibles y la más moderna y eficiente ortodoncia con brackets (transparente) para que el tratamiento no interfiera con su vida personal ni laboral.
+                                <strong>Estética Invisible:</strong> Entendemos que su imagen personal es vital.
                             </p>
                             <p style={{ fontSize: '1.05rem', color: 'var(--color-text-light)' }}>
                                 <strong>Interdisciplina:</strong> Trabajamos coordinados con rehabilitadores, periodoncistas y cirujanos maxilofaciales.

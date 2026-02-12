@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroInvisalign from '../assets/hero_invisalign.png';
-import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
+import alignmentSchematic from '../assets/alignment-schematic.png';
+import { BsCheckCircle, BsStarFill, BsShieldCheck, BsLightningCharge, BsDisplay } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import navInvisalign from '../assets/nav_invisalign.png';
@@ -105,23 +106,35 @@ const InvisalignPage = () => {
                 </div>
             </section>
 
+
+
             {/* PROBLEM & PIVOT */}
             <section className="section">
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
-                    >
-                        <h2 style={{ marginBottom: '2rem' }}>"Me hice Invisalign y no quedó bien"</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8' }}>
-                            Lamentablemente, muchos tratamientos fallan porque se confía ciegamente en la propuesta automática del software.
-                            <br /><br />
-                            En Ortodoncia Rajevic, <strong>nosotros movemos cada diente digitalmente</strong>, no el algoritmo. Controlamos la fuerza, el torque y la secuencia para asegurar que lo que se ve en la pantalla ocurra realmente en su boca.
-                        </p>
-                    </motion.div>
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 style={{ marginBottom: '2rem' }}>"Me hice Invisalign y no quedó bien"</h2>
+                            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                                Lamentablemente, muchos tratamientos fallan porque se confía ciegamente en la propuesta automática del software.
+                            </p>
+                            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8' }}>
+                                En Ortodoncia Rajevic, <strong>nosotros movemos cada diente digitalmente</strong>, no el algoritmo. Controlamos la fuerza, el torque y la secuencia para asegurar que lo que se ve en la pantalla ocurra realmente en su boca.
+                            </p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src={alignmentSchematic} alt="Biomecánica de Alineación" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -138,8 +151,10 @@ const InvisalignPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
+                            style={{ padding: '2.5rem', textAlign: 'center' }}
                         >
-                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)' }}>Higiene Superior</h3>
+                            <BsShieldCheck style={{ fontSize: '3rem', color: 'var(--color-primary)', marginBottom: '1.5rem' }} />
+                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Higiene Superior</h3>
                             <p className="text-light">Al ser removible, permite uso de hilo dental y cepillado normal, reduciendo riesgo de caries y gingivitis durante el tratamiento.</p>
                         </motion.div>
                         <motion.div
@@ -148,8 +163,10 @@ const InvisalignPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
+                            style={{ padding: '2.5rem', textAlign: 'center' }}
                         >
-                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)' }}>Fuerzas Controladas</h3>
+                            <BsLightningCharge style={{ fontSize: '3rem', color: 'var(--color-primary)', marginBottom: '1.5rem' }} />
+                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Fuerzas Controladas</h3>
                             <p className="text-light">Ideal para pacientes con poco soporte óseo, ya que el alineador empuja el diente de forma mucho más suave que un bracket.</p>
                         </motion.div>
                         <motion.div
@@ -158,8 +175,10 @@ const InvisalignPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.4 }}
+                            style={{ padding: '2.5rem', textAlign: 'center' }}
                         >
-                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)' }}>Visualización Previa</h3>
+                            <BsDisplay style={{ fontSize: '3rem', color: 'var(--color-primary)', marginBottom: '1.5rem' }} />
+                            <h3 style={{ fontSize: '1.3rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Visualización Previa</h3>
                             <p className="text-light">Le mostramos su resultado final en 3D antes de comenzar, validando juntos el objetivo estético.</p>
                         </motion.div>
                     </div>

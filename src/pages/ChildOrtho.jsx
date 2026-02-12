@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import heroChild from '../assets/hero_child.png';
+import growthSchematic from '../assets/child_ortho_growth_schematic.png';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
@@ -99,20 +100,30 @@ const ChildOrtho = () => {
             {/* PROBLEM & PIVOT */}
             <section className="section">
                 <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
-                    >
-                        <h2 style={{ marginBottom: '2rem' }}>El mito de "Esperar a que crezca"</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8' }}>
-                            Si la mandíbula es pequeña o el paladar es estrecho, esperar solo consolida el problema. A los 7 años, el hueso es maleable; a los 12, la estructura ya está casi rígida.
-                            <br /><br />
-                            <strong style={{ color: 'var(--color-primary)' }}>Corregir hueso temprano es más fácil. Corregir dientes y mordidas sobre hueso deformado es difícil.</strong>
-                        </p>
-                    </motion.div>
+                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 style={{ marginBottom: '2rem' }}>El mito de "Esperar a que crezca"</h2>
+                            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                                Si la mandíbula es pequeña o el paladar es estrecho, esperar solo consolida el problema. A los 7 años, el hueso es maleable; a los 12, la estructura ya está casi rígida.
+                            </p>
+                            <p style={{ fontSize: '1.2rem', color: 'var(--color-primary)', fontWeight: 'bold' }}>
+                                Corregir hueso temprano es más fácil. Corregir dientes sobre hueso deformado es difícil.
+                            </p>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <img src={growthSchematic} alt="Crecimiento Maxilofacial Infantil" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
