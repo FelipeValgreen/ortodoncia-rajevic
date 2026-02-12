@@ -111,7 +111,7 @@ const SecondOpinion = () => {
                             <ul style={{ listStyle: 'none', padding: 0 }}>
                                 <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
                                     <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
-                                    <span>Antes de partir si no le han explicado bien su diagnostico las opciones de tratamiento, las opciones de frenillos, los tiempos concretos de duración y presupuesto total de su tratamiento.</span>
+                                    <span>Antes de partir si no le han explicado bien su diagnóstico las opciones de tratamiento, las opciones de frenillos, los tiempos concretos de duración y presupuesto total de su tratamiento.</span>
                                 </li>
                                 <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem', alignItems: 'start' }}>
                                     <BsCheckCircle style={{ color: 'var(--color-secondary)', fontSize: '1.5rem', flexShrink: 0, marginTop: '2px' }} />
@@ -150,7 +150,7 @@ const SecondOpinion = () => {
                 <div className="container">
                     <div className="text-center" style={{ marginBottom: '4rem' }}>
                         <h2 style={{ marginBottom: '1rem' }}>Nuestra Metodología de Rescate</h2>
-                        <p style={{ color: 'var(--color-text-light)', maxWidth: '700px', margin: '0 auto' }}>No adivinamos ni improvisamos. Re estudiamos su caso con evidencia cientifica y clínica.</p>
+                        <p style={{ color: 'var(--color-text-light)', maxWidth: '700px', margin: '0 auto' }}>No adivinamos ni improvisamos. Re estudiamos su caso con evidencia científica y clínica.</p>
                     </div>
 
                     <div className="grid-3" style={{ gap: '2rem' }}>
@@ -158,7 +158,7 @@ const SecondOpinion = () => {
                             <span style={{ fontSize: '3rem', color: 'var(--color-secondary)', fontWeight: 'bold', display: 'block', marginBottom: '1rem', lineHeight: 1 }}>01</span>
                             <h4 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>Re-Diagnóstico Total</h4>
                             <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
-                                Ignoramos el plan anterior. Tomamos registros nuevos para ver la realidad actual y todas las posibilidades correctas y rapidas para terminar el caso.
+                                Ignoramos el plan anterior. Tomamos registros nuevos para ver la realidad actual y todas las posibilidades correctas y rápidas para terminar el caso.
                             </p>
                         </div>
                         <div style={{ padding: '2rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>

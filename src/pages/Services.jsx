@@ -90,9 +90,9 @@ const Services = () => {
                                 La "Ortopedia Maxilar" es la oportunidad única de guiar el crecimiento de los huesos. Intervenir en el momento correcto (niñez temprana) puede evitar cirugías o extracciones en la adultez.
                             </p>
                             <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
-                                <li style={{ marginBottom: '0.5rem' }}>Corrección temprana y prevencion de malas mordidas.</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Corrección temprana y prevención de malas mordidas.</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Tratamiento de mordidas cruzadas y abiertas</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Guia de erupción</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Guía de erupción</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Control de malos hábitos (succión de dedo, chupete y respiración bucal).</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Manejo de bruxismo en niños</li>
                             </ul>
@@ -127,10 +127,10 @@ const Services = () => {
                                 Nunca es tarde para corregir la función y la estética. En adultos, el desafío es mover dientes en un hueso maduro, muchas veces con desgastes o pérdidas previas. Requiere una planificación biomecánica de precisión.
                             </p>
                             <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', color: 'var(--color-text-light)', marginBottom: '2rem' }}>
-                                <li style={{ marginBottom: '0.5rem' }}>Alineacion estetica en corto tiempo y de alta discreción</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Alineación estética en corto tiempo y de alta discreción</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Preparación para implantes y rehabilitación.</li>
                                 <li style={{ marginBottom: '0.5rem' }}>Manejo de enfermedad periodontal.</li>
-                                <li style={{ marginBottom: '0.5rem' }}>Tratamiento de bruxismo y difunción mandibular</li>
+                                <li style={{ marginBottom: '0.5rem' }}>Tratamiento de bruxismo y disfunción mandibular</li>
                             </ul>
                         </motion.div>
                     </div>

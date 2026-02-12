@@ -49,10 +49,10 @@ const Profile = () => {
 
                             <div style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--color-text-light)', marginBottom: '3rem' }}>
                                 <p style={{ marginBottom: '1rem' }}>
-                                    En una era de "ortodoncia rápida" y alineadores por correo, mi práctica se mantiene firme en los principios biológicos. No tipo de frenillos; ofrezco diagnósticos médicos.
+                                    En una era de "ortodoncia rápida" y alineadores por correo, mi práctica se mantiene firme en los principios biológicos. No vendo aparatos; ofrezco diagnósticos médicos.
                                 </p>
                                 <p>
-                                    Cada paciente que se sienta en mi sillón recibe el mismo nivel de análisis que hemos llevado a la practica durante decadas. No delegamos el pensamiento clínico y traspasamos todo nuestro conocimiento a la sonrisa de nuestros pacientes.
+                                    Cada paciente que se sienta en mi sillón recibe el mismo nivel de análisis que hemos llevado a la práctica durante décadas. No delegamos el pensamiento clínico y traspasamos todo nuestro conocimiento a la sonrisa de nuestros pacientes.
                                 </p>
                             </div>
 
@@ -63,11 +63,11 @@ const Profile = () => {
                                     <p style={{ fontSize: '0.9rem', color: 'var(--color-text-light)' }}>
                                         Cirujano Dentista (U. Chile) con Distinción Máxima.
                                         <br /><br />
-                                        Especialista en Ortodoncia Universidad de Chile. Distinción maxima.
+                                        Especialista en Ortodoncia Universidad de Chile. Distinción Máxima.
                                         <br /><br />
-                                        Magister en Ortodoncia del ROTH-WILLIAM CENTER FOR FUNCTIONAL OCCLUSION
+                                        Magíster en Ortodoncia del ROTH-WILLIAM CENTER FOR FUNCTIONAL OCCLUSION
                                         <br /><br />
-                                        Invisalign doctor
+                                        Invisalign Doctor
                                     </p>
                                 </div>
                                 <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px' }}>
@@ -76,7 +76,7 @@ const Profile = () => {
                                     <p style={{ fontSize: '0.9rem', color: 'var(--color-text-light)' }}>
                                         35+ años resolviendo casos que otros consideraban "imposibles" o "quirúrgicos".
                                         <br /><br />
-                                        Alto nivel de especialidad para resolver casos de cirugia ortognaticas
+                                        Alto nivel de especialidad para resolver casos de cirugía ortognática
                                     </p>
                                 </div>
                             </div>
