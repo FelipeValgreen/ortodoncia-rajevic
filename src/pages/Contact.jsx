@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import MapComponent from '../components/MapComponent';
 
+import SEO from '../components/SEO';
+
 const Contact = () => {
     // Schema JSON-LD for Local SEO
     useEffect(() => {
@@ -94,6 +96,11 @@ const Contact = () => {
 
     return (
         <>
+            <SEO
+                title="Contacto Ortodoncia Rajevic: Agenda tu Evaluación en Vitacura"
+                description="Agenda tu hora con el Dr. Rajevic en Vitacura. Evaluación de ortodoncia, frenillos e Invisalign. WhatsApp: +56 9 3342 7916."
+                breadcrumbs={[{ name: 'Contacto', path: '/contacto' }]}
+            />
             <section className="section">
                 <div className="container">
                     <div className="grid-1-2" style={{ alignItems: 'start', gap: '4rem' }}>

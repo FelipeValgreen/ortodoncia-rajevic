@@ -3,13 +3,18 @@ import { motion } from 'framer-motion';
 import drRajevicImg from '../assets/dr-rajevic.jpg';
 import { BsAward, BsBook, BsEyeglasses } from 'react-icons/bs';
 
+import SEO from '../components/SEO';
+
 const Profile = () => {
-    React.useEffect(() => {
-        document.title = "Dr. Zdenko Rajevic | Ortodoncia Clínica Vitacura";
-    }, []);
+    // useEffect removed
 
     return (
         <>
+            <SEO
+                title="Dr. Zdenko Rajevic: Ortodoncista Especialista en Vitacura | Bio"
+                description="Conozca al Director Clínico Dr. Zdenko Rajevic. Más de 35 años de experiencia en casos complejos, ortodoncia biológica y estética en Vitacura."
+                breadcrumbs={[{ name: 'Dr. Rajevic', path: '/dr-zdenko-rajevic' }]}
+            />
             <section className="section" style={{ paddingBottom: '0' }}>
                 <div className="container">
                     <div className="grid-2" style={{ alignItems: 'center', gap: '5rem' }}>

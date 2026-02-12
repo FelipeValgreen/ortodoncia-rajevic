@@ -7,10 +7,10 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.png';
 import { BsStarFill } from 'react-icons/bs';
 
+import SEO from '../components/SEO';
+
 const OralRehab = () => {
-    React.useEffect(() => {
-        document.title = "Rehabilitación Oral Compleja Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const rehabTestimonials = [
         {
@@ -38,6 +38,11 @@ const OralRehab = () => {
 
     return (
         <>
+            <SEO
+                title="Rehabilitación Oral Compleja e Implantes en Vitacura | Dr. Rajevic"
+                description="Trabajo interdisciplinario para casos complejos. Ortodoncia pre-protésica, implantes y recuperación funcional de la boca con enfoque integral."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Rehabilitación Oral', path: '/rehabilitacion-oral-vitacura' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

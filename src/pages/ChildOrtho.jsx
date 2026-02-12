@@ -9,10 +9,10 @@ import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import navChild from '../assets/nav_child.png';
 import { BsStarFill, BsCheckCircle } from 'react-icons/bs';
+import SEO from '../components/SEO';
+
 const ChildOrtho = () => {
-    React.useEffect(() => {
-        document.title = "Ortodoncia Infantil Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const childTestimonials = [
         {
@@ -40,6 +40,11 @@ const ChildOrtho = () => {
 
     return (
         <>
+            <SEO
+                title="Ortodoncia Infantil Vitacura: Expertos en Crecimiento | Dr. Rajevic"
+                description="Ortodoncia infantil en Vitacura. Tratamiento temprano y ortopedia maxilar para guiar el crecimiento correctivo. Evite cirugías futuras."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Ortodoncia Infantil', path: '/ortodoncia-infantil-vitacura' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

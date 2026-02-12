@@ -7,10 +7,10 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.png';
 import { BsStarFill } from 'react-icons/bs';
 
+import SEO from '../components/SEO';
+
 const Bruxism = () => {
-    React.useEffect(() => {
-        document.title = "Bruxismo y ATM Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const bruxismTestimonials = [
         {
@@ -38,6 +38,11 @@ const Bruxism = () => {
 
     return (
         <>
+            <SEO
+                title="Tratamiento de Bruxismo y Dolor de ATM en Vitacura | Clínica Rajevic"
+                description="Tratamiento médico del bruxismo en Vitacura. Planos de relajación Míchigan y alivio del dolor orofacial y de ATM. Recupere su descanso."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Bruxismo y ATM', path: '/bruxismo-planos-relajacion-vitacura' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

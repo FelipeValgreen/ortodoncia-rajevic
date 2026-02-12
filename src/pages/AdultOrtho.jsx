@@ -8,10 +8,10 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.png';
 import navInvisalign from '../assets/nav_invisalign.png';
 
+import SEO from '../components/SEO';
+
 const AdultOrtho = () => {
-    React.useEffect(() => {
-        document.title = "Ortodoncia Adultos Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const adultTestimonials = [
         {
@@ -39,6 +39,11 @@ const AdultOrtho = () => {
 
     return (
         <>
+            <SEO
+                title="Ortodoncia Adultos Vitacura: Invisalign y Estética Dental | Dr. Rajevic"
+                description="Nunca es tarde para corregir su sonrisa. Ortodoncia estética, lingual e Invisalign en Vitacura. Tratamientos de alta discreción y eficiencia."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Ortodoncia Adultos', path: '/ortodoncia-adultos-vitacura' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

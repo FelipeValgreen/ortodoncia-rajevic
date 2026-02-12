@@ -5,13 +5,18 @@ import { motion } from 'framer-motion';
 import heroDiagnosis from '../assets/hero_diagnosis_real.jpg';
 import diagnosisFlow from '../assets/diagnosis-flow.png';
 
+import SEO from '../components/SEO';
+
 const Diagnosis = () => {
-    React.useEffect(() => {
-        document.title = "Diagnóstico en Ortodoncia Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     return (
         <>
+            <SEO
+                title="Diagnóstico en Ortodoncia Vitacura"
+                description="Diagnóstico clínico de precisión en Ortodoncia Rajevic. Análisis articular, periodontal y planificación digital para resultados estables."
+                breadcrumbs={[{ name: 'Diagnóstico', path: '/diagnostico-ortodoncia-vitacura' }]}
+            />
             {/* 1. HERO MANIFESTO */}
             <section className="hero-section" style={{
                 position: 'relative',

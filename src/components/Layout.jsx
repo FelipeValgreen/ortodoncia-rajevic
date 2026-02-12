@@ -105,6 +105,14 @@ const Layout = () => {
                                 </Link>
                             </li>
                             <li>
+                                <Link
+                                    to="/blog"
+                                    className={`nav-link ${location.pathname.includes('blog') ? 'active' : ''}`}
+                                >
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
                                     Agenda tu diagnóstico
                                 </Link>
@@ -138,6 +146,7 @@ const Layout = () => {
                     <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '0.5rem 0' }}></div>
 
                     <Link to="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
+                    <Link to="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
                     <Link to="/contacto" onClick={closeMobileMenu} className="mobile-nav-link" style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem' }}>
                         Agenda tu hora
                     </Link>

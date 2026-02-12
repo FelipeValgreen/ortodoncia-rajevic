@@ -18,6 +18,9 @@ import Services from './pages/Services';
 
 import ScrollToTop from './components/ScrollToTop';
 
+import BlogIndex from './pages/BlogIndex';
+import BlogPost from './pages/BlogPost';
+
 function App() {
     return (
         <>
@@ -34,6 +37,10 @@ function App() {
                     <Route path="bruxismo-planos-relajacion-vitacura" element={<Bruxism />} />
                     <Route path="rehabilitacion-oral-vitacura" element={<OralRehab />} />
                     <Route path="segunda-opinion-ortodoncia" element={<SecondOpinion />} />
+
+                    {/* Blog Routes */}
+                    <Route path="blog" element={<BlogIndex />} />
+                    <Route path="blog/:slug" element={<BlogPost />} />
 
                     <Route path="dr-zdenko-rajevic" element={<Profile />} />
                     <Route path="contacto" element={<Contact />} />

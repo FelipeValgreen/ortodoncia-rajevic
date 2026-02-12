@@ -11,10 +11,12 @@ import navChild from '../assets/nav_child.png';
 import navAdult from '../assets/nav_adult.png';
 import navInvisalign from '../assets/nav_invisalign.png';
 
+import SEO from '../components/SEO';
+import BlogGrid from '../components/BlogGrid';
+import { getLatestPosts } from '../data/blogData';
+
 const Home = () => {
-  React.useEffect(() => {
-    document.title = "Ortodoncia Rajevic | Diagnóstico y Planificación Vitacura";
-  }, []);
+  // useEffect removed - handled by SEO component
 
   const homeTestimonials = [
     {
@@ -42,6 +44,10 @@ const Home = () => {
 
   return (
     <>
+      <SEO
+        title="Ortodoncia Rajevic | Clínica de Ortodoncia en Vitacura y Estética Dental"
+        description="Clínica de ortodoncia en Vitacura liderada por el Dr. Zdenko Rajevic. Expertos en ortodoncia invisible, lingual y casos complejos. Agenda tu evaluación."
+      />
       {/* 1. HERO MANIFESTO */}
       <section className="hero-section hero-home" style={{
         position: 'relative',
@@ -274,6 +280,20 @@ const Home = () => {
           </div>
         </div>
       </section >
+
+      {/* LATEST BLOG POSTS */}
+      <section className="section" style={{ backgroundColor: '#f8fafc' }}>
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '3rem' }}>
+            <span className="uppercase-tracking text-secondary">Actualidad & Consejos</span>
+            <h2 style={{ marginTop: '0.5rem' }}>Blog de Salud Dental</h2>
+          </div>
+          <BlogGrid posts={getLatestPosts(3)} />
+          <div className="text-center" style={{ marginTop: '2rem' }}>
+            <Link to="/blog" className="btn-link">Ver todos los artículos &rarr;</Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQs Section */}
       < FAQSection

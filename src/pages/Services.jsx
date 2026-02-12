@@ -6,13 +6,18 @@ import childOrthoSchematic from '../assets/child_ortho_growth_schematic.png';
 
 import heroServices from '../assets/hero_diagnosis_real.jpg';
 
+import SEO from '../components/SEO';
+
 const Services = () => {
-    React.useEffect(() => {
-        document.title = "Servicios Clínicos | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     return (
         <>
+            <SEO
+                title="Servicios de Ortodoncia en Vitacura: Infantil, Adultos e Invisalign"
+                description="Ortodoncia integral en Vitacura. Especialistas en Ortodoncia Infantil, Adultos, Invisalign, Ortodoncia Lingual y Rehabilitación Oral Compleja."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }]}
+            />
             {/* Hero Section */}
             <section style={{
                 position: 'relative',

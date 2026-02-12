@@ -7,10 +7,10 @@ import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.png';
+import SEO from '../components/SEO';
+
 const SecondOpinion = () => {
-    React.useEffect(() => {
-        document.title = "Segunda Opinión Experta Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const secondOpinionTestimonials = [
         {
@@ -38,6 +38,11 @@ const SecondOpinion = () => {
 
     return (
         <>
+            <SEO
+                title="Segunda Opinión Ortodoncia: Diagnóstico Experto en Vitacura"
+                description="¿Tratamiento estancado? Ofrecemos una auditoría clínica de su caso y un re-diagnóstico honesto para corregir el rumbo. Evite errores costosos."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Segunda Opinión', path: '/segunda-opinion-ortodoncia' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

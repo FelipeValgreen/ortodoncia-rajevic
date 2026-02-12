@@ -2,17 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroInvisalign from '../assets/hero_invisalign.png';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
 import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import navInvisalign from '../assets/nav_invisalign.png';
 import navAdult from '../assets/nav_adult.png';
+import BlogGrid from '../components/BlogGrid';
+import { getPostsByCategory } from '../data/blogData';
+
+import SEO from '../components/SEO';
 
 const InvisalignPage = () => {
-    React.useEffect(() => {
-        document.title = "Invisalign Vitacura | Ortodoncia Rajevic";
-    }, []);
+    // useEffect removed
 
     const invisalignTestimonials = [
         {
@@ -40,6 +41,11 @@ const InvisalignPage = () => {
 
     return (
         <>
+            <SEO
+                title="Invisalign en Vitacura: Ortodoncia Invisible Certificada | Dr. Rajevic"
+                description="Ortodoncia invisible con Invisalign en Vitacura. Alineadores transparentes planificados por especialista certificado. Comodidad y estética sin metales."
+                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Invisalign', path: '/invisalign-vitacura' }]}
+            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',
@@ -174,31 +180,16 @@ const InvisalignPage = () => {
                 </div>
             </section>
 
-            {/* Authority */}
-            <section className="section">
+            {/* Related Blog Posts */}
+            <section className="section" style={{ backgroundColor: '#f8fafc' }}>
                 <div className="container">
-                    <div className="grid-2-3" style={{ alignItems: 'center', gap: '3rem' }}>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <div style={{ borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-                                <img src={drRajevicImg} alt="Dr. Rajevic planificando tratamiento Invisalign" style={{ width: '100%', display: 'block' }} />
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Expertise Digital: ClinCheck® Pro</h3>
-                            <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)' }}>
-                                El Dr. Rajevic utiliza el software ClinCheck como una herramienta de arquitectura dental, no solo de visualización. Cada movimiento es calculado para asegurar que la raíz del diente se mueva dentro del hueso de forma segura.
-                            </p>
-                        </motion.div>
+                    <div className="text-center" style={{ marginBottom: '3rem' }}>
+                        <span className="uppercase-tracking text-secondary">Aprende Más</span>
+                        <h2 style={{ marginTop: '0.5rem' }}>Artículos Relacionados</h2>
+                    </div>
+                    <BlogGrid posts={getPostsByCategory('Invisalign')} />
+                    <div className="text-center" style={{ marginTop: '2rem' }}>
+                        <Link to="/blog" className="btn-link">Ver todos los artículos &rarr;</Link>
                     </div>
                 </div>
             </section>
