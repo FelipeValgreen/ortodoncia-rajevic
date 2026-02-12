@@ -4,6 +4,7 @@ import heroChild from '../assets/hero_child.png';
 import heroAdult from '../assets/hero_adult.png';
 import heroDiagnosis from '../assets/hero_diagnosis.png';
 import navInvisalign from '../assets/nav_invisalign.png';
+import heroBruxism from '../assets/hero_bruxism.png';
 
 export const blogPosts = [
     // INVISALIGN CATEGORY
@@ -85,7 +86,7 @@ export const blogPosts = [
             <p>La regla de oro: "Si no están en tu boca, están en su caja". Muchos alineadores terminan en la basura envueltos en servilletas de restaurante. Evita accidentes costosos guardándolos siempre en su estuche.</p>
         `,
         category: 'Invisalign',
-        image: heroDiagnosis, // Placeholder conceptual
+        image: heroAdult,
         date: '05 Feb, 2026',
         author: 'Equipo Clínico',
         metaTitle: 'Cómo limpiar Invisalign y cuidar tus alineadores | Tips',
@@ -142,7 +143,7 @@ export const blogPosts = [
             </ul>
         `,
         category: 'Bruxismo',
-        image: heroDiagnosis, // Placeholder
+        image: heroBruxism,
         date: '15 Ene, 2026',
         author: 'Dr. Zdenko Rajevic',
         metaTitle: 'Tratamiento de Bruxismo y ATM en Vitacura',
