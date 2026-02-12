@@ -5,6 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Logo from './Logo';
 import WhatsAppButton from './WhatsAppButton';
 import MegaMenu from './MegaMenu';
+import CookieConsent from './CookieConsent';
 
 const Layout = () => {
     const location = useLocation();
@@ -207,11 +208,19 @@ const Layout = () => {
                         </div>
                     </div>
 
-                    <div style={{ paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>
-                        &copy; {new Date().getFullYear()} Ortodoncia Rajevic. Todos los derechos reservados.
+                    <div style={{ paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+                        <div>
+                            &copy; {new Date().getFullYear()} Ortodoncia Rajevic. Todos los derechos reservados.
+                        </div>
+                        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                            <Link to="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Privacidad</Link>
+                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
+                            <Link to="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Cookies</Link>
+                        </div>
                     </div>
                 </div>
             </footer>
+            <CookieConsent />
             <WhatsAppButton />
         </div>
     );

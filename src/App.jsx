@@ -11,6 +11,8 @@ import OralRehab from './pages/OralRehab';
 import SecondOpinion from './pages/SecondOpinion';
 import Profile from './pages/Profile';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
 import Services from './pages/Services';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -34,6 +36,9 @@ function App() {
 
                     <Route path="dr-zdenko-rajevic" element={<Profile />} />
                     <Route path="contacto" element={<Contact />} />
+
+                    <Route path="politica-de-privacidad" element={<PrivacyPolicy />} />
+                    <Route path="politica-de-cookies" element={<CookiePolicy />} />
 
                     {/* Legacy/Overview */}
                     <Route path="servicios" element={<Services />} />
