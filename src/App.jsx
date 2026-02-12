@@ -13,28 +13,33 @@ import Profile from './pages/Profile';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
+        <>
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
 
-                {/* SEO Defined Routes */}
-                <Route path="diagnostico-ortodoncia-vitacura" element={<Diagnosis />} />
-                <Route path="ortodoncia-infantil-vitacura" element={<ChildOrtho />} />
-                <Route path="ortodoncia-adultos-vitacura" element={<AdultOrtho />} />
-                <Route path="invisalign-vitacura" element={<InvisalignPage />} />
-                <Route path="bruxismo-planos-relajacion-vitacura" element={<Bruxism />} />
-                <Route path="rehabilitacion-oral-vitacura" element={<OralRehab />} />
-                <Route path="segunda-opinion-ortodoncia" element={<SecondOpinion />} />
+                    {/* SEO Defined Routes */}
+                    <Route path="diagnostico-ortodoncia-vitacura" element={<Diagnosis />} />
+                    <Route path="ortodoncia-infantil-vitacura" element={<ChildOrtho />} />
+                    <Route path="ortodoncia-adultos-vitacura" element={<AdultOrtho />} />
+                    <Route path="invisalign-vitacura" element={<InvisalignPage />} />
+                    <Route path="bruxismo-planos-relajacion-vitacura" element={<Bruxism />} />
+                    <Route path="rehabilitacion-oral-vitacura" element={<OralRehab />} />
+                    <Route path="segunda-opinion-ortodoncia" element={<SecondOpinion />} />
 
-                <Route path="dr-zdenko-rajevic" element={<Profile />} />
-                <Route path="contacto" element={<Contact />} />
+                    <Route path="dr-zdenko-rajevic" element={<Profile />} />
+                    <Route path="contacto" element={<Contact />} />
 
-                {/* Legacy/Overview */}
-                <Route path="servicios" element={<Services />} />
-            </Route>
-        </Routes>
+                    {/* Legacy/Overview */}
+                    <Route path="servicios" element={<Services />} />
+                </Route>
+            </Routes>
+        </>
     );
 }
 
