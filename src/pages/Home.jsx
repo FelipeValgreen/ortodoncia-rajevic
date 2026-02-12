@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
       {/* 1. HERO MANIFESTO */}
-      <section className="hero-section" style={{
+      <section className="hero-section hero-home" style={{
         position: 'relative',
         height: '90vh',
         minHeight: '650px',
@@ -90,7 +90,7 @@ const Home = () => {
               paddingBottom: '2px',
               textAlign: 'right'
             }}>
-              Clínica de Especialidad
+              Diagnóstico Integral
             </span>
             <h1 style={{
               fontSize: 'clamp(1.875rem, 5vw, 4.2rem)',

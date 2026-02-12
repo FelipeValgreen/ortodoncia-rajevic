@@ -443,6 +443,28 @@ img {
     /* More top padding for nav */
   }
 
+  /* Specific mobile fix for Home Hero to clear face */
+  .hero-section.hero-home .container {
+    align-items: flex-end !important;
+    text-align: right !important;
+    padding-left: 2rem !important;
+    /* Push text slightly right */
+  }
+
+  .hero-section.hero-home h1,
+  .hero-section.hero-home p,
+  .hero-section.hero-home span.uppercase-tracking,
+  .hero-section.hero-home .btn {
+    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-section.hero-home h1 {
+    max-width: 90% !important;
+    /* Allow it to be wider but aligned right */
+  }
+
   /* Typography scaling */
   h1 {
     font-size: clamp(2rem, 8vw, 3rem) !important;
