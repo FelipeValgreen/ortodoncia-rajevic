@@ -11,6 +11,11 @@ import navChild from '../assets/nav_child.png';
 import navAdult from '../assets/nav_adult.png';
 import navInvisalign from '../assets/nav_invisalign.png';
 
+// Import new premium images for Areas de Experticia
+import heroChild from '../assets/hero_child.png';
+import heroAdult from '../assets/hero_adult.png';
+import heroComplex from '../assets/hero_second_opinion.png';
+
 import SEO from '../components/SEO';
 import BlogGrid from '../components/BlogGrid';
 import { getLatestPosts } from '../data/blogData';
@@ -198,7 +203,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={navChild} alt="Ortodoncia Infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={heroChild} alt="Ortodoncia Infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>01</div>
@@ -217,7 +222,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={navAdult} alt="Ortodoncia Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={heroAdult} alt="Ortodoncia Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>02</div>
@@ -236,7 +241,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={drRajevicImg} alt="Casos Complejos" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+                <img src={heroComplex} alt="Casos Complejos" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>03</div>
