@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabaseClient';
-import StoreLocator from '../components/StoreLocator';
+import AddressSelection from '../components/AddressSelection';
 
 import SEO from '../components/SEO';
 
@@ -126,7 +126,7 @@ const Contact = () => {
                             </div>
 
                             <div style={{ marginBottom: '2rem' }}>
-                                <StoreLocator />
+                                <AddressSelection />
                             </div>
                         </motion.div>
 

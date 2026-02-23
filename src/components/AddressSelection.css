@@ -1,0 +1,84 @@
+.address-selection-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* Smooth corners for the whole block */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Match site aesthetic */
+    margin-bottom: 2rem;
+}
+
+.sb-title {
+    position: relative;
+    top: -12px;
+    font-family: var(--font-primary), "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-left: 8px;
+}
+
+.sb-title-icon {
+    position: relative;
+    top: -5px;
+    filter: invert(36%) sepia(8%) saturate(1478%) hue-rotate(174deg) brightness(98%) contrast(92%);
+    /* Try to match branding somewhat */
+}
+
+gmpx-split-layout:not(:defined) {
+    visibility: hidden;
+}
+
+.panel {
+    background: white;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+    /* Add some consistent gap */
+}
+
+.half-input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.half-input {
+    flex: 1;
+    /* allow spreading */
+    min-width: 0;
+    /* fix flexbox overflow */
+}
+
+.panel input[type="text"] {
+    height: 40px;
+    border: 0;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 1rem;
+    font-family: var(--font-primary), "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    padding: 5px 0;
+    transition: border-bottom-color 0.3s;
+    background-color: transparent;
+    /* match form styles roughly */
+}
+
+.panel input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: var(--color-primary);
+}
+
+.panel input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.panel gmpx-icon-button {
+    margin-top: 15px;
+}
