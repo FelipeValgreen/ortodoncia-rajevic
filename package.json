@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.2.0",
     "@react-google-maps/api": "^2.20.8",
     "@supabase/supabase-js": "^2.90.1",
     "framer-motion": "^11.0.3",
