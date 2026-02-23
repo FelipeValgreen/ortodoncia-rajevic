@@ -19,17 +19,35 @@ const TestimonialCard = ({ name, role, text, image, date }) => {
             }}
         >
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem', gap: '1rem' }}>
-                <img
-                    src={image}
-                    alt={name}
-                    style={{
+                {image ? (
+                    <img
+                        src={image}
+                        alt={name}
+                        style={{
+                            width: '60px',
+                            height: '60px',
+                            borderRadius: '50%',
+                            objectFit: 'cover',
+                            border: '2px solid var(--color-background)'
+                        }}
+                    />
+                ) : (
+                    <div style={{
                         width: '60px',
                         height: '60px',
                         borderRadius: '50%',
-                        objectFit: 'cover',
+                        backgroundColor: '#e2e8f0',
+                        color: 'var(--color-primary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '1.5rem',
+                        fontWeight: 'bold',
                         border: '2px solid var(--color-background)'
-                    }}
-                />
+                    }}>
+                        {name ? name.charAt(0).toUpperCase() : 'P'}
+                    </div>
+                )}
                 <div>
                     <h4 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--color-primary)' }}>{name}</h4>
                     <span style={{ fontSize: '0.85rem', color: 'var(--color-text-light)' }}>{role}</span>

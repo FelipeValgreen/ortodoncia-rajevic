@@ -25,25 +25,32 @@ const Home = () => {
 
   const homeTestimonials = [
     {
-      name: "María José L.",
-      role: "Mamá de paciente (10 años)",
-      text: "Llegué preocupada porque me decían que mi hijo necesitaba cirugía. El Dr. Rajevic nos explicó que con ortopedia podíamos guiar su crecimiento. Hoy tiene una mordida perfecta y evitamos el pabellón. La paciencia con los niños es única.",
-      image: navChild,
-      date: "Hace 2 meses en Google"
+      name: "Catalina Izcue",
+      role: "Paciente",
+      text: "Mi experiencia con la clínica y el Dr. Zdenko ha sido realmente excelente. Desde lo administrativo, como atender siempre a tiempo o la amabilidad del equipo, hasta lo clínico. Excelente nivel de profesionales.",
+      image: null,
+      date: "Hace 5 días en Google"
     },
     {
-      name: "Sofía R.",
-      role: "Estudiante Universitaria",
-      text: "Usé frenillos de niña y se me volvieron a enchuecar. No quería metales de nuevo. Con Invisalign en la clínica fue todo invisible y rapidísimo. Lo mejor fue ver la planificación en 3D antes de empezar.",
-      image: navInvisalign,
-      date: "Hace 1 mes en Google"
+      name: "Carolina Muñoz",
+      role: "Mamá de paciente",
+      text: "Excelente atención, muy dedicado el doctor y por sobretodo amoroso. Atiende a mi hija y sus dientes y paladar cambiaron del cielo a la tierra, muy agradecidos con el doctor Zdenko.",
+      image: null,
+      date: "Hace 6 días en Google"
     },
     {
-      name: "Carlos M.",
-      role: "Ejecutivo (45 años)",
-      text: "Sufría de dolores cervicales y bruxismo. No buscaba estética, buscaba salud. El diagnóstico del Dr. Rajevic fue certero: mi mordida estaba causando todo. Ahora duermo sin dolor y mis dientes están alineados. Un cambio de vida.",
-      image: navAdult,
+      name: "Maria Paz Tagle",
+      role: "Paciente",
+      text: "Excelente atención. Muy profesional y dedicado. 100% recomendado.",
+      image: null,
       date: "Hace 3 semanas en Google"
+    },
+    {
+      name: "Fernanda L.",
+      role: "Paciente",
+      text: "Seco el doctor Rajevic! Llegué por una segunda opinión y me salvó. Muy honesto y claro al explicar el tratamiento.",
+      image: null,
+      date: "Hace 1 mes en Google"
     }
   ];
 
