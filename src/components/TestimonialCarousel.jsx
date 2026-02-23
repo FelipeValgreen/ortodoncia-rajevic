@@ -10,7 +10,8 @@ const TestimonialCarousel = ({ testimonials }) => {
     // Responsive visible count
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 1024) setVisibleCount(3);
+            if (window.innerWidth >= 1280) setVisibleCount(4);
+            else if (window.innerWidth >= 1024) setVisibleCount(3);
             else if (window.innerWidth >= 768) setVisibleCount(2);
             else setVisibleCount(1);
         };

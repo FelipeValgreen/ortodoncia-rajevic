@@ -51,6 +51,27 @@ const Home = () => {
       text: "Seco el doctor Rajevic! Llegué por una segunda opinión y me salvó. Muy honesto y claro al explicar el tratamiento.",
       image: null,
       date: "Hace 1 mes en Google"
+    },
+    {
+      name: "María José L.",
+      role: "Paciente",
+      text: "Llegué preocupada porque me decían que mi hijo necesitaba cirugía. El Dr. Rajevic nos explicó que con ortopedia podíamos guiar su crecimiento. Hoy tiene una mordida perfecta y evitamos el pabellón. La paciencia con los niños es única.",
+      image: navChild,
+      date: "Hace 2 meses en Google"
+    },
+    {
+      name: "Sofía R.",
+      role: "Paciente",
+      text: "Usé frenillos de niña y se me volvieron a enchuecar. No quería metales de nuevo. Con Invisalign en la clínica fue todo invisible y rapidísimo. Lo mejor fue ver la planificación en 3D antes de empezar.",
+      image: navInvisalign,
+      date: "Hace 3 meses en Google"
+    },
+    {
+      name: "Carlos M.",
+      role: "Paciente",
+      text: "Sufría de dolores cervicales y bruxismo. No buscaba estética, buscaba salud. El diagnóstico del Dr. Rajevic fue certero: mi mordida estaba causando todo. Ahora duermo sin dolor y mis dientes están alineados. Un cambio de vida.",
+      image: navAdult,
+      date: "Hace 6 meses en Google"
     }
   ];
 
@@ -278,7 +299,7 @@ const Home = () => {
           <TestimonialCarousel testimonials={homeTestimonials} />
 
           <div className="text-center" style={{ marginTop: '3rem' }}>
-            <a href="https://www.google.com/maps/place/Ortodoncia+Rajevic" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)', fontWeight: '600' }}>
+            <a href="https://search.google.com/local/reviews?placeid=ChIJT-5-tSTJYpYRoq1YwFCV0sk" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)', fontWeight: '600' }}>
               Ver todas las reseñas en Google Maps
             </a>
           </div>
