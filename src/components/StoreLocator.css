@@ -1,0 +1,34 @@
+.store-locator-wrapper {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* Adds a bit of polish */
+}
+
+gmpx-store-locator {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* Customization parameters for Locator Plus appearance */
+    --gmpx-color-surface: #fff;
+    --gmpx-color-on-surface: #212121;
+    --gmpx-color-on-surface-variant: #757575;
+    --gmpx-color-primary: #1967d2;
+    --gmpx-color-outline: #e0e0e0;
+
+    --gmpx-fixed-panel-width-row-layout: 22em;
+    /* Adjusted to fit better on screens */
+    --gmpx-fixed-panel-height-column-layout: 50%;
+
+    --gmpx-font-family-base: "Inter", "Roboto", sans-serif;
+    --gmpx-font-family-headings: "Inter", "Roboto", sans-serif;
+    --gmpx-font-size-base: 0.875rem;
+
+    --gmpx-hours-color-open: #188038;
+    --gmpx-hours-color-closed: #d50000;
+    --gmpx-rating-color: #ffb300;
+    --gmpx-rating-color-empty: #e0e0e0;
+}
