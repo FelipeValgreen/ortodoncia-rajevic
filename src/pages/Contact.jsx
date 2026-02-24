@@ -13,7 +13,7 @@ const Contact = () => {
             "@context": "https://schema.org",
             "@type": "Dentist",
             "name": "Ortodoncia Rajevic",
-            "image": "https://ortodonciarajevic.cl/assets/dr-rajevic.jpg",
+            "image": "https://ortodonciarajevic.cl/assets/dr-rajevic.webp",
             "url": "https://ortodonciarajevic.cl",
             "telephone": "+56933427916",
             "address": {

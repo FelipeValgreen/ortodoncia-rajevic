@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import heroInvisalign from '../assets/hero_invisalign.png';
-import alignmentSchematic from '../assets/alignment-schematic.png';
+import heroInvisalign from '../assets/hero_invisalign.webp';
+import alignmentSchematic from '../assets/alignment-schematic.webp';
 import { BsCheckCircle, BsStarFill, BsShieldCheck, BsLightningCharge, BsDisplay } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-import navInvisalign from '../assets/nav_invisalign.png';
-import navAdult from '../assets/nav_adult.png';
+import navInvisalign from '../assets/nav_invisalign.webp';
+import navAdult from '../assets/nav_adult.webp';
 import BlogGrid from '../components/BlogGrid';
 import { getPostsByCategory } from '../data/blogData';
 

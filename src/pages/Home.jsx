@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowRight, BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
-import heroHome from '../assets/hero_home_v2.jpg';
+import drRajevicImg from '../assets/dr-rajevic.webp';
+import heroHome from '../assets/hero_home_v2.webp';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 
-import navChild from '../assets/nav_child.png';
-import navAdult from '../assets/nav_adult.png';
-import navInvisalign from '../assets/nav_invisalign.png';
+import navChild from '../assets/nav_child.webp';
+import navAdult from '../assets/nav_adult.webp';
+import navInvisalign from '../assets/nav_invisalign.webp';
 
 // Import new premium images for Areas de Experticia
-import heroChild from '../assets/hero_child.png';
-import heroAdult from '../assets/hero_adult.png';
-import heroComplex from '../assets/hero_second_opinion.png';
+import heroChild from '../assets/hero_child.webp';
+import heroAdult from '../assets/hero_adult.webp';
+import heroComplex from '../assets/hero_second_opinion.webp';
 
 import SEO from '../components/SEO';
 import BlogGrid from '../components/BlogGrid';

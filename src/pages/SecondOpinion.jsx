@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import heroSecondOpinion from '../assets/hero_second_opinion.png';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
+import heroSecondOpinion from '../assets/hero_second_opinion.webp';
+import drRajevicImg from '../assets/dr-rajevic.webp';
 import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-import navAdult from '../assets/nav_adult.png';
+import navAdult from '../assets/nav_adult.webp';
 import SEO from '../components/SEO';
 
 const SecondOpinion = () => {

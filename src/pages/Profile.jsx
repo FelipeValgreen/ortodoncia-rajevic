@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
+import drRajevicImg from '../assets/dr-rajevic.webp';
 import { BsAward, BsBook, BsEyeglasses } from 'react-icons/bs';
 
 import SEO from '../components/SEO';

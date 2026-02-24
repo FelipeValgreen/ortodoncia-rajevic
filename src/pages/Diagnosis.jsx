@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsCheckCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import heroDiagnosis from '../assets/hero_diagnosis_real.jpg';
-import diagnosisFlow from '../assets/diagnosis-flow.png';
+import heroDiagnosis from '../assets/hero_diagnosis_real.webp';
+import diagnosisFlow from '../assets/diagnosis-flow.webp';
 
 import SEO from '../components/SEO';
 

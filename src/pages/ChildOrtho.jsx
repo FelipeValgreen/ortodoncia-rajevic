@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
-import heroChild from '../assets/hero_child.png';
-import growthSchematic from '../assets/child_ortho_growth_schematic.png';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
+import heroChild from '../assets/hero_child.webp';
+import growthSchematic from '../assets/child_ortho_growth_schematic.webp';
+import drRajevicImg from '../assets/dr-rajevic.webp';
 import FAQSection from '../components/FAQSection';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-import navChild from '../assets/nav_child.png';
+import navChild from '../assets/nav_child.webp';
 import { BsStarFill, BsCheckCircle } from 'react-icons/bs';
 import SEO from '../components/SEO';
 

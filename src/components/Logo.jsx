@@ -1,5 +1,5 @@
 import React from 'react';
-import isotype from '../assets/isotype_final.png';
+import isotype from '../assets/isotype_final.webp';
 
 const Logo = ({ height = 40 }) => {
     return (

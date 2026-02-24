@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import heroRehab from '../assets/hero_rehab.png';
-import drRajevicImg from '../assets/dr-rajevic.jpg';
+import heroRehab from '../assets/hero_rehab.webp';
+import drRajevicImg from '../assets/dr-rajevic.webp';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-import navAdult from '../assets/nav_adult.png';
+import navAdult from '../assets/nav_adult.webp';
 import { BsStarFill } from 'react-icons/bs';
 
 import SEO from '../components/SEO';
