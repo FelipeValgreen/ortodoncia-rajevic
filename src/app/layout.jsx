@@ -1,6 +1,7 @@
 import './../index.css';
 import Script from 'next/script';
 import Layout from '../components/Layout';
+import ScrollToTop from '../components/ScrollToTop';
 import { Inter, Playfair_Display } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
                 <link rel="preload" as="image" href="/src/assets/hero_child.webp" type="image/webp" />
             </head>
             <body>
+                <ScrollToTop />
                 <Script id="gtm" strategy="afterInteractive">
                     {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
