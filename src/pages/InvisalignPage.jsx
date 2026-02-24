@@ -282,6 +282,28 @@ const InvisalignPage = () => {
                     </motion.div>
                 </div>
             </section>
+
+            {/* SILO LINK TO PILLAR PAGE */}
+            <section className="section" style={{ backgroundColor: '#f0f5f9' }}>
+                <div className="container text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        style={{ maxWidth: '800px', margin: '0 auto', padding: '3rem 2rem', backgroundColor: 'white', borderRadius: '16px', border: '1px solid var(--color-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+                    >
+                        <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>¿Quieres saber todo sobre Invisalign?</h2>
+                        <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '2rem', lineHeight: '1.6' }}>
+                            Descubre precios, tiempos exactos de tratamiento y una comparativa clínica profunda en nuestra guía definitiva elaborada especialmente para despejar todas tus dudas.
+                        </p>
+                        <Link to="/guia-invisalign-chile" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                            Leer la Guía Completa de Invisalign
+                        </Link>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* FAQs Section */}
             <FAQSection
                 title="Preguntas Frecuentes sobre Invisalign"
