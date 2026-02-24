@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, breadcrumbs = [], schema = null }) => {
+const SEO = ({ title, description, breadcrumbs = [], schema = null, videoId = null }) => {
     const location = useLocation();
     const cleanPath = location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
     const currentUrl = `https://www.ortodonciarajevic.cl${cleanPath}`;
@@ -36,6 +36,19 @@ const SEO = ({ title, description, breadcrumbs = [], schema = null }) => {
         } else {
             schemas.push(schema);
         }
+    }
+
+    if (videoId) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": title,
+            "description": description,
+            "thumbnailUrl": `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+            "uploadDate": new Date().toISOString().split('T')[0],
+            "contentUrl": `https://www.youtube.com/watch?v=${videoId}`,
+            "embedUrl": `https://www.youtube.com/embed/${videoId}`
+        });
     }
 
     return (

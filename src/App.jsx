@@ -11,6 +11,8 @@ import OralRehab from './pages/OralRehab';
 import SecondOpinion from './pages/SecondOpinion';
 import Profile from './pages/Profile';
 import Contact from './pages/Contact';
+import GeoLanding from './pages/GeoLanding';
+import InvisalignGuide from './pages/InvisalignGuide';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';
 import RefundPolicy from './pages/RefundPolicy';
@@ -41,6 +43,12 @@ function App() {
                     {/* Blog Routes */}
                     <Route path="blog" element={<BlogIndex />} />
                     <Route path="blog/:slug" element={<BlogPost />} />
+
+                    {/* Local SEO / Geo Landings */}
+                    <Route path="ortodoncia-:commune" element={<GeoLanding />} />
+
+                    {/* SGEO Pillar Pages */}
+                    <Route path="guia-invisalign-chile" element={<InvisalignGuide />} />
 
                     <Route path="dr-zdenko-rajevic" element={<Profile />} />
                     <Route path="contacto" element={<Contact />} />

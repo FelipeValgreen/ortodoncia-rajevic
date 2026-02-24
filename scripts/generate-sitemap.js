@@ -21,7 +21,10 @@ const staticRoutes = [
     '/servicios',
     '/dr-zdenko-rajevic',
     '/contacto',
-    '/blog'
+    '/blog',
+    '/ortodoncia-las-condes',
+    '/ortodoncia-lo-barnechea',
+    '/guia-invisalign-chile'
 ];
 
 // Rutas dinámicas (Blogs)
