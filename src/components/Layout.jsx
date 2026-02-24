@@ -203,11 +203,15 @@ const Layout = () => {
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.95rem' }}>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
                                     <BsGeoAlt style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
-                                    Las Hualtatas 8999. Vitacura. Santiago.
+                                    <a href="https://maps.app.goo.gl/t1X3mC4w5Yd6nZ4W6" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        Las Hualtatas 8999. Vitacura. Santiago.
+                                    </a>
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
                                     <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
-                                    +56 9 3342 7916
+                                    <a href="https://wa.me/56933427916" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        +56 9 3342 7916
+                                    </a>
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
                                     <BsClock style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
