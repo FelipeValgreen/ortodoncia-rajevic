@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import alignmentSchematic from '../assets/alignment-schematic.webp';
 import childOrthoSchematic from '../assets/child_ortho_growth_schematic.webp';
 
-import heroServices from '../assets/hero_diagnosis_real.webp';
+import heroServices from '../assets/hero_diagnosis.webp';
 
 import SEO from '../components/SEO';
 
