@@ -221,7 +221,7 @@ const Layout = () => {
                         </div>
                     </div>
 
-                    <div style={{ paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
+                    <div style={{ paddingTop: '2rem', textAlign: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center' }}>
                         <div>
                             &copy; {new Date().getFullYear()} Ortodoncia Rajevic. Todos los derechos reservados.
                         </div>

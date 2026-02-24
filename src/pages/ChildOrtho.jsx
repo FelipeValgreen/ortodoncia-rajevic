@@ -64,7 +64,7 @@ const ChildOrtho = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroChild} alt="Ortopedia maxilar infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={heroChild} alt="Ortopedia maxilar infantil" width="1920" height="1080" fetchpriority="high" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div style={{
                         position: 'absolute',
                         top: 0,
@@ -121,7 +121,7 @@ const ChildOrtho = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <img src={growthSchematic} alt="Crecimiento Maxilofacial Infantil" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                            <img src={growthSchematic} alt="Crecimiento Maxilofacial Infantil" loading="lazy" width="800" height="600" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
                         </motion.div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@ const ChildOrtho = () => {
                     <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
                         <div style={{ position: 'relative' }}>
                             <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100px', height: '100px', backgroundColor: 'var(--color-secondary)', opacity: 0.1, borderRadius: '50%' }}></div>
-                            <img src={drRajevicImg} alt="Dr. Rajevic con paciente" style={{ width: '100%', borderRadius: 'var(--border-radius)', position: 'relative', zIndex: 1 }} />
+                            <img src={drRajevicImg} alt="Dr. Rajevic con paciente" loading="lazy" width="600" height="600" style={{ width: '100%', borderRadius: 'var(--border-radius)', position: 'relative', zIndex: 1 }} />
                         </div>
                         <div>
                             <h2>Responsabilidad Clínica</h2>

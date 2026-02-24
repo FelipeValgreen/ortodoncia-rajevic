@@ -92,15 +92,28 @@ const TestimonialCarousel = ({ testimonials }) => {
                                 onClick={() => setCurrentIndex(i)}
                                 aria-label={`Ir al grupo de testimonios ${i + 1}`}
                                 style={{
+                                    width: i === currentIndex ? '32px' : '24px',
+                                    height: '32px',
+                                    borderRadius: '16px',
+                                    border: 'none',
+                                    backgroundColor: 'transparent',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    padding: 0,
+                                    margin: '0 2px',
+                                    transition: 'all 0.3s'
+                                }}
+                            >
+                                <div style={{
                                     width: i === currentIndex ? '24px' : '12px',
                                     height: '4px',
                                     borderRadius: '2px',
-                                    border: 'none',
                                     backgroundColor: i === currentIndex ? 'var(--color-secondary)' : '#ddd',
-                                    cursor: 'pointer',
                                     transition: 'all 0.3s'
-                                }}
-                            />
+                                }} />
+                            </button>
                         ))}
                     </div>
                     <button

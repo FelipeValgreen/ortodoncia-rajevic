@@ -100,7 +100,7 @@ const Home = () => {
           height: '100%',
           zIndex: 1
         }}>
-          <img src={heroHome} alt="Ortodoncia Rajevic - Sonrisas Reales" width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '85% center' }} />
+          <img src={heroHome} alt="Ortodoncia Rajevic - Sonrisas Reales" fetchpriority="high" width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '85% center' }} />
           {/* Strategic overlay: transparent left, solid white right for text */}
           <div style={{
             position: 'absolute',
