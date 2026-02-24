@@ -39,7 +39,7 @@ const Profile = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div style={{ position: 'relative' }}>
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '4/5' }}>
                                 <div style={{
                                     position: 'absolute',
                                     top: '-20px',
@@ -50,7 +50,7 @@ const Profile = () => {
                                     zIndex: 0,
                                     borderRadius: 'var(--border-radius)'
                                 }}></div>
-                                <img src={drRajevicImg} alt="Dr. Zdenko Rajevic" style={{ width: '100%', borderRadius: 'var(--border-radius)', position: 'relative', zIndex: 1, display: 'block' }} />
+                                <Image src={drRajevicImg} alt="Dr. Zdenko Rajevic" fill style={{ borderRadius: 'var(--border-radius)', objectFit: 'cover' }} />
                             </div>
                         </motion.div>
 

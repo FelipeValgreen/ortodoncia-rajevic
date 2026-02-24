@@ -145,12 +145,14 @@ img {
 
 
 /* Responsive Utilities */
-.desktop-only {
-  display: flex !important;
-}
+@media (min-width: 901px) {
+  .desktop-only {
+    display: flex !important;
+  }
 
-.mobile-only {
-  display: none !important;
+  .mobile-only {
+    display: none !important;
+  }
 }
 
 @media (max-width: 900px) {

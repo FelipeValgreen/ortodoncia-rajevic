@@ -31,6 +31,9 @@ export const metadata = {
 
 export const viewport = {
     themeColor: '#1A3A5C',
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5, // Allow zooming for accessibility
 };
 
 export default function RootLayout({ children }) {
