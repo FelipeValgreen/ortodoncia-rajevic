@@ -1,5 +1,6 @@
 "use client";
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import alignmentSchematic from '../assets/alignment-schematic.webp';

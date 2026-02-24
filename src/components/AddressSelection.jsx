@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import '@googlemaps/extended-component-library/api_loader.js';
 import '@googlemaps/extended-component-library/split_layout.js';
 import '@googlemaps/extended-component-library/icon_button.js';
