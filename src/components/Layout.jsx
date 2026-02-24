@@ -186,10 +186,8 @@ const Layout = () => {
                                 <li><Link to="/dr-zdenko-rajevic" style={{ color: 'rgba(255,255,255,0.7)' }}>Dr. Rajevic</Link></li>
 
                                 <li style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                                    <span style={{ color: 'var(--color-secondary)' }}>Expansión y Guías</span>
+                                    <span style={{ color: 'var(--color-secondary)' }}>Guías Clínicas</span>
                                 </li>
-                                <li><Link to="/ortodoncia-las-condes" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Las Condes</Link></li>
-                                <li><Link to="/ortodoncia-lo-barnechea" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Lo Barnechea</Link></li>
                                 <li><Link to="/guia-invisalign-chile" style={{ color: 'rgba(255,255,255,0.7)' }}>Guía Completa Invisalign</Link></li>
                             </ul>
                         </div>
