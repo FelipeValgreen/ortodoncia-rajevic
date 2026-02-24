@@ -23,6 +23,9 @@ const TestimonialCard = ({ name, role, text, image, date }) => {
                     <img
                         src={image}
                         alt={name}
+                        loading="lazy"
+                        width="60"
+                        height="60"
                         style={{
                             width: '60px',
                             height: '60px',
@@ -49,7 +52,7 @@ const TestimonialCard = ({ name, role, text, image, date }) => {
                     </div>
                 )}
                 <div>
-                    <h4 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--color-primary)' }}>{name}</h4>
+                    <h3 style={{ margin: 0, fontSize: '1.1rem', color: 'var(--color-primary)' }}>{name}</h3>
                     <span style={{ fontSize: '0.85rem', color: 'var(--color-text-light)' }}>{role}</span>
                 </div>
                 <div style={{ marginLeft: 'auto' }}>
@@ -74,7 +77,7 @@ const TestimonialCard = ({ name, role, text, image, date }) => {
                 "{text}"
             </p>
 
-            <div style={{ fontSize: '0.8rem', color: '#999', borderTop: '1px solid #eee', paddingTop: '1rem' }}>
+            <div style={{ fontSize: '0.8rem', color: '#737373', borderTop: '1px solid #eee', paddingTop: '1rem' }}>
                 {date}
             </div>
         </motion.div>

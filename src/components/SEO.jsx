@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 const SEO = ({ title, description, breadcrumbs = [] }) => {
     const location = useLocation();
     const cleanPath = location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
-    const currentUrl = `https://ortodonciarajevic.cl${cleanPath}`;
+    const currentUrl = `https://www.ortodonciarajevic.cl${cleanPath}`;
 
     // Base breadcrumb (Home)
     const breadcrumbList = [
@@ -13,13 +13,13 @@ const SEO = ({ title, description, breadcrumbs = [] }) => {
             "@type": "ListItem",
             "position": 1,
             "name": "Inicio",
-            "item": "https://ortodonciarajevic.cl"
+            "item": "https://www.ortodonciarajevic.cl"
         },
         ...breadcrumbs.map((crumb, index) => ({
             "@type": "ListItem",
             "position": index + 2,
             "name": crumb.name,
-            "item": `https://ortodonciarajevic.cl${crumb.path}`
+            "item": `https://www.ortodonciarajevic.cl${crumb.path}`
         }))
     ];
 

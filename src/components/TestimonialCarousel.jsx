@@ -66,6 +66,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem' }}>
                     <button
                         onClick={prevSlide}
+                        aria-label="Ver testimonios anteriores"
                         style={{
                             width: '40px',
                             height: '40px',
@@ -89,6 +90,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                             <button
                                 key={i}
                                 onClick={() => setCurrentIndex(i)}
+                                aria-label={`Ir al grupo de testimonios ${i + 1}`}
                                 style={{
                                     width: i === currentIndex ? '24px' : '12px',
                                     height: '4px',
@@ -103,6 +105,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                     </div>
                     <button
                         onClick={nextSlide}
+                        aria-label="Ver siguientes testimonios"
                         style={{
                             width: '40px',
                             height: '40px',

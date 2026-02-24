@@ -100,7 +100,7 @@ const Home = () => {
           height: '100%',
           zIndex: 1
         }}>
-          <img src={heroHome} alt="Ortodoncia Rajevic - Sonrisas Reales" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '85% center' }} />
+          <img src={heroHome} alt="Ortodoncia Rajevic - Sonrisas Reales" width="1920" height="1080" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '85% center' }} />
           {/* Strategic overlay: transparent left, solid white right for text */}
           <div style={{
             position: 'absolute',
@@ -177,7 +177,7 @@ const Home = () => {
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
                 Hoy en día, se puede comprar un tratamiento de ortodoncia casi como un producto de supermercado. Alineadores por correo, franquicias de paso rápido, diagnósticos por selfie.
               </p>
-              <h4 style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1rem' }}>Lo que nadie dice:</h4>
+              <h3 style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1rem' }}>Lo que nadie dice:</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
                   <BsCheckCircle style={{ color: 'var(--color-alert)', flexShrink: 0, fontSize: '1.2rem', marginTop: '3px' }} />
@@ -231,7 +231,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={heroChild} alt="Ortodoncia Infantil" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={heroChild} alt="Ortodoncia Infantil" loading="lazy" width="400" height="200" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>01</div>
@@ -250,7 +250,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={heroAdult} alt="Ortodoncia Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={heroAdult} alt="Ortodoncia Adultos" loading="lazy" width="400" height="200" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>02</div>
@@ -269,7 +269,7 @@ const Home = () => {
               style={{ padding: '0', overflow: 'hidden' }}
             >
               <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img src={heroComplex} alt="Casos Complejos" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+                <img src={heroComplex} alt="Casos Complejos" loading="lazy" width="400" height="200" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
               </div>
               <div style={{ padding: '2rem' }}>
                 <div style={{ color: 'var(--color-secondary)', fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>03</div>
@@ -311,7 +311,7 @@ const Home = () => {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center', gap: '4rem' }}>
             <div style={{ position: 'relative' }}>
-              <img src={drRajevicImg} alt="Dr Rajevic en Consulta" style={{ borderRadius: 'var(--border-radius)', width: '100%', filter: 'grayscale(100%)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'grayscale(0%)'} onMouseOut={(e) => e.currentTarget.style.filter = 'grayscale(100%)'} />
+              <img src={drRajevicImg} alt="Dr Rajevic en Consulta" loading="lazy" width="600" height="600" style={{ borderRadius: 'var(--border-radius)', width: '100%', filter: 'grayscale(100%)', transition: 'filter 0.3s' }} onMouseOver={(e) => e.currentTarget.style.filter = 'grayscale(0%)'} onMouseOut={(e) => e.currentTarget.style.filter = 'grayscale(100%)'} />
             </div>
             <div>
               <h2 style={{ marginBottom: '1.5rem' }}>35 Años de "Bocas Difíciles"</h2>

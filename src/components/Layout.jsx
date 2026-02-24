@@ -46,9 +46,9 @@ const Layout = () => {
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsClock /> Lun - Vie: 9:00 - 19:00</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                        <a href="https://www.facebook.com/profile.php?id=61586571209741" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaFacebookF /></a>
-                        <a href="https://www.instagram.com/ortodonciarajevic/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaInstagram /></a>
-                        <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaLinkedinIn /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61586571209741" aria-label="Facebook de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaFacebookF /></a>
+                        <a href="https://www.instagram.com/ortodonciarajevic/" aria-label="Instagram de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaInstagram /></a>
+                        <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" aria-label="LinkedIn del Dr. Zdenko Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaLinkedinIn /></a>
                     </div>
                 </div>
             </div>
@@ -171,9 +171,9 @@ const Layout = () => {
                                 Criterio clínico superior. Especialistas en diagnóstico, planificación y casos complejos de ortodoncia en Vitacura.
                             </p>
                             <div style={{ display: 'flex', gap: '1rem' }}>
-                                <a href="https://www.facebook.com/profile.php?id=61586571209741" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaFacebookF /></a>
-                                <a href="https://www.instagram.com/ortodonciarajevic/" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaInstagram /></a>
-                                <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaLinkedinIn /></a>
+                                <a href="https://www.facebook.com/profile.php?id=61586571209741" aria-label="Visitar Facebook" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaFacebookF /></a>
+                                <a href="https://www.instagram.com/ortodonciarajevic/" aria-label="Visitar Instagram" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaInstagram /></a>
+                                <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" aria-label="Visitar LinkedIn" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaLinkedinIn /></a>
                             </div>
                         </div>
 
@@ -222,11 +222,11 @@ const Layout = () => {
                             &copy; {new Date().getFullYear()} Ortodoncia Rajevic. Todos los derechos reservados.
                         </div>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                            <Link to="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Privacidad</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-                            <Link to="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Cookies</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-                            <Link to="/politica-de-reembolso" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Política de Reembolso</Link>
+                            <Link to="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Privacidad</Link>
+                            <span style={{ color: 'rgba(255,255,255,0.5)' }}>|</span>
+                            <Link to="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Cookies</Link>
+                            <span style={{ color: 'rgba(255,255,255,0.5)' }}>|</span>
+                            <Link to="/politica-de-reembolso" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Reembolso</Link>
                         </div>
                     </div>
                 </div>
