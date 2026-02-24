@@ -1,5 +1,5 @@
-
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 
@@ -25,11 +25,13 @@ const BlogCard = ({ post }) => {
                 e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
             }}
         >
-            <div style={{ height: '200px', overflow: 'hidden' }}>
-                <img
+            <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                <Image
                     src={post.image}
                     alt={post.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
