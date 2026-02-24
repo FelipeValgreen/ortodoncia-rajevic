@@ -20,10 +20,14 @@ export const metadata = {
             { url: '/apple-touch-icon.png', sizes: '180x180' },
         ],
     },
-    themeColor: '#1A3A5C',
+},
     verification: {
         google: '6Uh51YpZ6okjTKOw3Q3SYg_u4AH-e8vx5UMtCIwwm1w',
     },
+};
+
+export const viewport = {
+    themeColor: '#1A3A5C',
 };
 
 export default function RootLayout({ children }) {
