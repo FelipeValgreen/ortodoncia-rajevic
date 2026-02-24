@@ -17,25 +17,25 @@ const ChildOrtho = () => {
 
     const childTestimonials = [
         {
-            name: "Andrea P.",
-            role: "Mamá de paciente (7 años)",
-            text: "La diferencia en la cara de mi hijo es impresionante. El Dr. Rajevic no solo arregló sus dientes chuecos, sino que ahora respira mejor y duerme toda la noche. El enfoque integral es real.",
+            name: "Carolina Muñoz",
+            role: "Mamá de paciente",
+            text: "Excelente atención, muy dedicado el doctor y por sobretodo amoroso. Atiende a mi hija y sus dientes y paladar cambiaron del cielo a la tierra, muy agradecidos con el doctor Zdenko.",
             image: navChild,
-            date: "Hace 3 meses en Google"
+            date: "Hace una semana en Google"
         },
         {
-            name: "Marcela S.",
-            role: "Mamá de paciente (11 años)",
-            text: "Nos ahorramos una cirugía de mandíbula futura gracias a la ortopedia. Agradezco la honestidad del diagnóstico desde el día uno. Vale la pena cada peso invertido en salud.",
+            name: "María José L.",
+            role: "Mamá de paciente",
+            text: "Llegué preocupada porque me decían que mi hijo necesitaba cirugía. El Dr. Rajevic nos explicó que con ortopedia podíamos guiar su crecimiento. Hoy tiene una mordida perfecta y evitamos el pabellón. La paciencia con los niños es única.",
             image: navChild,
-            date: "Hace 5 meses en Google"
+            date: "Hace 2 meses en Google"
         },
         {
-            name: "Roberto G.",
-            role: "Papá de paciente (9 años)",
-            text: "El trato con los niños es excepcional. Mi hija tenía pánico al dentista y aquí viene feliz a sus controles. La paciencia de todo el equipo es maravillosa.",
+            name: "Catalina Izcue",
+            role: "Mamá de paciente",
+            text: "Mi experiencia con la clínica y el Dr. Zdenko ha sido realmente excelente. Desde lo administrativo, como atender siempre a tiempo o la amabilidad del equipo, hasta lo clínico. Excelente nivel de profesionales.",
             image: navChild,
-            date: "Hace 1 mes en Google"
+            date: "Hace 5 días en Google"
         }
     ];
 
