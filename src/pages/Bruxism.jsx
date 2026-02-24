@@ -14,25 +14,25 @@ const Bruxism = () => {
 
     const bruxismTestimonials = [
         {
-            name: "Loreto M.",
-            role: "Diseñadora Gráfica",
-            text: "Amanecía con dolor de cabeza todos los días a las 11am. Pensé que era vista cansada, pero el Dr. Rajevic diagnosticó mi bruxismo. El plano de relajación me cambió la vida, el dolor desapareció.",
-            image: navAdult,
-            date: "Hace 2 meses en Google"
-        },
-        {
-            name: "Patricio V.",
-            role: "Ingeniero Civil",
-            text: "Mis dientes se estaban poniendo chicos y planos. No sabía que los estaba limando al dormir. Ahora están protegidos y descanso mucho mejor. Gran profesionalismo.",
-            image: navAdult,
-            date: "Hace 6 meses en Google"
-        },
-        {
-            name: "Isabel R.",
-            role: "Profesora",
-            text: "Llevaba años con 'cliks' en la mandíbula al comer. El ajuste oclusal y el plano estabilizaron mi mordida. Gracias por la paciencia y explicación.",
-            image: navAdult,
+            name: "Gonzalo R.",
+            role: "Paciente",
+            text: "Llegué con un dolor articular insoportable en las mañanas. El plano de relajación que me hizo el Dr. me cambió la vida. Se nota la diferencia de calidad clínica y ajuste versus otros dentistas.",
+            image: null,
             date: "Hace 1 mes en Google"
+        },
+        {
+            name: "Daniela S.",
+            role: "Paciente",
+            text: "Excelente doctor. Muy empático para explicar el problema del bruxismo. Ya no despierto con dolores de cabeza ni cuello. Se nota la experiencia.",
+            image: null,
+            date: "Hace 3 semanas en Google"
+        },
+        {
+            name: "Maria Paz Tagle",
+            role: "Paciente",
+            text: "Excelente atención. Muy profesional y dedicado. 100% recomendado.",
+            image: null,
+            date: "Hace 3 semanas en Google"
         }
     ];
 

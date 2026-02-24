@@ -139,6 +139,36 @@ const TestimonialCarousel = ({ testimonials }) => {
                     </button>
                 </div>
             )}
+
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+                <a
+                    href="https://www.google.com/search?q=ortodoncia+rajevic+vitacura#lrd=0x9662cbe8b2c4d8e5:0x52482e1eef45cda1,1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        fontSize: '1rem',
+                        fontWeight: '600',
+                        color: 'var(--color-primary)',
+                        textDecoration: 'none',
+                        borderBottom: '2px solid var(--color-secondary)',
+                        paddingBottom: '0.2rem',
+                        transition: 'opacity 0.2s'
+                    }}
+                    onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.target.style.opacity = '1'}
+                >
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
+                        <path d="M24.48 48.0016C30.9525 48.0016 36.4116 45.8764 40.3888 42.2078L32.6549 36.2111C30.5031 37.675 27.7252 38.5039 24.4888 38.5039C18.2275 38.5039 12.9187 34.2798 11.0139 28.6006H3.03296V34.7825C7.10718 42.8868 15.4056 48.0016 24.48 48.0016Z" fill="#34A853" />
+                        <path d="M11.0051 28.5997C10.0139 25.6457 10.0139 22.3557 11.0051 19.4017V13.2198H3.033A24.0137 24.0137 0 0 0 0 24.0007C0 27.999 1.09241 31.657 3.033 34.7816L11.0051 28.5997Z" fill="#FBBC04" />
+                        <path d="M24.48 9.49932C27.9016 9.4446 31.2086 10.7339 33.6866 13.0973L40.5387 6.24523C36.2 2.17101 30.4418 -0.0632324 24.48 0.000305176C15.4056 0.000305176 7.10718 5.11516 3.03296 13.2206L11.0051 19.4025C12.901 13.7233 18.2187 9.49932 24.48 9.49932Z" fill="#EA4335" />
+                    </svg>
+                    Ver todas las reseñas en Google
+                </a>
+            </div>
         </div>
     );
 };

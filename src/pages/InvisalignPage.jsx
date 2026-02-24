@@ -18,25 +18,25 @@ const InvisalignPage = () => {
 
     const invisalignTestimonials = [
         {
-            name: "Diego L.",
-            role: "Gerente de Marketing",
-            text: "Viajo mucho por trabajo y los brackets no eran opción por las urgencias. Invisalign se adaptó perfecto a mi ritmo. El Dr. Rajevic monitoreó todo digitalmente. Un 7.",
-            image: navInvisalign,
+            name: "Pedro G.",
+            role: "Paciente",
+            text: "Me hice el tratamiento Invisalign con el doctor Rajevic y fue la mejor inversión. Rápido, sin dolor y el resultado superó mis expectativas. Aparte la clínica es impecable.",
+            image: null,
             date: "Hace 1 mes en Google"
         },
         {
-            name: "Valentina C.",
-            role: "Novia (28 años)",
-            text: "Me casaba en 8 meses y quería fotos perfectas pero sin fierros. El Dr. Rajevic lo logró a tiempo. Nadie supo que estaba en tratamiento hasta que vieron mi sonrisa nueva.",
-            image: navAdult,
-            date: "Hace 4 meses en Google"
+            name: "Javier V.",
+            role: "Paciente",
+            text: "Trabajo en reuniones todo el día y la verdad no quería usar brackets de metal. La ortodoncia invisible fue la solución perfecta porque nadie lo notó. Excelente nivel de doctores.",
+            image: null,
+            date: "Hace 2 meses en Google"
         },
         {
-            name: "Tomás H.",
-            role: "Chef",
-            text: "Poder sacármelos para probar comida en la cocina es impagable. Higiene y estética 10/10. La planificación 3D fue exacta, quedó tal cual la simulación.",
-            image: navInvisalign,
-            date: "Hace 2 meses en Google"
+            name: "Maria Paz Tagle",
+            role: "Paciente",
+            text: "Excelente atención. Muy profesional y dedicado. 100% recomendado.",
+            image: null,
+            date: "Hace 3 semanas en Google"
         }
     ];
 

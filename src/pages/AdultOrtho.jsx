@@ -15,25 +15,25 @@ const AdultOrtho = () => {
 
     const adultTestimonials = [
         {
-            name: "Javier V.",
-            role: "Ingeniero Comercial",
-            text: "Trabajo en reuniones todo el día y no podía usar brackets metálicos. La ortodoncia invisible fue la solución perfecta. Nadie lo notó y el resultado fue rapidísimo. 100% recomendado.",
-            image: navInvisalign,
+            name: "María Luz Díaz",
+            role: "Paciente",
+            text: "Dudé mucho por mi edad, pero el Dr Zdenko me explicó súper claro las opciones estéticas y empezamos el tratamiento. Ya veo los cambios y es mucho más cómodo de lo que pensé. Lo recomiendo a ojos cerrados.",
+            image: null,
+            date: "Hace 3 semanas en Google"
+        },
+        {
+            name: "Carlos Y.",
+            role: "Paciente",
+            text: "Seco el doctor. Trabajo atendiendo público y los brackets de zafiro fueron la mejor decisión. Muy puntual, profesional y todo su equipo es un 7.",
+            image: null,
             date: "Hace 2 meses en Google"
         },
         {
-            name: "Carolina M.",
-            role: "Arquitecta (42 años)",
-            text: "Tenía miedo de usar ortodoncia a mi edad. Con el Dr. Rajevic fue todo muy claro y profesional. El cambio en mi sonrisa y en mi seguridad personal ha sido impagable.",
-            image: navAdult,
-            date: "Hace 6 meses en Google"
-        },
-        {
-            name: "Gonzalo R.",
-            role: "Abogado",
-            text: "El Dr. Rajevic solucionó un problema de mordida y dolor articular que arrastraba por años y que otros no vieron. La precisión del diagnóstico hizo toda la diferencia.",
-            image: navAdult,
-            date: "Hace 1 mes en Google"
+            name: "Maria Paz Tagle",
+            role: "Paciente",
+            text: "Excelente atención. Muy profesional y dedicado. El proceso como adulto fue súper llevadero y los resultados increíbles. 100% recomendado.",
+            image: null,
+            date: "Hace 3 semanas en Google"
         }
     ];
 

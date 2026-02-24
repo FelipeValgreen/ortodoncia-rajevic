@@ -14,25 +14,25 @@ const SecondOpinion = () => {
 
     const secondOpinionTestimonials = [
         {
-            name: "Fernanda G.",
-            role: "Universitaria",
-            text: "Llevaba 3 años con brackets en otro lado y no veía avances. Aquí me explicaron por qué no cerraban los espacios. En 8 meses el Dr. Rajevic solucionó lo que otros no pudieron en años.",
-            image: navAdult,
-            date: "Hace 5 meses en Google"
+            name: "Fernanda L.",
+            role: "Paciente",
+            text: "Seco el doctor Rajevic! Llegué por una segunda opinión y me salvó. Muy honesto y claro al explicar el tratamiento.",
+            image: null,
+            date: "Hace 1 mes en Google"
         },
         {
-            name: "Familia Muñoz",
-            role: "Padres de Joaquín",
-            text: "Nos dijeron que nuestro hijo necesitaba cirugía sí o sí. Buscamos al Dr. Rajevic para una segunda opinión y logró corregir el problema con ortopedia. Estaremos siempre agradecidos.",
-            image: navAdult,
+            name: "Alejandra P.",
+            role: "Paciente",
+            text: "Venía de un tratamiento fracasado de 3 años en otra clínica. El Dr Rajevic me hizo un diagnóstico crudo pero real, y en un año me arregló todo el desastre anterior. Agradecida de por vida.",
+            image: null,
             date: "Hace 2 meses en Google"
         },
         {
-            name: "Pablo D.",
-            role: "Ingeniero",
-            text: "La diferencia en el diagnóstico es abismal. Aquí se toman el tiempo de analizar y medir antes de actuar. Me sentí en manos de un verdadero experto, no de un vendedor.",
-            image: navAdult,
-            date: "Hace 1 mes en Google"
+            name: "Catalina Izcue",
+            role: "Paciente",
+            text: "Mi experiencia con la clínica y el Dr. Zdenko ha sido realmente excelente. Desde lo administrativo, como atender siempre a tiempo o la amabilidad del equipo, hasta lo clínico. Excelente nivel de profesionales.",
+            image: null,
+            date: "Hace 5 días en Google"
         }
     ];
 

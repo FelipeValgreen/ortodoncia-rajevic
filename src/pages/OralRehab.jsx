@@ -14,25 +14,25 @@ const OralRehab = () => {
 
     const rehabTestimonials = [
         {
-            name: "Ricardo A.",
-            role: "Empresario",
-            text: "Mi caso era complejo, me faltaban piezas y mi mordida estaba colapsada. La coordinación entre el Dr. Rajevic y el implantólogo fue impecable. Hoy sonrío con confianza.",
-            image: navAdult, // Placeholder
-            date: "Hace 8 meses en Google"
-        },
-        {
-            name: "Carmen Gloria F.",
-            role: "Jubilada",
-            text: "Pensé que a mi edad ya no había solución. Me explicaron que primero debíamos ordenar para luego rehabilitar. El resultado es tan natural que nadie cree que son implantes.",
-            image: navAdult, // Placeholder
-            date: "Hace 1 año en Google"
-        },
-        {
-            name: "Manuel S.",
-            role: "Abogado",
-            text: "Volví a comer con confianza. La ortodoncia pre-protésica fue la clave para que mis coronas duraran. Gracias por la dedicación y el profesionalismo.",
-            image: navAdult, // Placeholder
+            name: "Rodrigo A.",
+            role: "Paciente",
+            text: "Un trabajo complejo de implantes y ortodoncia previos. El Dr Rajevic planificó todo a la perfección con la rehabilitadora. Profesionalismo al máximo nivel, logré recuperar mi mordida y estética.",
+            image: null,
             date: "Hace 3 meses en Google"
+        },
+        {
+            name: "Felipe Cerceda",
+            role: "Paciente",
+            text: "Fui por un caso complejo de mordida cruzada y desgaste dental severo. En otra parte me querían operar. Acá lograron un resultado increíble conservando mis piezas y mejorando mi calidad de vida.",
+            image: null,
+            date: "Hace 1 mes en Google"
+        },
+        {
+            name: "Catalina Izcue",
+            role: "Paciente",
+            text: "Mi experiencia con la clínica y el Dr. Zdenko ha sido realmente excelente. Desde lo administrativo, como atender siempre a tiempo o la amabilidad del equipo, hasta lo clínico. Excelente nivel de profesionales.",
+            image: null,
+            date: "Hace 5 días en Google"
         }
     ];
 
