@@ -76,7 +76,7 @@ const Bruxism = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroBruxism} alt="Bruxismo y Relajación Mandibular" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src={heroBruxism} alt="Bruxismo y Relajación Mandibular" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
                 </div>
 
@@ -165,7 +165,9 @@ const Bruxism = () => {
                 <div className="container">
                     <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', maxWidth: '800px', margin: '0 auto', backgroundColor: 'white', padding: '3rem', borderRadius: 'var(--border-radius)', boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
                         <div style={{ flex: '0 0 120px' }}>
-                            <img src={drRajevicImg} alt="Dr. Rajevic" style={{ borderRadius: '50%', width: '120px', height: '120px', objectFit: 'cover' }} />
+                            <div style={{ position: 'relative', width: '120px', height: '120px', margin: '0 auto 1rem auto' }}>
+                                <Image src={drRajevicImg} alt="Dr. Rajevic" fill style={{ borderRadius: '50%', objectFit: 'cover' }} />
+                            </div>
                         </div>
                         <div>
                             <h4 style={{ marginBottom: '0.5rem' }}>Especialista en Oclusión</h4>

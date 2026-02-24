@@ -1,6 +1,10 @@
 import './../index.css';
 import Script from 'next/script';
 import Layout from '../components/Layout';
+import { Inter, Playfair_Display } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
 
 export const metadata = {
     title: 'Clínica Ortodoncia Rajevic',
@@ -20,7 +24,6 @@ export const metadata = {
             { url: '/apple-touch-icon.png', sizes: '180x180' },
         ],
     },
-},
     verification: {
         google: '6Uh51YpZ6okjTKOw3Q3SYg_u4AH-e8vx5UMtCIwwm1w',
     },
@@ -32,7 +35,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="es-CL">
+        <html lang="es-CL" className={`${inter.variable} ${playfair.variable}`}>
             <head>
                 <link rel="preload" as="image" href="/src/assets/hero_child.webp" type="image/webp" />
             </head>

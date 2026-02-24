@@ -108,24 +108,17 @@ const ChildOrtho = () => {
                 color: 'white',
                 overflow: 'hidden'
             }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+                    <Image src={heroChild} alt="Especialista en Ortopedia Maxilar Infantil Vitacura" fill priority style={{ objectFit: 'cover' }} />
+                </div>
                 <div style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    zIndex: 1
-                }}>
-                    <img src={heroChild} alt="Especialista en Ortopedia Maxilar Infantil Vitacura" width="1920" height="1080" fetchpriority="high" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.7) 50%, rgba(16, 24, 40, 0.4) 100%)'
-                    }}></div>
-                </div>
+                    background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.7) 50%, rgba(16, 24, 40, 0.4) 100%)'
+                }}></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
@@ -173,7 +166,9 @@ const ChildOrtho = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <img src={growthSchematic} alt="Crecimiento Maxilofacial Infantil" loading="lazy" width="800" height="600" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '4/3' }}>
+                                <Image src={growthSchematic} alt="Crecimiento Maxilofacial Infantil" fill style={{ borderRadius: 'var(--border-radius)', objectFit: 'contain' }} />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
@@ -254,8 +249,9 @@ const ChildOrtho = () => {
                 <div className="container">
                     <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
                         <div style={{ position: 'relative' }}>
-                            <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '100px', height: '100px', backgroundColor: 'var(--color-secondary)', opacity: 0.1, borderRadius: '50%' }}></div>
-                            <img src={drRajevicImg} alt="Dr. Rajevic con paciente" loading="lazy" width="600" height="600" style={{ width: '100%', borderRadius: 'var(--border-radius)', position: 'relative', zIndex: 1 }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '1/1' }}>
+                                <Image src={drRajevicImg} alt="Dr. Rajevic con paciente" fill style={{ width: '100%', borderRadius: 'var(--border-radius)', objectFit: 'cover' }} />
+                            </div>
                         </div>
                         <div>
                             <h2>Responsabilidad Clínica</h2>

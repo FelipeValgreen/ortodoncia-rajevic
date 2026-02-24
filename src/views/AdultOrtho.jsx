@@ -68,15 +68,8 @@ const AdultOrtho = () => {
                 color: 'white',
                 overflow: 'hidden'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 1
-                }}>
-                    <img src={heroAdult} alt="Ortodoncia Estética y Brackets para Adultos en Vitacura" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+                    <Image src={heroAdult} alt="Ortodoncia Estética y Brackets para Adultos en Vitacura" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{
                         position: 'absolute',
                         top: 0,
@@ -125,7 +118,9 @@ const AdultOrtho = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <img src={navAdult} alt="Ortodoncia Adultos Profesional" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                                <Image src={navAdult} alt="Ortodoncia Adultos Profesional" fill style={{ borderRadius: 'var(--border-radius)', objectFit: 'cover' }} />
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}

@@ -113,7 +113,7 @@ const SecondOpinion = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroSecondOpinion} alt="Segunda Opinión Ortodoncia" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src={heroSecondOpinion} alt="Segunda Opinión Ortodoncia" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
                 </div>
 
@@ -240,7 +240,9 @@ const SecondOpinion = () => {
             <section className="section">
                 <div className="container">
                     <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                        <img src={drRajevicImg} alt="Dr. Rajevic" style={{ borderRadius: '50%', width: '150px', height: '150px', objectFit: 'cover' }} />
+                        <div style={{ position: 'relative', width: '150px', height: '150px', margin: '0 auto 1.5rem auto' }}>
+                            <Image src={drRajevicImg} alt="Dr. Rajevic" fill style={{ borderRadius: '50%', objectFit: 'cover' }} />
+                        </div>
                         <div>
                             <h3>El "Juez" Clínico</h3>
                             <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>

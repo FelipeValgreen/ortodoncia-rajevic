@@ -41,15 +41,8 @@ const Diagnosis = () => {
                 color: 'white',
                 overflow: 'hidden'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 1
-                }}>
-                    <img src={heroDiagnosis} alt="Dr. Rajevic realizando diagnóstico clínico con paciente" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+                    <Image src={heroDiagnosis} alt="Dr. Rajevic realizando diagnóstico clínico con paciente" fill priority style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
                     {/* Gradient Overlay for general contrast */}
                     <div style={{
                         position: 'absolute',
@@ -121,7 +114,9 @@ const Diagnosis = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <img src={diagnosisFlow} alt="Diagrama de flujo diagnóstico" style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                                <Image src={diagnosisFlow} alt="Diagrama de flujo diagnóstico" fill style={{ borderRadius: 'var(--border-radius)', objectFit: 'contain' }} />
+                            </div>
                         </motion.div>
                     </div>
                 </div>

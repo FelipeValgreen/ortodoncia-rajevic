@@ -75,7 +75,7 @@ const OralRehab = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroRehab} alt="Rehabilitación Oral Compleja" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src={heroRehab} alt="Rehabilitación Oral Compleja" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(16, 24, 40, 0.9), rgba(16, 24, 40, 0.4))' }}></div>
                 </div>
 

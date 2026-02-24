@@ -30,24 +30,18 @@ const Services = () => {
                 color: 'white',
                 overflow: 'hidden'
             }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+                    <Image src={heroServices} alt="Servicios Clínicos Ortodoncia Rajevic" fill priority style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
+                </div>
                 <div style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    zIndex: 1
-                }}>
-                    <img src={heroServices} alt="Servicios Clínicos Ortodoncia Rajevic" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }} />
-                    <div style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        background: 'linear-gradient(to right, rgba(16, 24, 40, 0.85) 0%, rgba(16, 24, 40, 0.5) 100%)'
-                    }}></div>
-                </div>
+                    background: 'linear-gradient(to right, rgba(16, 24, 40, 0.85) 0%, rgba(16, 24, 40, 0.5) 100%)'
+                }}></div>
+
 
                 <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
@@ -80,8 +74,8 @@ const Services = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div style={{ width: '100%', borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
-                                <img src={childOrthoSchematic} alt="Esquema de guía de crecimiento maxilar" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                                <Image src={childOrthoSchematic} alt="Esquema de guía de crecimiento maxilar" fill style={{ objectFit: 'contain' }} />
                             </div>
                         </motion.div>
                         <motion.div
@@ -118,8 +112,8 @@ const Services = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div style={{ width: '100%', borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
-                                <img src={alignmentSchematic} alt="Esquema de alineación dental y biomecánica" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                                <Image src={alignmentSchematic} alt="Esquema de alineación dental y biomecánica" fill style={{ objectFit: 'contain' }} />
                             </div>
                         </motion.div>
                         <motion.div

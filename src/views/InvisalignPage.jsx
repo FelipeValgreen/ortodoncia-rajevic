@@ -118,7 +118,7 @@ const InvisalignPage = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroInvisalign} alt="Tratamiento con Alineadores Transparentes Invisalign Vitacura" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src={heroInvisalign} alt="Tratamiento con Alineadores Transparentes Invisalign Vitacura" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{
                         position: 'absolute',
                         top: 0,
@@ -185,7 +185,9 @@ const InvisalignPage = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <img src={alignmentSchematic} alt="Biomecánica de Alineación" style={{ width: '100%', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+                            <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9' }}>
+                                <Image src={alignmentSchematic} alt="Biomecánica de Alineación" fill style={{ borderRadius: 'var(--border-radius)', objectFit: 'contain' }} />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
