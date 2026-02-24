@@ -97,8 +97,8 @@ const Contact = () => {
     return (
         <>
             <SEO
-                title="Contacto Ortodoncia Rajevic: Agenda tu Evaluación en Vitacura"
-                description="Agenda tu hora con el Dr. Rajevic en Vitacura. Evaluación de ortodoncia, frenillos e Invisalign. WhatsApp: +56 9 3342 7916."
+                title="Contacto y Reservas | Clínica Ortodoncia Rajevic Vitacura"
+                description="Agende su evaluación con el Dr. Zdenko Rajevic en Vitacura. Ortodoncia estética, invisible e infantil. Envíenos un mensaje o contáctenos por WhatsApp."
                 breadcrumbs={[{ name: 'Contacto', path: '/contacto' }]}
             />
             <section className="section">

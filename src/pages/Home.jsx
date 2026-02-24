@@ -78,8 +78,77 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Ortodoncia Rajevic | Clínica de Ortodoncia en Vitacura y Estética Dental"
-        description="Clínica de ortodoncia en Vitacura liderada por el Dr. Zdenko Rajevic. Expertos en ortodoncia invisible, lingual y casos complejos. Agenda tu evaluación."
+        title="Clínica Ortodoncia en Vitacura | Dr. Rajevic | Invisalign y Estética"
+        description="Ortodoncista experto en Vitacura, Santiago. Especialistas en Invisalign, ortodoncia invisible para adultos, niños y casos complejos. Agende su evaluación."
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Dentist",
+            "name": "Clínica Ortodoncia Rajevic",
+            "image": "https://www.ortodonciarajevic.cl/src/assets/dr-rajevic.webp",
+            "@id": "https://www.ortodonciarajevic.cl",
+            "url": "https://www.ortodonciarajevic.cl",
+            "telephone": "+56933427916",
+            "priceRange": "$$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Las Hualtatas 8999",
+              "addressLocality": "Vitacura",
+              "addressRegion": "Santiago",
+              "addressCountry": "CL"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "19:00"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuánto dura un tratamiento de ortodoncia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La duración varía según la complejidad del caso. Un tratamiento simple puede durar entre 12-18 meses, mientras que casos más complejos pueden extenderse hasta 24-30 meses. Durante la evaluación inicial, le entregaremos un plan de tratamiento con tiempos realistas basados en su diagnóstico específico."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Atienden con convenio Isapre?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, trabajamos con todas las isapres. Emitimos bonos electrónicos y le ayudamos con la gestión para maximizar su cobertura. También aceptamos pago con tarjetas de crédito y débito."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Desde qué edad pueden empezar los niños con ortodoncia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La edad ideal para una primera evaluación es alrededor de los 6-7 años. En algunos casos, la ortopedia maxilar puede iniciarse desde los 4 años para guiar el crecimiento de los huesos. La intervención temprana puede prevenir tratamientos más complejos en el futuro."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo funciona la evaluación inicial?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La primera consulta incluye un examen clínico completo, análisis de mordida, evaluación articular (ATM) y una explicación detallada del diagnóstico. Si es necesario, solicitamos radiografías y fotografías para crear un plan de tratamiento personalizado. La duración aproximada es de 30-45 minutos."
+                }
+              }
+            ]
+          }
+        ]}
       />
       {/* 1. HERO MANIFESTO */}
       <section className="hero-section hero-home" style={{

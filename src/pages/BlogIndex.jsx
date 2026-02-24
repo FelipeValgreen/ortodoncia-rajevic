@@ -9,8 +9,8 @@ const BlogIndex = () => {
     return (
         <>
             <SEO
-                title="Blog de Ortodoncia y Salud Dental | Dr. Rajevic Vitacura"
-                description="Consejos de ortodoncia, guías de cuidado para Invisalign y brackets, y noticias sobre salud bucal del equipo del Dr. Zdenko Rajevic."
+                title="Blog de Ortodoncia y Salud Dental | Artículos Especializados Vitacura"
+                description="Infórmese con nuestros artículos clínicos sobre Invisalign, ortodoncia estética, bruxismo y más. Guías redactadas por especialistas de Ortodoncia Rajevic."
                 breadcrumbs={[{ name: 'Blog', path: '/blog' }]}
             />
 

@@ -39,9 +39,21 @@ const Bruxism = () => {
     return (
         <>
             <SEO
-                title="Tratamiento de Bruxismo y Dolor de ATM en Vitacura | Clínica Rajevic"
-                description="Tratamiento médico del bruxismo en Vitacura. Planos de relajación Míchigan y alivio del dolor orofacial y de ATM. Recupere su descanso."
+                title="Tratamiento Bruxismo Vitacura | Plano de Relajación Míchigan"
+                description="Clínica experta en bruxismo y dolor de ATM en Vitacura. Detenga el desgaste dental y el dolor de cabeza con un plano de relajación médico a medida."
                 breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Bruxismo y ATM', path: '/bruxismo-planos-relajacion-vitacura' }]}
+                schema={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "MedicalSpecialty",
+                        "name": "Tratamiento de Bruxismo y ATM",
+                        "description": "Diagnóstico y tratamiento del bruxismo y trastornos de la articulación temporomandibular mediante planos de relajación rígidos tipo Míchigan.",
+                        "relevantSpecialty": {
+                            "@type": "MedicalSpecialty",
+                            "name": "Dentistry"
+                        }
+                    }
+                ]}
             />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{

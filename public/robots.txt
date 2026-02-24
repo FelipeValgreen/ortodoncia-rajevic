@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-Sitemap: https://ortodonciarajevic.cl/sitemap.xml
+Sitemap: https://www.ortodonciarajevic.cl/sitemap.xml

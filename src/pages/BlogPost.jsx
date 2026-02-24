@@ -26,6 +26,26 @@ const BlogPost = () => {
                     { name: 'Blog', path: '/blog' },
                     { name: post.title, path: `/blog/${post.slug}` }
                 ]}
+                schema={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": post.title,
+                        "description": post.metaDescription,
+                        "author": {
+                            "@type": "Person",
+                            "name": post.author
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Clínica Ortodoncia Rajevic",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.ortodonciarajevic.cl/src/assets/logo-rajevic.png"
+                            }
+                        }
+                    }
+                ]}
             />
 
             <article className="blog-post-page">

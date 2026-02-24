@@ -39,9 +39,21 @@ const OralRehab = () => {
     return (
         <>
             <SEO
-                title="Rehabilitación Oral Compleja e Implantes en Vitacura | Dr. Rajevic"
-                description="Trabajo interdisciplinario para casos complejos. Ortodoncia pre-protésica, implantes y recuperación funcional de la boca con enfoque integral."
+                title="Rehabilitación Oral e Implantes Vitacura | Ortodoncia Pre-Protésica"
+                description="Trabajo interdisciplinario para casos complejos en Vitacura. Ortodoncia para preparar espacios antes de implantes o carillas. Recupere la función de su boca."
                 breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Rehabilitación Oral', path: '/rehabilitacion-oral-vitacura' }]}
+                schema={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "MedicalSpecialty",
+                        "name": "Ortodoncia Pre-Protésica y Rehabilitación Oral Compleja",
+                        "description": "Preparación ortodóncica interdisciplinaria para la posterior colocación de implantes, coronas o carillas dentales.",
+                        "relevantSpecialty": {
+                            "@type": "MedicalSpecialty",
+                            "name": "Dentistry"
+                        }
+                    }
+                ]}
             />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{

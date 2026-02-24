@@ -13,9 +13,21 @@ const Diagnosis = () => {
     return (
         <>
             <SEO
-                title="Diagnóstico en Ortodoncia Vitacura"
-                description="Diagnóstico clínico de precisión en Ortodoncia Rajevic. Análisis articular, periodontal y planificación digital para resultados estables."
+                title="Diagnóstico Clínico de Precisión en Ortodoncia | Vitacura"
+                description="Lo invisible no se cura. Realizamos un análisis articular, periodontal y cefalométrico exhaustivo antes de colocar aparatos. Evite sorpresas y dolores futuros."
                 breadcrumbs={[{ name: 'Diagnóstico', path: '/diagnostico-ortodoncia-vitacura' }]}
+                schema={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "MedicalSpecialty",
+                        "name": "Diagnóstico de Precisión Facial y Dental",
+                        "description": "Análisis clínico, radiográfico y articular exhaustivo para la planificación predecible en tratamientos de ortodoncia.",
+                        "relevantSpecialty": {
+                            "@type": "MedicalSpecialty",
+                            "name": "Orthodontic"
+                        }
+                    }
+                ]}
             />
             {/* 1. HERO MANIFESTO */}
             <section className="hero-section" style={{

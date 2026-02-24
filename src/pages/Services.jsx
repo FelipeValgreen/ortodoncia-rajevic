@@ -14,8 +14,8 @@ const Services = () => {
     return (
         <>
             <SEO
-                title="Servicios de Ortodoncia en Vitacura: Infantil, Adultos e Invisalign"
-                description="Ortodoncia integral en Vitacura. Especialistas en Ortodoncia Infantil, Adultos, Invisalign, Ortodoncia Lingual y Rehabilitación Oral Compleja."
+                title="Especialidades en Ortodoncia | Clínica Rajevic Vitacura"
+                description="Conozca nuestros servicios clínicos: Ortodoncia Infantil, Adultos, ortodoncia Invisible (Invisalign), Rehabilitación Oral y Diagnóstico de Segunda Opinión."
                 breadcrumbs={[{ name: 'Servicios', path: '/servicios' }]}
             />
             {/* Hero Section */}

@@ -40,9 +40,21 @@ const AdultOrtho = () => {
     return (
         <>
             <SEO
-                title="Ortodoncia Adultos Vitacura: Invisalign y Estética Dental | Dr. Rajevic"
-                description="Nunca es tarde para corregir su sonrisa. Ortodoncia estética, lingual e Invisalign en Vitacura. Tratamientos de alta discreción y eficiencia."
+                title="Ortodoncia para Adultos en Vitacura | Invisalign y Brackets Estéticos"
+                description="Nunca es tarde para la sonrisa perfecta. Ortodoncia invisible (Invisalign), zafiro y lingual para adultos en Vitacura. Tratamientos discretos y eficientes."
                 breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Ortodoncia Adultos', path: '/ortodoncia-adultos-vitacura' }]}
+                schema={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "MedicalSpecialty",
+                        "name": "Ortodoncia para Adultos",
+                        "description": "Tratamientos de ortodoncia estética, invisible y lingual diseñados específicamente para pacientes adultos corporativos.",
+                        "relevantSpecialty": {
+                            "@type": "MedicalSpecialty",
+                            "name": "Orthodontic"
+                        }
+                    }
+                ]}
             />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
@@ -62,7 +74,7 @@ const AdultOrtho = () => {
                     height: '100%',
                     zIndex: 1
                 }}>
-                    <img src={heroAdult} alt="Ortodoncia Estética Adultos" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={heroAdult} alt="Ortodoncia Estética y Brackets para Adultos en Vitacura" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div style={{
                         position: 'absolute',
                         top: 0,

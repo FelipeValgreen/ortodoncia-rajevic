@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, breadcrumbs = [] }) => {
+const SEO = ({ title, description, breadcrumbs = [], schema = null }) => {
     const location = useLocation();
     const cleanPath = location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
     const currentUrl = `https://www.ortodonciarajevic.cl${cleanPath}`;
@@ -23,11 +23,20 @@ const SEO = ({ title, description, breadcrumbs = [] }) => {
         }))
     ];
 
-    const structuredData = {
+    const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": breadcrumbList
     };
+
+    const schemas = [breadcrumbSchema];
+    if (schema) {
+        if (Array.isArray(schema)) {
+            schemas.push(...schema);
+        } else {
+            schemas.push(schema);
+        }
+    }
 
     return (
         <Helmet>
@@ -49,9 +58,11 @@ const SEO = ({ title, description, breadcrumbs = [] }) => {
             <meta name="twitter:description" content={description} />
 
             {/* Structured Data (JSON-LD) */}
-            <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
-            </script>
+            {schemas.map((s, idx) => (
+                <script key={idx} type="application/ld+json">
+                    {JSON.stringify(s)}
+                </script>
+            ))}
         </Helmet>
     );
 };
