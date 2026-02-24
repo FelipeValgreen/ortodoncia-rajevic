@@ -1,10 +1,11 @@
-
-import heroInvisalign from '../assets/hero_invisalign.png';
-import heroChild from '../assets/hero_child.png';
-import heroAdult from '../assets/hero_adult.png';
-import heroDiagnosis from '../assets/hero_diagnosis.png';
-import navInvisalign from '../assets/nav_invisalign.png';
-import heroBruxism from '../assets/hero_bruxism.png';
+import heroInvisalign from '../assets/hero_invisalign.webp';
+import heroChild from '../assets/hero_child.webp';
+import heroAdult from '../assets/hero_adult.webp';
+import heroDiagnosis from '../assets/hero_diagnosis.webp';
+import navInvisalign from '../assets/nav_invisalign.webp';
+import heroBruxism from '../assets/hero_bruxism.webp';
+import invisalignCleaning from '../assets/invisalign_cleaning.webp';
+import invisalignDoctor from '../assets/invisalign_doctor.webp';
 
 export const blogPosts = [
     // INVISALIGN CATEGORY
@@ -59,7 +60,7 @@ export const blogPosts = [
             <p><strong>Técnicamente sí, pero riesgoso.</strong> Invisalign es una herramienta. Quien diseña el movimiento es el doctor. Un especialista en ortodoncia tiene el conocimiento de biomecánica para lograr resultados que un dentista general podría no alcanzar, especialmente en la mordida funcional.</p>
         `,
         category: 'Invisalign',
-        image: navInvisalign,
+        image: invisalignDoctor,
         date: '10 Feb, 2026',
         author: 'Dr. Zdenko Rajevic',
         metaTitle: 'Mitos de Invisalign: Precio y Dolor | Ortodoncia Rajevic',
@@ -86,7 +87,7 @@ export const blogPosts = [
             <p>La regla de oro: "Si no están en tu boca, están en su caja". Muchos alineadores terminan en la basura envueltos en servilletas de restaurante. Evita accidentes costosos guardándolos siempre en su estuche.</p>
         `,
         category: 'Invisalign',
-        image: heroAdult,
+        image: invisalignCleaning,
         date: '05 Feb, 2026',
         author: 'Equipo Clínico',
         metaTitle: 'Cómo limpiar Invisalign y cuidar tus alineadores | Tips',
