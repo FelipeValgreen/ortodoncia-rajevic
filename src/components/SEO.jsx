@@ -59,9 +59,11 @@ const SEO = ({ title, description, breadcrumbs = [], schema = null }) => {
 
             {/* Structured Data (JSON-LD) */}
             {schemas.map((s, idx) => (
-                <script key={idx} type="application/ld+json">
-                    {JSON.stringify(s)}
-                </script>
+                <script
+                    key={idx}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+                />
             ))}
         </Helmet>
     );
