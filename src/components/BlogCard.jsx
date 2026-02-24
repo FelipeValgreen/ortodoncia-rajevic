@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 
 const BlogCard = ({ post }) => {
@@ -49,7 +49,7 @@ const BlogCard = ({ post }) => {
                     lineHeight: '1.4',
                     color: 'var(--color-primary)'
                 }}>
-                    <Link to={`/blog/${post.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <Link href={`/blog/${post.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                         {post.title}
                     </Link>
                 </h3>
@@ -65,7 +65,7 @@ const BlogCard = ({ post }) => {
                 }}>
                     {post.excerpt}
                 </p>
-                <Link to={`/blog/${post.slug}`} style={{
+                <Link href={`/blog/${post.slug}`} style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',

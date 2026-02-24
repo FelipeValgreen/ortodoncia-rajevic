@@ -1,5 +1,6 @@
+"use client";
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const CookieConsent = () => {
@@ -42,7 +43,7 @@ const CookieConsent = () => {
                     <div className="container" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto', flexWrap: 'wrap' }}>
                         <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
                             <p style={{ fontSize: '0.8rem', color: 'var(--color-text-light)', margin: 0, lineHeight: '1.2' }}>
-                                Usamos cookies para mejorar su experiencia. Al navegar, acepta nuestra <Link to="/politica-de-cookies" style={{ textDecoration: 'underline', color: 'var(--color-secondary)' }}>Política de Cookies</Link>.
+                                Usamos cookies para mejorar su experiencia. Al navegar, acepta nuestra <Link href="/politica-de-cookies" style={{ textDecoration: 'underline', color: 'var(--color-secondary)' }}>Política de Cookies</Link>.
                             </p>
                         </div>
                         <div style={{ display: 'flex', gap: '0.5rem', flexShrink: 0 }}>

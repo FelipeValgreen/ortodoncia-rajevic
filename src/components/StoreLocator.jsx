@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import '@googlemaps/extended-component-library/api_loader.js';
 import '@googlemaps/extended-component-library/store_locator.js';
@@ -36,7 +37,7 @@ const CONFIGURATION = {
 const StoreLocator = () => {
     const locatorRef = useRef(null);
     const apiLoaderRef = useRef(null);
-    const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "YOUR_API_KEY_HERE";
+    const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "YOUR_API_KEY_HERE";
 
     useEffect(() => {
         // React intercepts the 'key' prop, so we set it manually on the custom element

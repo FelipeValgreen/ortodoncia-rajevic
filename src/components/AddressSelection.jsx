@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import '@googlemaps/extended-component-library/api_loader.js';
 import '@googlemaps/extended-component-library/split_layout.js';
@@ -38,7 +39,7 @@ const AddressSelection = () => {
     const postalCodeInputRef = useRef(null);
     const countryInputRef = useRef(null);
 
-    const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "YOUR_API_KEY_HERE";
+    const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "YOUR_API_KEY_HERE";
 
     useEffect(() => {
         if (apiLoaderRef.current && API_KEY) {

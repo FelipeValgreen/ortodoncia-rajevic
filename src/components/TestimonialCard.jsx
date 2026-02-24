@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { BsStarFill, BsGoogle } from 'react-icons/bs';
 import { motion } from 'framer-motion';

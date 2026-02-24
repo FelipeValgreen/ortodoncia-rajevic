@@ -1,10 +1,10 @@
+"use client";
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 const SEO = ({ title, description, breadcrumbs = [], schema = null, videoId = null }) => {
-    const location = useLocation();
-    const cleanPath = location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
+    const pathname = usePathname() || "";
+    const cleanPath = pathname.endsWith('/') && pathname.length > 1 ? pathname.slice(0, -1) : pathname;
     const currentUrl = `https://www.ortodonciarajevic.cl${cleanPath}`;
 
     // Base breadcrumb (Home)
@@ -52,7 +52,7 @@ const SEO = ({ title, description, breadcrumbs = [], schema = null, videoId = nu
     }
 
     return (
-        <Helmet>
+        <>
             {/* Standard Meta Tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
@@ -78,7 +78,7 @@ const SEO = ({ title, description, breadcrumbs = [], schema = null, videoId = nu
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
                 />
             ))}
-        </Helmet>
+        </>
     );
 };
 

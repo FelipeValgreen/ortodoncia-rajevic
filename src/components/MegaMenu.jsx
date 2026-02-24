@@ -1,5 +1,6 @@
+"use client";
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const menuItems = [
@@ -67,8 +68,7 @@ const MegaMenu = ({ isOpen, onClose }) => {
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {menuItems.map((item, index) => (
                             <li key={index}>
-                                <Link
-                                    to={item.path}
+                                <Link href={item.path}
                                     onClick={onClose}
                                     style={{
                                         textDecoration: 'none',

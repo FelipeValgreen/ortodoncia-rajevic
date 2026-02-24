@@ -11,6 +11,7 @@ node_modules/
 dist/
 build/
 coverage/
+.next/
 
 # Logs
 npm-debug.log*

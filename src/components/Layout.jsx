@@ -1,5 +1,7 @@
+"use client";
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BsTelephone, BsGeoAlt, BsClock, BsList, BsX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Logo from './Logo';
@@ -7,8 +9,8 @@ import WhatsAppButton from './WhatsAppButton';
 import MegaMenu from './MegaMenu';
 import CookieConsent from './CookieConsent';
 
-const Layout = () => {
-    const location = useLocation();
+const Layout = ({ children }) => {
+    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -58,7 +60,7 @@ const Layout = () => {
                 <div className="container header-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 'var(--header-height)' }}>
                     <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <Logo height={45} />
-                        <Link to="/" style={{
+                        <Link href="/" style={{
                             fontFamily: 'var(--font-body)',
                             fontSize: '1.2rem',
                             fontWeight: '600',
@@ -76,8 +78,8 @@ const Layout = () => {
                         <ul style={{ display: 'flex', listStyle: 'none', gap: '2.5rem', alignItems: 'center', margin: 0 }}>
                             <li>
                                 <Link
-                                    to="/diagnostico-ortodoncia-vitacura"
-                                    className={`nav-link ${location.pathname.includes('diagnostico') ? 'active' : ''}`}
+                                    href="/diagnostico-ortodoncia-vitacura"
+                                    className={`nav-link ${pathname && pathname.includes('diagnostico') ? 'active' : ''}`}
                                 >
                                     Diagnóstico
                                 </Link>
@@ -88,8 +90,8 @@ const Layout = () => {
                                 style={{ position: 'relative', height: '100%', display: 'flex', alignItems: 'center' }}
                             >
                                 <Link
-                                    to="/servicios"
-                                    className={`nav-link ${location.pathname.includes('ortodoncia') || location.pathname.includes('invisalign') || location.pathname.includes('bruxismo') || location.pathname.includes('rehabilitacion') ? 'active' : ''}`}
+                                    href="/servicios"
+                                    className={`nav-link ${pathname && (pathname.includes('ortodoncia') || pathname.includes('invisalign') || pathname.includes('bruxismo') || pathname.includes('rehabilitacion')) ? 'active' : ''}`}
                                     style={{ height: '100%', display: 'flex', alignItems: 'center' }}
                                 >
                                     Servicios
@@ -98,22 +100,22 @@ const Layout = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/dr-zdenko-rajevic"
-                                    className={`nav-link ${location.pathname.includes('dr-zdenko-rajevic') ? 'active' : ''}`}
+                                    href="/dr-zdenko-rajevic"
+                                    className={`nav-link ${pathname && pathname.includes('dr-zdenko-rajevic') ? 'active' : ''}`}
                                 >
                                     Dr. Rajevic
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    to="/blog"
-                                    className={`nav-link ${location.pathname.includes('blog') ? 'active' : ''}`}
+                                    href="/blog"
+                                    className={`nav-link ${pathname && pathname.includes('blog') ? 'active' : ''}`}
                                 >
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
+                                <Link href="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
                                     Agenda tu diagnóstico
                                 </Link>
                             </li>
@@ -130,31 +132,31 @@ const Layout = () => {
             {/* Mobile Menu Overlay */}
             <div className={`mobile-menu-overlay ${mobileMenuOpen ? 'open' : ''}`}>
                 <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', textAlign: 'center', maxHeight: '100vh', overflowY: 'auto', padding: '2rem 0' }}>
-                    <Link to="/" onClick={closeMobileMenu} className="mobile-nav-link">Inicio</Link>
-                    <Link to="/diagnostico-ortodoncia-vitacura" onClick={closeMobileMenu} className="mobile-nav-link">Diagnóstico</Link>
+                    <Link href="/" onClick={closeMobileMenu} className="mobile-nav-link">Inicio</Link>
+                    <Link href="/diagnostico-ortodoncia-vitacura" onClick={closeMobileMenu} className="mobile-nav-link">Diagnóstico</Link>
 
                     <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '0.5rem 0' }}></div>
                     <span style={{ color: 'var(--color-secondary)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Especialidades</span>
 
-                    <Link to="/ortodoncia-infantil-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Ortodoncia Infantil</Link>
-                    <Link to="/ortodoncia-adultos-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Ortodoncia Adultos</Link>
-                    <Link to="/invisalign-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Invisalign</Link>
-                    <Link to="/bruxismo-planos-relajacion-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Bruxismo y ATM</Link>
-                    <Link to="/rehabilitacion-oral-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Rehabilitación Oral</Link>
-                    <Link to="/segunda-opinion-ortodoncia" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Segunda Opinión</Link>
+                    <Link href="/ortodoncia-infantil-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Ortodoncia Infantil</Link>
+                    <Link href="/ortodoncia-adultos-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Ortodoncia Adultos</Link>
+                    <Link href="/invisalign-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Invisalign</Link>
+                    <Link href="/bruxismo-planos-relajacion-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Bruxismo y ATM</Link>
+                    <Link href="/rehabilitacion-oral-vitacura" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Rehabilitación Oral</Link>
+                    <Link href="/segunda-opinion-ortodoncia" onClick={closeMobileMenu} className="mobile-nav-link" style={{ fontSize: '1.2rem' }}>Segunda Opinión</Link>
 
                     <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '0.5rem 0' }}></div>
 
-                    <Link to="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
-                    <Link to="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
-                    <Link to="/contacto" onClick={closeMobileMenu} className="mobile-nav-link" style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem' }}>
+                    <Link href="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
+                    <Link href="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
+                    <Link href="/contacto" onClick={closeMobileMenu} className="mobile-nav-link" style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem' }}>
                         Agenda tu hora
                     </Link>
                 </nav>
             </div>
 
             <main style={{ minHeight: 'calc(100vh - var(--header-height))' }}>
-                <Outlet />
+                {children}
             </main>
 
             <footer className="footer" style={{ backgroundColor: 'var(--color-primary)', color: 'white', paddingTop: '5rem', paddingBottom: '2rem' }}>
@@ -180,26 +182,26 @@ const Layout = () => {
                         <div>
                             <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Enlaces Rápidos</h4>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.95rem' }}>
-                                <li><Link to="/" style={{ color: 'rgba(255,255,255,0.7)' }}>Inicio</Link></li>
-                                <li><Link to="/diagnostico-ortodoncia-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Diagnóstico</Link></li>
-                                <li><Link to="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Servicios</Link></li>
-                                <li><Link to="/dr-zdenko-rajevic" style={{ color: 'rgba(255,255,255,0.7)' }}>Dr. Rajevic</Link></li>
+                                <li><Link href="/" style={{ color: 'rgba(255,255,255,0.7)' }}>Inicio</Link></li>
+                                <li><Link href="/diagnostico-ortodoncia-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Diagnóstico</Link></li>
+                                <li><Link href="/servicios" style={{ color: 'rgba(255,255,255,0.7)' }}>Servicios</Link></li>
+                                <li><Link href="/dr-zdenko-rajevic" style={{ color: 'rgba(255,255,255,0.7)' }}>Dr. Rajevic</Link></li>
 
                                 <li style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                                     <span style={{ color: 'var(--color-secondary)' }}>Guías Clínicas</span>
                                 </li>
-                                <li><Link to="/guia-invisalign-chile" style={{ color: 'rgba(255,255,255,0.7)' }}>Guía Completa Invisalign</Link></li>
+                                <li><Link href="/guia-invisalign-chile" style={{ color: 'rgba(255,255,255,0.7)' }}>Guía Completa Invisalign</Link></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Especialidades</h4>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.95rem' }}>
-                                <li><Link to="/ortodoncia-infantil-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Infantil</Link></li>
-                                <li><Link to="/ortodoncia-adultos-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Adultos</Link></li>
-                                <li><Link to="/invisalign-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Invisalign</Link></li>
-                                <li><Link to="/bruxismo-planos-relajacion-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Bruxismo y ATM</Link></li>
-                                <li><Link to="/rehabilitacion-oral-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Rehabilitación Oral</Link></li>
+                                <li><Link href="/ortodoncia-infantil-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Infantil</Link></li>
+                                <li><Link href="/ortodoncia-adultos-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Adultos</Link></li>
+                                <li><Link href="/invisalign-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Invisalign</Link></li>
+                                <li><Link href="/bruxismo-planos-relajacion-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Bruxismo y ATM</Link></li>
+                                <li><Link href="/rehabilitacion-oral-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Rehabilitación Oral</Link></li>
                             </ul>
                         </div>
 
@@ -231,11 +233,11 @@ const Layout = () => {
                             &copy; {new Date().getFullYear()} Ortodoncia Rajevic. Todos los derechos reservados.
                         </div>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                            <Link to="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Privacidad</Link>
+                            <Link href="/politica-de-privacidad" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Privacidad</Link>
                             <span style={{ color: 'rgba(255,255,255,0.5)' }}>|</span>
-                            <Link to="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Cookies</Link>
+                            <Link href="/politica-de-cookies" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Cookies</Link>
                             <span style={{ color: 'rgba(255,255,255,0.5)' }}>|</span>
-                            <Link to="/politica-de-reembolso" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Reembolso</Link>
+                            <Link href="/politica-de-reembolso" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Política de Reembolso</Link>
                         </div>
                     </div>
                 </div>
