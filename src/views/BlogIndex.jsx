@@ -1,7 +1,5 @@
 "use client";
 
-import React from 'react';
-import SEO from '../components/SEO';
 import BlogGrid from '../components/BlogGrid';
 import { blogPosts } from '../data/blogData';
 import { motion } from 'framer-motion';
@@ -9,11 +7,6 @@ import { motion } from 'framer-motion';
 const BlogIndex = () => {
     return (
         <>
-            <SEO
-                title="Blog de Ortodoncia y Salud Dental | Artículos Especializados Vitacura"
-                description="Infórmese con nuestros artículos clínicos sobre Invisalign, ortodoncia estética, bruxismo y más. Guías redactadas por especialistas de Ortodoncia Rajevic."
-                breadcrumbs={[{ name: 'Blog', path: '/blog' }]}
-            />
 
             <section className="section" style={{ paddingBottom: '2rem', backgroundColor: '#f8fafc' }}>
                 <div className="container" style={{ textAlign: 'center' }}>

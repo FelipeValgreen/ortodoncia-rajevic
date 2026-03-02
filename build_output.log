@@ -10,111 +10,37 @@
    Linting and checking validity of types ...
    Collecting page data ...
    Generating static pages (0/20) ...
- ⚠ Unsupported metadata themeColor is configured in metadata export in /guia-invisalign-chile. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /guia-invisalign-chile. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /blog. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /blog. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /bruxismo-planos-relajacion-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /bruxismo-planos-relajacion-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /ortodoncia-adultos-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /ortodoncia-adultos-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /invisalign-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /invisalign-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /contacto. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /contacto. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /rehabilitacion-oral-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /rehabilitacion-oral-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /ortodoncia-infantil-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /ortodoncia-infantil-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-privacidad. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-privacidad. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ReferenceError: BlogGrid is not defined
+    at u (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/.next/server/app/invisalign-vitacura/page.js:1:16545)
+    at nj (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+    at nB (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681) {
+  digest: '1646463160'
+}
+
+Error occurred prerendering page "/invisalign-vitacura". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: BlogGrid is not defined
+    at u (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/.next/server/app/invisalign-vitacura/page.js:1:16545)
+    at nj (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:46252)
+    at nM (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:47572)
+    at nM (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:61547)
+    at nL (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64547)
+    at nB (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
+    at nL (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:64854)
+    at nB (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:67539)
+    at nD (/Users/valgreen/.gemini/antigravity/scratch/ortodoncia-rajevic/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:66681)
    Generating static pages (5/20) 
- ⚠ Unsupported metadata themeColor is configured in metadata export in /diagnostico-ortodoncia-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /diagnostico-ortodoncia-vitacura. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
    Generating static pages (10/20) 
- ⚠ Unsupported metadata themeColor is configured in metadata export in /segunda-opinion-ortodoncia. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /segunda-opinion-ortodoncia. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-reembolso. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-reembolso. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /servicios. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /servicios. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-cookies. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /politica-de-cookies. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /guia-cirugia-ortognatica-chile. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /guia-cirugia-ortognatica-chile. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /dr-zdenko-rajevic. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
- ⚠ Unsupported metadata themeColor is configured in metadata export in /dr-zdenko-rajevic. Please move it to viewport export instead.
-Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
    Generating static pages (15/20) 
  ✓ Generating static pages (20/20)
-   Finalizing page optimization ...
-   Collecting build traces ...
 
-Route (app)                               Size     First Load JS
-┌ ○ /                                     6.16 kB         158 kB
-├ ○ /_not-found                           875 B          88.7 kB
-├ ○ /blog                                 2.39 kB         144 kB
-├ ƒ /blog/[slug]                          8.32 kB         149 kB
-├ ○ /bruxismo-planos-relajacion-vitacura  3.12 kB         149 kB
-├ ○ /contacto                             53.3 kB         177 kB
-├ ○ /diagnostico-ortodoncia-vitacura      4.64 kB         145 kB
-├ ○ /dr-zdenko-rajevic                    3.89 kB         135 kB
-├ ○ /guia-cirugia-ortognatica-chile       6.61 kB         144 kB
-├ ○ /guia-invisalign-chile                5.3 kB          146 kB
-├ ○ /invisalign-vitacura                  4.58 kB         157 kB
-├ ○ /ortodoncia-adultos-vitacura          3.64 kB         149 kB
-├ ○ /ortodoncia-infantil-vitacura         7.55 kB         150 kB
-├ ○ /politica-de-cookies                  2.31 kB         135 kB
-├ ○ /politica-de-privacidad               2.29 kB         126 kB
-├ ○ /politica-de-reembolso                2.26 kB         126 kB
-├ ○ /rehabilitacion-oral-vitacura         3.08 kB         149 kB
-├ ○ /segunda-opinion-ortodoncia           5.11 kB         151 kB
-└ ○ /servicios                            3.42 kB         141 kB
-+ First Load JS shared by all             87.8 kB
-  ├ chunks/117-c86a41b869f6b521.js        31.7 kB
-  ├ chunks/fd9d1056-6922f449a204c2cc.js   53.7 kB
-  └ other shared chunks (total)           2.39 kB
-
-
-○  (Static)   prerendered as static content
-ƒ  (Dynamic)  server-rendered on demand
-
+> Export encountered errors on following paths:
+	/invisalign-vitacura/page: /invisalign-vitacura

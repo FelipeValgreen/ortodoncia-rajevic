@@ -3,8 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import SEO from '../components/SEO';
-
 const CookiePolicy = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -12,11 +10,6 @@ const CookiePolicy = () => {
 
     return (
         <>
-            <SEO
-                title="Política de Cookies | Ortodoncia Rajevic"
-                description="Política de uso de cookies y tecnologías de seguimiento."
-                breadcrumbs={[{ name: 'Política de Cookies', path: '/politica-de-cookies' }]}
-            />
             <div className="page-container" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
                 <div className="container">
                     <motion.div

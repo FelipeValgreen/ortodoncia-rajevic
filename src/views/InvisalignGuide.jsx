@@ -6,58 +6,9 @@ import { motion } from 'framer-motion';
 import heroInvisalign from '../assets/hero_invisalign.webp';
 import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
-import SEO from '../components/SEO';
-
 const InvisalignGuide = () => {
     return (
         <>
-            <SEO
-                title="Todo sobre Invisalign en Chile | Guía Completa de Alineadores Invisibles"
-                description="Descubra precios, tiempos de tratamiento, cuidados y comparativas exhaustivas sobre Invisalign. Respuestas directas preparadas por el Dr. Zdenko Rajevic."
-                breadcrumbs={[
-                    { name: 'Guías Clínicas', path: '/guias' },
-                    { name: 'Guía Definitiva Invisalign', path: '/guia-invisalign-chile' }
-                ]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "Article",
-                        "headline": "Guía Definitiva de Invisalign en Chile: Precios, Tiempos y Resultados",
-                        "description": "Análisis clínico completo sobre el uso de alineadores invisibles Invisalign, elaborado por especialistas certificados.",
-                        "author": {
-                            "@type": "Person",
-                            "name": "Dr. Zdenko Rajevic"
-                        },
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Clínica Ortodoncia Rajevic"
-                        }
-                    },
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": [
-                            {
-                                "@type": "Question",
-                                "name": "¿Qué es exactamente Invisalign?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Invisalign es un sistema robótico de ortodoncia que utiliza una secuencia de placas de poliuretano transparentes (SmartTrack) impresas en 3D para mover gradualmente los dientes hacia la posición ideal planificada digitalmente."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "¿Cuánto cuesta Invisalign en Chile?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "El valor de Invisalign en Chile varía según la complejidad del caso (Express, Lite, Comprehensive). En promedio, los tratamientos oscilan entre $1.800.000 y $3.500.000 CLP. Es fundamental una evaluación clínica con Escáner iTero para obtener un presupuesto exacto."
-                                }
-                            }
-                        ]
-                    }
-                ]}
-            />
-
             {/* 1. HERO CLINICAL - SGEO Optimized */}
             <section className="hero-section" style={{
                 position: 'relative',
@@ -68,7 +19,7 @@ const InvisalignGuide = () => {
                 color: 'white'
             }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
-                    <img src={heroInvisalign} alt="Alineador transparente Invisalign en mano de especialista" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="eager" width="1920" height="1080" />
+                    <Image src="/assets/hero_invisalign.webp" alt="Alineador transparente Invisalign en mano de especialista" fill priority style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to right, rgba(26, 58, 92, 0.95) 0%, rgba(26, 58, 92, 0.7) 100%)' }}></div>
                 </div>
 

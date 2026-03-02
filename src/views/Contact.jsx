@@ -6,56 +6,9 @@ import { supabase } from '../lib/supabaseClient';
 import dynamic from 'next/dynamic';
 
 const StoreLocator = dynamic(() => import('../components/StoreLocator'), { ssr: false });
-
-import SEO from '../components/SEO';
+const DoctoraliaWidget = dynamic(() => import('../components/DoctoraliaWidget'), { ssr: false });
 
 const Contact = () => {
-    // Schema JSON-LD for Local SEO
-    useEffect(() => {
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "Dentist",
-            "name": "Ortodoncia Rajevic",
-            "image": "https://ortodonciarajevic.cl/assets/dr-rajevic.webp",
-            "url": "https://ortodonciarajevic.cl",
-            "telephone": "+56933427916",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Las Hualtatas 8999",
-                "addressLocality": "Vitacura",
-                "addressRegion": "RM",
-                "postalCode": "7630000",
-                "addressCountry": "CL"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": -33.403,
-                "longitude": -70.596
-            },
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                ],
-                "opens": "09:00",
-                "closes": "19:00"
-            },
-            "priceRange": "$$"
-        };
-
-        const script = document.createElement('script');
-        script.type = "application/ld+json";
-        script.text = JSON.stringify(schema);
-        document.head.appendChild(script);
-
-        return () => {
-            document.head.removeChild(script);
-        }
-    }, []);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -99,11 +52,6 @@ const Contact = () => {
 
     return (
         <>
-            <SEO
-                title="Contacto y Reservas | Clínica Ortodoncia Rajevic Vitacura"
-                description="Agende su evaluación con el Dr. Zdenko Rajevic en Vitacura. Ortodoncia estética, invisible e infantil. Envíenos un mensaje o contáctenos por WhatsApp."
-                breadcrumbs={[{ name: 'Contacto', path: '/contacto' }]}
-            />
             <section className="section">
                 <div className="container">
                     <div className="grid-1-2" style={{ alignItems: 'start', gap: '4rem' }}>
@@ -126,6 +74,21 @@ const Contact = () => {
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Correo:</strong> <span className="text-light">ortodonciarajevic@gmail.com</span></li>
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Dirección:</strong> <span className="text-light">Las Hualtatas 8999. Vitacura. Santiago.</span></li>
                                 </ul>
+                            </div>
+
+                            <div style={{
+                                backgroundColor: 'white',
+                                padding: '2rem',
+                                borderRadius: '12px',
+                                border: '1px solid var(--color-border)',
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
+                                marginBottom: '3rem'
+                            }}>
+                                <h3 style={{ marginBottom: '0.8rem', fontSize: '1.4rem', color: 'var(--color-primary)' }}>Reserva Directa</h3>
+                                <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-light)', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                                    Conozca la disponibilidad en tiempo real y agende su diagnóstico sin esperas a través de nuestra plataforma de Doctoralia.
+                                </p>
+                                <DoctoraliaWidget />
                             </div>
 
                             <div style={{ marginBottom: '2rem' }}>

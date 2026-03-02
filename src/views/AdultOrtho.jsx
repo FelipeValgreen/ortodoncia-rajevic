@@ -10,10 +10,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.webp';
 import navInvisalign from '../assets/nav_invisalign.webp';
 
-import SEO from '../components/SEO';
-
 const AdultOrtho = () => {
-    // useEffect removed
 
     const adultTestimonials = [
         {
@@ -41,23 +38,6 @@ const AdultOrtho = () => {
 
     return (
         <>
-            <SEO
-                title="Ortodoncia para Adultos en Vitacura | Invisalign y Brackets Estéticos"
-                description="Nunca es tarde para la sonrisa perfecta. Ortodoncia invisible (Invisalign), zafiro y lingual para adultos en Vitacura. Tratamientos discretos y eficientes."
-                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Ortodoncia Adultos', path: '/ortodoncia-adultos-vitacura' }]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "MedicalSpecialty",
-                        "name": "Ortodoncia para Adultos",
-                        "description": "Tratamientos de ortodoncia estética, invisible y lingual diseñados específicamente para pacientes adultos corporativos.",
-                        "relevantSpecialty": {
-                            "@type": "MedicalSpecialty",
-                            "name": "Orthodontic"
-                        }
-                    }
-                ]}
-            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

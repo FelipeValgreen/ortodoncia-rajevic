@@ -9,10 +9,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.webp';
 import { BsStarFill } from 'react-icons/bs';
 
-import SEO from '../components/SEO';
-
 const OralRehab = () => {
-    // useEffect removed
 
     const rehabTestimonials = [
         {
@@ -40,23 +37,6 @@ const OralRehab = () => {
 
     return (
         <>
-            <SEO
-                title="Rehabilitación Oral e Implantes Vitacura | Ortodoncia Pre-Protésica"
-                description="Trabajo interdisciplinario para casos complejos en Vitacura. Ortodoncia para preparar espacios antes de implantes o carillas. Recupere la función de su boca."
-                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Rehabilitación Oral', path: '/rehabilitacion-oral-vitacura' }]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "MedicalSpecialty",
-                        "name": "Ortodoncia Pre-Protésica y Rehabilitación Oral Compleja",
-                        "description": "Preparación ortodóncica interdisciplinaria para la posterior colocación de implantes, coronas o carillas dentales.",
-                        "relevantSpecialty": {
-                            "@type": "MedicalSpecialty",
-                            "name": "Dentistry"
-                        }
-                    }
-                ]}
-            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

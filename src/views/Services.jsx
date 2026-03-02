@@ -5,21 +5,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import alignmentSchematic from '../assets/alignment-schematic.webp';
 import childOrthoSchematic from '../assets/child_ortho_growth_schematic.webp';
-
 import heroServices from '../assets/hero_diagnosis.webp';
 
-import SEO from '../components/SEO';
-
 const Services = () => {
-    // useEffect removed
 
     return (
         <>
-            <SEO
-                title="Especialidades en Ortodoncia | Clínica Rajevic Vitacura"
-                description="Conozca nuestros servicios clínicos: Ortodoncia Infantil, Adultos, ortodoncia Invisible (Invisalign), Rehabilitación Oral y Diagnóstico de Segunda Opinión."
-                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }]}
-            />
             {/* Hero Section */}
             <section style={{
                 position: 'relative',
@@ -31,7 +22,7 @@ const Services = () => {
                 overflow: 'hidden'
             }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
-                    <Image src={heroServices} alt="Servicios Clínicos Ortodoncia Rajevic" fill priority style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
+                    <Image src={heroServices} alt="Servicios Clínicos Ortodoncia Rajevic" fill priority fetchPriority="high" sizes="(max-width: 768px) 100vw, 100vw" style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
                 </div>
                 <div style={{
                     position: 'absolute',
@@ -44,11 +35,7 @@ const Services = () => {
 
 
                 <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
+                    <div>
                         <span className="uppercase-tracking" style={{ color: 'var(--color-accent)', marginBottom: '1rem', display: 'block', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                             Áreas de Especialidad
                         </span>
@@ -59,7 +46,7 @@ const Services = () => {
                             Nuestra práctica se divide por áreas de necesidad clínica, no por productos comerciales.<br />
                             Adaptamos la técnica a la biología de cada paciente.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 

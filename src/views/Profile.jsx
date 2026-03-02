@@ -5,31 +5,10 @@ import { motion } from 'framer-motion';
 import drRajevicImg from '../assets/dr-rajevic.webp';
 import { BsAward, BsBook, BsEyeglasses } from 'react-icons/bs';
 
-import SEO from '../components/SEO';
-
 const Profile = () => {
-    // useEffect removed
 
     return (
         <>
-            <SEO
-                title="Dr. Zdenko Rajevic | Especialista en Ortodoncia y Ortopedia Maxilar"
-                description="Conozca al Dr. Rajevic. Más de 35 años resolviendo casos complejos de ortodoncia, cirugía ortognática e Invisalign en Vitacura con enfoque biológico."
-                breadcrumbs={[{ name: 'Dr. Rajevic', path: '/dr-zdenko-rajevic' }]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "Person",
-                        "name": "Dr. Zdenko Rajevic",
-                        "jobTitle": "Especialista en Ortodoncia y Ortopedia Dento Maxilar",
-                        "worksFor": {
-                            "@type": "Dentist",
-                            "name": "Clínica Ortodoncia Rajevic"
-                        },
-                        "alumniOf": "Universidad de Chile"
-                    }
-                ]}
-            />
             <section className="section" style={{ paddingBottom: '0' }}>
                 <div className="container">
                     <div className="grid-2" style={{ alignItems: 'center', gap: '5rem' }}>

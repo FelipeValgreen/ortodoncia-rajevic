@@ -9,10 +9,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import navAdult from '../assets/nav_adult.webp';
 import { BsStarFill } from 'react-icons/bs';
 
-import SEO from '../components/SEO';
-
 const Bruxism = () => {
-    // useEffect removed
 
     const bruxismTestimonials = [
         {
@@ -40,24 +37,6 @@ const Bruxism = () => {
 
     return (
         <>
-            <SEO
-                title="Tratamiento Bruxismo Vitacura | Plano de Relajación Míchigan"
-                description="Clínica experta en bruxismo y dolor de ATM en Vitacura. Detenga el desgaste dental y el dolor de cabeza con un plano de relajación médico a medida."
-                videoId="YOUR_YOUTUBE_VIDEO_ID_HERE" // Reemplazar con ID real del Reel/Short
-                breadcrumbs={[{ name: 'Servicios', path: '/servicios' }, { name: 'Bruxismo y ATM', path: '/bruxismo-planos-relajacion-vitacura' }]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "MedicalSpecialty",
-                        "name": "Tratamiento de Bruxismo y ATM",
-                        "description": "Diagnóstico y tratamiento del bruxismo y trastornos de la articulación temporomandibular mediante planos de relajación rígidos tipo Míchigan.",
-                        "relevantSpecialty": {
-                            "@type": "MedicalSpecialty",
-                            "name": "Dentistry"
-                        }
-                    }
-                ]}
-            />
             {/* 1. HERO CLINICAL */}
             <section className="hero-section" style={{
                 position: 'relative',

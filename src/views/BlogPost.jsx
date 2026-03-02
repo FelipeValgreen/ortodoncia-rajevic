@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import SEO from '../components/SEO';
 import { getPostBySlug, getLatestPosts } from '../data/blogData';
 import { motion } from 'framer-motion';
 import { BsArrowLeft, BsCalendar, BsPerson } from 'react-icons/bs';
@@ -26,35 +25,6 @@ const BlogPost = ({ slug }) => {
 
     return (
         <>
-            <SEO
-                title={post.metaTitle}
-                description={post.metaDescription}
-                breadcrumbs={[
-                    { name: 'Blog', path: '/blog' },
-                    { name: post.title, path: `/blog/${post.slug}` }
-                ]}
-                schema={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "Article",
-                        "headline": post.title,
-                        "description": post.metaDescription,
-                        "author": {
-                            "@type": "Person",
-                            "name": post.author
-                        },
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Clínica Ortodoncia Rajevic",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://www.ortodonciarajevic.cl/src/assets/logo-rajevic.png"
-                            }
-                        }
-                    }
-                ]}
-            />
-
             <article className="blog-post-page">
                 {/* Header */}
                 <div className="section" style={{ backgroundColor: '#f8fafc', paddingBottom: '0' }}>

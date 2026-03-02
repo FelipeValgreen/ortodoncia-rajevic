@@ -2,8 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import SEO from '../components/SEO';
-
 const RefundPolicy = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -11,11 +9,6 @@ const RefundPolicy = () => {
 
     return (
         <>
-            <SEO
-                title="Política de Reembolsos | Ortodoncia Rajevic"
-                description="Política de reembolsos y garantías de tratamientos."
-                breadcrumbs={[{ name: 'Política de Reembolsos', path: '/politica-de-reembolso' }]}
-            />
             <div className="page-container" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
                 <div className="container">
                     <motion.div

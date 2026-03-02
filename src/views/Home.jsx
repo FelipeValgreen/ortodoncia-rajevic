@@ -18,12 +18,10 @@ import heroChild from '../assets/hero_child.webp';
 import heroAdult from '../assets/hero_adult.webp';
 import heroComplex from '../assets/hero_second_opinion.webp';
 
-import SEO from '../components/SEO';
 import BlogGrid from '../components/BlogGrid';
 import { getLatestPosts } from '../data/blogData';
 
 const Home = () => {
-  // useEffect removed - handled by SEO component
 
   const homeTestimonials = [
     {
@@ -79,79 +77,6 @@ const Home = () => {
 
   return (
     <>
-      <SEO
-        title="Clínica Ortodoncia en Vitacura | Dr. Rajevic | Invisalign y Estética"
-        description="Ortodoncista experto en Vitacura, Santiago. Especialistas en Invisalign, ortodoncia invisible para adultos, niños y casos complejos. Agende su evaluación."
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Dentist",
-            "name": "Clínica Ortodoncia Rajevic",
-            "image": "https://www.ortodonciarajevic.cl/src/assets/dr-rajevic.webp",
-            "@id": "https://www.ortodonciarajevic.cl",
-            "url": "https://www.ortodonciarajevic.cl",
-            "telephone": "+56933427916",
-            "priceRange": "$$$",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Las Hualtatas 8999",
-              "addressLocality": "Vitacura",
-              "addressRegion": "Santiago",
-              "addressCountry": "CL"
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "09:00",
-              "closes": "19:00"
-            }
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Cuánto dura un tratamiento de ortodoncia?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La duración varía según la complejidad del caso. Un tratamiento simple puede durar entre 12-18 meses, mientras que casos más complejos pueden extenderse hasta 24-30 meses. Durante la evaluación inicial, le entregaremos un plan de tratamiento con tiempos realistas basados en su diagnóstico específico."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Atienden con convenio Isapre?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sí, trabajamos con todas las isapres. Emitimos bonos electrónicos y le ayudamos con la gestión para maximizar su cobertura. También aceptamos pago con tarjetas de crédito y débito."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Desde qué edad pueden empezar los niños con ortodoncia?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La edad ideal para una primera evaluación es alrededor de los 6-7 años. En algunos casos, la ortopedia maxilar puede iniciarse desde los 4 años para guiar el crecimiento de los huesos. La intervención temprana puede prevenir tratamientos más complejos en el futuro."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Cómo funciona la evaluación inicial?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La primera consulta incluye un examen clínico completo, análisis de mordida, evaluación articular (ATM) y una explicación detallada del diagnóstico. Si es necesario, solicitamos radiografías y fotografías para crear un plan de tratamiento personalizado. La duración aproximada es de 30-45 minutos."
-                }
-              }
-            ]
-          }
-        ]}
-      />
       {/* 1. HERO MANIFESTO */}
       <section className="hero-section hero-home" style={{
         position: 'relative',
@@ -175,8 +100,9 @@ const Home = () => {
             src={heroHome}
             alt="Ortodoncia Rajevic - Sonrisas Reales"
             priority={true}
+            fetchPriority="high"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 100vw"
             style={{ objectFit: 'cover', objectPosition: '85% center' }}
           />
           {/* Strategic overlay: transparent left, solid white right for text */}
@@ -192,10 +118,7 @@ const Home = () => {
 
         {/* Content Container (Text) */}
         <div className="container" style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+          <div
             style={{ maxWidth: '550px', textAlign: 'right' }}
           >
             <span className="uppercase-tracking" style={{
@@ -237,7 +160,7 @@ const Home = () => {
                 Conozca el Método de Diagnóstico
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section >
 
@@ -376,11 +299,7 @@ const Home = () => {
 
           <TestimonialCarousel testimonials={homeTestimonials} />
 
-          <div className="text-center" style={{ marginTop: '3rem' }}>
-            <a href="https://search.google.com/local/reviews?placeid=ChIJT-5-tSTJYpYRoq1YwFCV0sk" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'var(--color-primary)', fontWeight: '600' }}>
-              Ver todas las reseñas en Google Maps
-            </a>
-          </div>
+
         </div>
       </section>
 
@@ -408,7 +327,7 @@ const Home = () => {
                 "La paciencia es nuestra herramienta más valiosa. Hay casos en que un tratamiento lento y estable es preferible a uno rápido que fracasa en el tiempo."
               </p>
               <Link href="/contacto" className="btn btn-outline">
-                Agendar Hora
+                Agendar por Teléfono
               </Link>
             </div>
           </div>

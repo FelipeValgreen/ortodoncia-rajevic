@@ -2,8 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import SEO from '../components/SEO';
-
 const PrivacyPolicy = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -11,11 +9,6 @@ const PrivacyPolicy = () => {
 
     return (
         <>
-            <SEO
-                title="Política de Privacidad | Ortodoncia Rajevic"
-                description="Política de privacidad y protección de datos de pacientes."
-                breadcrumbs={[{ name: 'Política de Privacidad', path: '/politica-de-privacidad' }]}
-            />
             <div className="page-container" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
                 <div className="container">
                     <motion.div

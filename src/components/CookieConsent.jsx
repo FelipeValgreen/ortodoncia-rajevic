@@ -8,7 +8,17 @@ const CookieConsent = () => {
 
     useEffect(() => {
         const consent = localStorage.getItem('cookieConsent');
-        if (!consent) {
+        if (consent === 'true') {
+            // Update GTM consent if already accepted previously
+            if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+            }
+        } else if (!consent) {
             // Delay slightly to not overwhelm on initial load
             const timer = setTimeout(() => setIsVisible(true), 1500);
             return () => clearTimeout(timer);
@@ -17,6 +27,17 @@ const CookieConsent = () => {
 
     const handleAccept = () => {
         localStorage.setItem('cookieConsent', 'true');
+
+        // Update Google Consent Mode
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
+
         setIsVisible(false);
     };
 
