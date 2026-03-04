@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BsTelephone, BsGeoAlt, BsClock, BsList, BsX } from 'react-icons/bs';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from 'react-icons/fa';
 import Logo from './Logo';
 import WhatsAppButton from './WhatsAppButton';
 import MegaMenu from './MegaMenu';
@@ -51,6 +51,8 @@ const Layout = ({ children }) => {
                         <a href="https://www.facebook.com/profile.php?id=61586571209741" aria-label="Facebook de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaFacebookF /></a>
                         <a href="https://www.instagram.com/ortodonciarajevic/" aria-label="Instagram de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaInstagram /></a>
                         <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" aria-label="LinkedIn del Dr. Zdenko Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaLinkedinIn /></a>
+                        <a href="https://www.tiktok.com/@ortodonciarajevic" aria-label="TikTok de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaTiktok /></a>
+                        <a href="https://www.youtube.com/@OrtodonciaRajevic" aria-label="YouTube de Ortodoncia Rajevic" target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.8 }}><FaYoutube /></a>
                     </div>
                 </div>
             </div>
@@ -172,10 +174,12 @@ const Layout = ({ children }) => {
                             <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
                                 Criterio clínico superior. Especialistas en diagnóstico, planificación y casos complejos de ortodoncia en Vitacura.
                             </p>
-                            <div style={{ display: 'flex', gap: '1rem' }}>
+                            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                                 <a href="https://www.facebook.com/profile.php?id=61586571209741" aria-label="Visitar Facebook" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaFacebookF /></a>
                                 <a href="https://www.instagram.com/ortodonciarajevic/" aria-label="Visitar Instagram" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaInstagram /></a>
                                 <a href="https://www.linkedin.com/in/zdenko-rajevic-marin-67052534/?originalSubdomain=cl" aria-label="Visitar LinkedIn" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaLinkedinIn /></a>
+                                <a href="https://www.tiktok.com/@ortodonciarajevic" aria-label="Visitar TikTok" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaTiktok /></a>
+                                <a href="https://www.youtube.com/@OrtodonciaRajevic" aria-label="Visitar YouTube" target="_blank" rel="noopener noreferrer" className="icon-box" style={{ width: '40px', height: '40px', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }}><FaYoutube /></a>
                             </div>
                         </div>
 
