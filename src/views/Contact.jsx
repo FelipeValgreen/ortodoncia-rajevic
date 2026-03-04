@@ -69,9 +69,9 @@ const Contact = () => {
                             <div style={{ marginBottom: '3rem' }}>
                                 <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Contacto Directo</h3>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Teléfono:</strong> <span className="text-light">+56 9 3342 7916</span></li>
-                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>WhatsApp:</strong> <span className="text-light">+56 9 3342 7916</span></li>
-                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Correo:</strong> <span className="text-light">ortodonciarajevic@gmail.com</span></li>
+                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Teléfono:</strong> <a href="tel:+56988897033" className="text-light" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 8889 7033</a></li>
+                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>WhatsApp:</strong> <a href="https://wa.me/56988897033" target="_blank" rel="noopener noreferrer" className="text-light" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 8889 7033</a></li>
+                                    <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Correo:</strong> <a href="mailto:contacto@ortodonciarajevic.cl" className="text-light" style={{ textDecoration: 'none', color: 'inherit' }}>contacto@ortodonciarajevic.cl</a></li>
                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Dirección:</strong> <span className="text-light">Las Hualtatas 8999. Vitacura. Santiago.</span></li>
                                 </ul>
                             </div>

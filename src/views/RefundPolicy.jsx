@@ -57,7 +57,7 @@ const RefundPolicy = () => {
                                 <br /><br />
                                 <strong>Ortodoncia Rajevic</strong><br />
                                 Email: contacto@ortodonciarajevic.cl<br />
-                                Teléfono: +56 9 3342 7916
+                                Teléfono: <a href="tel:+56988897033" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 8889 7033</a>
                             </p>
                         </section>
                     </motion.div>

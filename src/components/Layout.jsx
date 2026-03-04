@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', gap: '2rem' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsGeoAlt /> Las Hualtatas 8999. Vitacura. Santiago.</span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsTelephone /> +56 9 3342 7916</span>
+                        <a href="tel:+56988897033" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 8889 7033</a>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsClock /> Lun - Vie: 9:00 - 19:00</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1rem' }}>
@@ -216,8 +216,8 @@ const Layout = ({ children }) => {
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
                                     <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
-                                    <a href="https://wa.me/56933427916" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                                        +56 9 3342 7916
+                                    <a href="https://wa.me/56988897033" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        +56 9 8889 7033
                                     </a>
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>

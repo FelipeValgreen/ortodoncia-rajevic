@@ -7,7 +7,7 @@ const jsonLd = {
   "image": "https://www.ortodonciarajevic.cl/assets/dr-rajevic.webp",
   "@id": "https://www.ortodonciarajevic.cl",
   "url": "https://www.ortodonciarajevic.cl",
-  "telephone": "+56933427916",
+  "telephone": "+56988897033",
   "priceRange": "$$$",
   "address": {
     "@type": "PostalAddress",
@@ -31,11 +31,11 @@ const jsonLd = {
 };
 
 export const metadata = {
-  title: 'Clínica Ortodoncia en Vitacura | Dr. Rajevic | Invisalign y Estética',
-  description: 'Ortodoncista experto en Vitacura, Santiago. Especialistas en Invisalign, ortodoncia invisible para adultos, niños y casos complejos. Agende su evaluación.',
+  title: 'Ortodoncia en Vitacura | Dr. Zdenko Rajevic | Invisalign y Estética Dental',
+  description: 'Clínica de ortodoncia líder en Vitacura, Santiago. Especialistas en Invisalign, ortodoncia para adultos y niños. Diagnóstico integral con tecnología 3D. Agende su cita.',
   openGraph: {
-    title: 'Clínica Ortodoncia en Vitacura | Dr. Rajevic | Invisalign y Estética',
-    description: 'Ortodoncista experto en Vitacura, Santiago. Especialistas en Invisalign, ortodoncia invisible para adultos, niños y casos complejos. Agende su evaluación.',
+    title: 'Ortodoncia en Vitacura | Dr. Zdenko Rajevic | Invisalign y Estética Dental',
+    description: 'Más de 35 años de experiencia en ortodoncia estética y funcional en Vitacura. Especialistas en Invisalign y casos complejos. ¡Sonría con confianza!',
     images: [
       {
         url: '/assets/hero_home_v2.webp',

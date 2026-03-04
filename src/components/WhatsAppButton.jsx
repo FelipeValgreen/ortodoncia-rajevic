@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
 
     return (
         <motion.a
-            href={`https://wa.me/56933427916?text=${encodedMessage}`}
+            href={`https://wa.me/56988897033?text=${encodedMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ scale: 0, opacity: 0 }}

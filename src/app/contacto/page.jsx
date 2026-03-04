@@ -6,7 +6,7 @@ const jsonLd = {
   "name": "Ortodoncia Rajevic",
   "image": "https://ortodonciarajevic.cl/assets/dr-rajevic.webp",
   "url": "https://ortodonciarajevic.cl",
-  "telephone": "+56933427916",
+  "telephone": "+56988897033",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Las Hualtatas 8999",

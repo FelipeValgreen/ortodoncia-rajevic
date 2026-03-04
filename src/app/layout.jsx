@@ -10,12 +10,12 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-headin
 
 export const metadata = {
     title: {
-        default: 'Clínica Ortodoncia Rajevic',
+        default: 'Clínica Ortodoncia Rajevic | Vitacura, Santiago',
         template: '%s | Ortodoncia Rajevic'
     },
-    description: 'Clínica de ortodoncia en Vitacura liderada por el Dr. Zdenko Rajevic. Expertos en ortodoncia invisible, lingual y casos complejos. Agenda tu evaluación.',
-    authors: [{ name: 'Ortodoncia Rajevic' }],
-    keywords: 'ortodoncia vitacura, invisalign vitacura, ortodoncia infantil, ortodoncia adultos, segunda opinión ortodoncia, bruxismo, rehabilitación oral, Dr. Zdenko Rajevic',
+    description: 'Especialistas en ortodoncia invisible Invisalign, ortodoncia lingual y casos complejos en Vitacura. Clínica Dr. Zdenko Rajevic con más de 35 años de experiencia.',
+    authors: [{ name: 'Dr. Zdenko Rajevic' }],
+    keywords: 'ortodoncia vitacura, dentista vitacura, invisalign santiago, ortodoncia invisible chile, ortodoncia infantil vitacura, frenillos invisibles, Dr. Zdenko Rajevic, clínica dental vitacura',
     metadataBase: new URL('https://www.ortodonciarajevic.cl'),
     alternates: {
         canonical: '/',
@@ -50,7 +50,10 @@ export const metadata = {
         type: 'website',
     },
     verification: {
-        google: '6Uh51YpZ6okjTKOw3Q3SYg_u4AH-e8vx5UMtCIwwm1w',
+        google: [
+            '6Uh51YpZ6okjTKOw3Q3SYg_u4AH-e8vx5UMtCIwwm1w',
+            'rRjdvBpy2S5hNAzoF2AhN-HVGhRluKIn-jsQzMpmPEg'
+        ],
     },
 };
 
