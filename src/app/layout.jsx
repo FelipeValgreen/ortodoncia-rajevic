@@ -84,17 +84,6 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 <ScrollToTop />
-                <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17984244304" strategy="afterInteractive" />
-                <Script id="google-ads" strategy="afterInteractive">
-                    {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('set', 'url_passthrough', true);
-            gtag('config', 'AW-17984244304');
-          `}
-                </Script>
-
                 <Script id="gtm" strategy="afterInteractive">
                     {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -102,16 +91,6 @@ export default function RootLayout({ children }) {
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MBF6FVWM');
-          `}
-                </Script>
-
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-FHFNNCYZZL" strategy="afterInteractive" />
-                <Script id="ga" strategy="afterInteractive">
-                    {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FHFNNCYZZL');
           `}
                 </Script>
 
