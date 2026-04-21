@@ -8,16 +8,16 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --dark:#133447;--blue:#2C709B;--blue-light:#92C6DF;--blue-pale:#D4E5F2;
+  --dark:#133447;--blue:#2C709B;--blue-light:#A6C6DF;--blue-pale:#D4E5F2;
   --white:#ffffff;--off:#f7fafb;--muted:#133447;--border:#d0e4ef;
-  --gold:#c9a96e;--gold-l:#e8d5a3;
+  --gold:#A6C6DF;--gold-l:#D4E5F2;
   --serif:'Lora',Georgia,serif;--sans:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--white);color:var(--dark);line-height:1.6;overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
 .topbar{background:var(--dark);color:rgba(255,255,255,.6);font-size:12px;letter-spacing:.04em;padding:9px 0;text-align:center}
 .topbar a{color:var(--gold-l);text-decoration:none}
-nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:65px}
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:center;height:65px}
 .logo{font-family:var(--serif);font-size:16px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px}
 .logo span{color:var(--blue)}
 .logo img{width:36px;height:36px;object-fit:contain;border-radius:4px;opacity:0.9}
@@ -42,7 +42,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-
 .step-content p{font-size:14px;color:var(--muted);line-height:1.6}
 
 .btn-home{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--dark);font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:16px 32px;text-decoration:none;border-radius:4px;transition:all .2s;margin-top:48px;position:relative;z-index:10;animation:fadeUp .6s ease both .4s}
-.btn-home:hover{background:var(--gold-l);transform:translateY(-2px)}
+.btn-home:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
 
 /* FOOTER */
 footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:48px 8% 28px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
@@ -96,7 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav>
   <a href="/" class="logo">
-    <img src="icon-512x512.png" alt="Dr. Zdenko Rajevic">
+    <img src="isotype.png" alt="Ortodoncia Rajevic">
     <div>Ortodoncia <span>Rajevic</span></div>
   </a>
 </nav>
@@ -149,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="foot-brand">
     <a href="/" class="logo" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
-      <img src="icon-512x512.png" alt="Dr. Zdenko Rajevic" style="width:32px; height:32px; object-fit:contain; border-radius:4px; opacity:0.9;">
+      <img src="isotype.png" alt="Ortodoncia Rajevic" style="width:32px; height:32px; object-fit:contain; border-radius:4px; opacity:0.9;">
       <div>Ortodoncia <span>Rajevic</span></div>
     </a>
     <p style="margin-top: 10px;">Diagnóstico de precisión. Ortodoncia con criterio clínico. Vitacura, Santiago.</p>
