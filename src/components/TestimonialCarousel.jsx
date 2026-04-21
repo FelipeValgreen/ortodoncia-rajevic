@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TestimonialCard from './TestimonialCard';
-import { motion, AnimatePresence } from 'framer-motion';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const TestimonialCarousel = ({ testimonials }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleCount, setVisibleCount] = useState(1);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const containerRef = useRef(null);
 
-    // Responsive visible count
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1280) setVisibleCount(4);
@@ -21,45 +21,42 @@ const TestimonialCarousel = ({ testimonials }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / visibleCount));
+    const totalPages = Math.ceil(testimonials.length / visibleCount);
+
+    const changePage = (newIndex) => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setCurrentIndex(newIndex);
+        setTimeout(() => setIsAnimating(false), 350);
     };
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + Math.ceil(testimonials.length / visibleCount)) % Math.ceil(testimonials.length / visibleCount));
-    };
+    const nextSlide = () => changePage((currentIndex + 1) % totalPages);
+    const prevSlide = () => changePage((currentIndex - 1 + totalPages) % totalPages);
 
-    // Calculate which items to show
-    // Simple logic: we show chunks of `visibleCount` for simplicity in this carousel version
-    // A better approach for "infinite" loop is harder, let's stick to page-based for stability
     const currentTestimonials = testimonials.slice(
         currentIndex * visibleCount,
         currentIndex * visibleCount + visibleCount
     );
 
-    // Check if we need to pad with start items to fill the row (optional, usually not needed if we just limit index)
-
     return (
         <div style={{ position: 'relative', padding: '0 1rem' }}>
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: `repeat(${visibleCount}, 1fr)`,
-                gap: '2rem',
-                marginBottom: '2rem'
-            }}>
-                <AnimatePresence mode='wait'>
-                    {currentTestimonials.map((t, idx) => (
-                        <motion.div
-                            key={`${currentIndex}-${idx}`}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
-                            transition={{ duration: 0.3, delay: idx * 0.1 }}
-                        >
-                            <TestimonialCard {...t} />
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
+            <div
+                ref={containerRef}
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${visibleCount}, 1fr)`,
+                    gap: '2rem',
+                    marginBottom: '2rem',
+                    opacity: isAnimating ? 0 : 1,
+                    transform: isAnimating ? 'translateX(10px)' : 'translateX(0)',
+                    transition: 'opacity 0.3s ease, transform 0.3s ease'
+                }}
+            >
+                {currentTestimonials.map((t, idx) => (
+                    <div key={`${currentIndex}-${idx}`}>
+                        <TestimonialCard {...t} />
+                    </div>
+                ))}
             </div>
 
             {/* Controls */}
@@ -69,48 +66,36 @@ const TestimonialCarousel = ({ testimonials }) => {
                         onClick={prevSlide}
                         aria-label="Ver testimonios anteriores"
                         style={{
-                            width: '40px',
-                            height: '40px',
-                            borderRadius: '50%',
+                            width: '40px', height: '40px', borderRadius: '50%',
                             border: '1px solid var(--color-border)',
-                            backgroundColor: 'white',
-                            color: 'var(--color-primary)',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            backgroundColor: 'white', color: 'var(--color-primary)',
+                            cursor: 'pointer', display: 'flex',
+                            alignItems: 'center', justifyContent: 'center',
                             transition: 'all 0.2s'
                         }}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = '#f8fafc'}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f8fafc'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                     >
                         <BsChevronLeft />
                     </button>
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                        {Array.from({ length: Math.ceil(testimonials.length / visibleCount) }).map((_, i) => (
+                        {Array.from({ length: totalPages }).map((_, i) => (
                             <button
                                 key={i}
-                                onClick={() => setCurrentIndex(i)}
+                                onClick={() => changePage(i)}
                                 aria-label={`Ir al grupo de testimonios ${i + 1}`}
                                 style={{
                                     width: i === currentIndex ? '32px' : '24px',
-                                    height: '32px',
-                                    borderRadius: '16px',
-                                    border: 'none',
-                                    backgroundColor: 'transparent',
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    padding: 0,
-                                    margin: '0 2px',
+                                    height: '32px', borderRadius: '16px', border: 'none',
+                                    backgroundColor: 'transparent', cursor: 'pointer',
+                                    display: 'flex', alignItems: 'center',
+                                    justifyContent: 'center', padding: 0, margin: '0 2px',
                                     transition: 'all 0.3s'
                                 }}
                             >
                                 <div style={{
                                     width: i === currentIndex ? '24px' : '12px',
-                                    height: '4px',
-                                    borderRadius: '2px',
+                                    height: '4px', borderRadius: '2px',
                                     backgroundColor: i === currentIndex ? 'var(--color-secondary)' : '#ddd',
                                     transition: 'all 0.3s'
                                 }} />
@@ -121,20 +106,15 @@ const TestimonialCarousel = ({ testimonials }) => {
                         onClick={nextSlide}
                         aria-label="Ver siguientes testimonios"
                         style={{
-                            width: '40px',
-                            height: '40px',
-                            borderRadius: '50%',
+                            width: '40px', height: '40px', borderRadius: '50%',
                             border: '1px solid var(--color-border)',
-                            backgroundColor: 'white',
-                            color: 'var(--color-primary)',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            backgroundColor: 'white', color: 'var(--color-primary)',
+                            cursor: 'pointer', display: 'flex',
+                            alignItems: 'center', justifyContent: 'center',
                             transition: 'all 0.2s'
                         }}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = '#f8fafc'}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f8fafc'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                     >
                         <BsChevronRight />
                     </button>
@@ -147,19 +127,13 @@ const TestimonialCarousel = ({ testimonials }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        fontSize: '1rem',
-                        fontWeight: '600',
-                        color: 'var(--color-primary)',
-                        textDecoration: 'none',
-                        borderBottom: '2px solid var(--color-secondary)',
-                        paddingBottom: '0.2rem',
-                        transition: 'opacity 0.2s'
+                        display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                        fontSize: '1rem', fontWeight: '600', color: 'var(--color-primary)',
+                        textDecoration: 'none', borderBottom: '2px solid var(--color-secondary)',
+                        paddingBottom: '0.2rem', transition: 'opacity 0.2s'
                     }}
-                    onMouseEnter={(e) => e.target.style.opacity = '0.8'}
-                    onMouseLeave={(e) => e.target.style.opacity = '1'}
+                    onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                 >
                     <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />

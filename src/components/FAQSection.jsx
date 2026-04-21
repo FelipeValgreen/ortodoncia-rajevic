@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const FAQSection = ({ faqs, title = "Preguntas Frecuentes" }) => {
     const [openIndex, setOpenIndex] = React.useState(null);
@@ -9,7 +8,6 @@ const FAQSection = ({ faqs, title = "Preguntas Frecuentes" }) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    // Generar Schema markup para FAQs
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -42,17 +40,16 @@ const FAQSection = ({ faqs, title = "Preguntas Frecuentes" }) => {
 
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     {faqs.map((faq, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
+                            className="anim-fade-up animate-in"
                             style={{
                                 backgroundColor: 'white',
                                 marginBottom: '1rem',
                                 borderRadius: '8px',
                                 overflow: 'hidden',
-                                boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                                transitionDelay: `${index * 0.05}s`
                             }}
                         >
                             <button
@@ -83,22 +80,20 @@ const FAQSection = ({ faqs, title = "Preguntas Frecuentes" }) => {
                                 </span>
                             </button>
 
-                            {openIndex === index && (
-                                <motion.div
-                                    initial={{ height: 0, opacity: 0 }}
-                                    animate={{ height: 'auto', opacity: 1 }}
-                                    exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    style={{
-                                        padding: '0 1.5rem 1.5rem 1.5rem',
-                                        color: '#555',
-                                        lineHeight: '1.8'
-                                    }}
-                                >
-                                    {faq.answer}
-                                </motion.div>
-                            )}
-                        </motion.div>
+                            <div
+                                style={{
+                                    maxHeight: openIndex === index ? '500px' : '0',
+                                    overflow: 'hidden',
+                                    transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                                    opacity: openIndex === index ? 1 : 0,
+                                    padding: openIndex === index ? '0 1.5rem 1.5rem 1.5rem' : '0 1.5rem',
+                                    color: '#555',
+                                    lineHeight: '1.8'
+                                }}
+                            >
+                                {faq.answer}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

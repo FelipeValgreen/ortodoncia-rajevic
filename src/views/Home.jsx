@@ -2,12 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import { BsArrowRight, BsCheckCircle, BsStarFill } from 'react-icons/bs';
-import { motion } from 'framer-motion';
+import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import drRajevicImg from '../assets/dr-rajevic.webp';
 import heroHome from '../assets/hero_home_v2.webp';
-import FAQSection from '../components/FAQSection';
-import TestimonialCarousel from '../components/TestimonialCarousel';
+import dynamic from 'next/dynamic';
+const FAQSection = dynamic(() => import('../components/FAQSection'), { ssr: false });
+const TestimonialCarousel = dynamic(() => import('../components/TestimonialCarousel'), { ssr: false });
 
 import navChild from '../assets/nav_child.webp';
 import navAdult from '../assets/nav_adult.webp';
@@ -16,9 +16,9 @@ import navInvisalign from '../assets/nav_invisalign.webp';
 // Import new premium images for Areas de Experticia
 import heroChild from '../assets/hero_child.webp';
 import heroAdult from '../assets/hero_adult.webp';
-import heroComplex from '../assets/hero_second_opinion.webp';
+import heroComplex from '../assets/hero_complex_cases.png';
 
-import BlogGrid from '../components/BlogGrid';
+const BlogGrid = dynamic(() => import('../components/BlogGrid'), { ssr: false });
 import { getLatestPosts } from '../data/blogData';
 
 const Home = () => {
@@ -100,7 +100,6 @@ const Home = () => {
             src={heroHome}
             alt="Ortodoncia Rajevic - Sonrisas Reales"
             priority={true}
-            fetchPriority="high"
             fill
             sizes="(max-width: 768px) 100vw, 100vw"
             style={{ objectFit: 'cover', objectPosition: '85% center' }}
@@ -168,12 +167,7 @@ const Home = () => {
       < section className="section" >
         <div className="container">
           <div className="grid-2" style={{ gap: '5rem', alignItems: 'center' }}>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="anim-fade-left animate-in">
               <h2 style={{ marginBottom: '2rem' }}>El peligro de la "invisibilidad"</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '1.5rem' }}>
                 Hoy en día, se puede comprar un tratamiento de ortodoncia casi como un producto de supermercado. Alineadores por correo, franquicias de paso rápido, diagnósticos por selfie.
@@ -193,12 +187,8 @@ const Home = () => {
                   <span>La evaluación de las encías y del hueso donde se insertan los dientes es primordial: Mover dientes en encías enfermas puede causar la pérdida de piezas dentarias.</span>
                 </li>
               </ul>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            </div>
+            <div className="anim-fade-right animate-in anim-delay-2"
               style={{ backgroundColor: '#f0f4f8', padding: '3rem', borderRadius: 'var(--border-radius)' }}
             >
               <h3 style={{ marginBottom: '1.5rem' }}>Nuestra promesa:</h3>
@@ -211,7 +201,7 @@ const Home = () => {
               <Link href="/dr-rajevic" style={{ marginTop: '2rem', display: 'inline-block', textDecoration: 'underline', color: 'var(--color-primary)' }}>
                 Conozca al Dr. Zdenko Rajevic &rarr;
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section >
@@ -226,11 +216,7 @@ const Home = () => {
 
           <div className="grid-3" style={{ gap: '2rem' }}>
             {/* Child */}
-            <motion.div
-              className="card"
-              whileHover={{ y: -5 }}
-              style={{ padding: '0', overflow: 'hidden' }}
-            >
+            <div className="card hover-lift" style={{ padding: '0', overflow: 'hidden' }}>
               <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                 <Image src={heroChild} alt="Ortodoncia Infantil" fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: 'cover' }} />
               </div>
@@ -242,14 +228,10 @@ const Home = () => {
                 </p>
                 <Link href="/ortodoncia-infantil-vitacura" className="btn-link">Ver Tratamiento &rarr;</Link>
               </div>
-            </motion.div>
+            </div>
 
             {/* Adult */}
-            <motion.div
-              className="card"
-              whileHover={{ y: -5 }}
-              style={{ padding: '0', overflow: 'hidden' }}
-            >
+            <div className="card hover-lift" style={{ padding: '0', overflow: 'hidden' }}>
               <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                 <Image src={heroAdult} alt="Ortodoncia Adultos" fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: 'cover' }} />
               </div>
@@ -261,14 +243,10 @@ const Home = () => {
                 </p>
                 <Link href="/ortodoncia-adultos-vitacura" className="btn-link">Ver Opciones &rarr;</Link>
               </div>
-            </motion.div>
+            </div>
 
             {/* Complex */}
-            <motion.div
-              className="card"
-              whileHover={{ y: -5 }}
-              style={{ padding: '0', overflow: 'hidden' }}
-            >
+            <div className="card hover-lift" style={{ padding: '0', overflow: 'hidden' }}>
               <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                 <Image src={heroComplex} alt="Casos Complejos" fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: 'cover', objectPosition: 'center' }} />
               </div>
@@ -280,7 +258,7 @@ const Home = () => {
                 </p>
                 <Link href="/segunda-opinion-ortodoncia" className="btn-link">Ver Soluciones &rarr;</Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section >

@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     title: 'Segunda Opinión en Ortodoncia | Diagnóstico Especializado Vitacura',
     description: '¿Tratamiento estancado? Ofrecemos una auditoría clínica integral y un re-diagnóstico honesto para corregir el rumbo clínico. Salve su inversión y su salud.',
-    images: ['/assets/hero_second_opinion.webp'],
+    images: ['/assets/hero_complex_cases.png'],
   },
 };
 

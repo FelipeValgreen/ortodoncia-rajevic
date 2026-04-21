@@ -1,0 +1,394 @@
+{
+  "largest-contentful-paint": {
+    "id": "largest-contentful-paint",
+    "title": "Largest Contentful Paint",
+    "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+    "score": 0.95,
+    "scoreDisplayMode": "numeric",
+    "numericValue": 2152.4070999999994,
+    "numericUnit": "millisecond",
+    "displayValue": "2.2 s",
+    "scoringOptions": {
+      "p10": 2500,
+      "median": 4000
+    }
+  },
+  "max-potential-fid": {
+    "id": "max-potential-fid",
+    "title": "Max Potential First Input Delay",
+    "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+    "score": 0.97,
+    "scoreDisplayMode": "numeric",
+    "numericValue": 96,
+    "numericUnit": "millisecond",
+    "displayValue": "100 ms"
+  },
+  "errors-in-console": {
+    "id": "errors-in-console",
+    "title": "Browser errors were logged to the console",
+    "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "sourceLocation",
+          "valueType": "source-location",
+          "label": "Source"
+        },
+        {
+          "key": "description",
+          "valueType": "code",
+          "label": "Description"
+        }
+      ],
+      "items": [
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/webpack-391ba578dc963702.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/fd9d1056-6922f449a204c2cc.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/117-c86a41b869f6b521.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/main-app-f62825e31085001c.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/145-3d212617de842f6e.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/app/page-074a680fd6cc341e.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/713-cfc1f007cb1e5f60.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        },
+        {
+          "source": "network",
+          "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+          "sourceLocation": {
+            "type": "source-location",
+            "url": "http://localhost:3001/_next/static/chunks/app/layout-c856299a4c65f587.js",
+            "urlProvider": "network",
+            "line": 0,
+            "column": 0
+          }
+        }
+      ]
+    }
+  },
+  "interactive": {
+    "id": "interactive",
+    "title": "Time to Interactive",
+    "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+    "score": 0.99,
+    "scoreDisplayMode": "numeric",
+    "numericValue": 2152.4070999999994,
+    "numericUnit": "millisecond",
+    "displayValue": "2.2 s"
+  },
+  "color-contrast": {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.11/color-contrast).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "valueType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "valueType": "node"
+          },
+          "label": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "1-0-SPAN",
+            "path": "1,HTML,1,BODY,1,DIV,4,FOOTER,0,DIV,0,DIV,1,DIV,1,UL,4,LI,0,SPAN",
+            "selector": "div > ul > li > span",
+            "boundingRect": {
+              "top": 8313,
+              "bottom": 8330,
+              "left": 16,
+              "right": 115,
+              "width": 99,
+              "height": 17
+            },
+            "snippet": "<span style=\"color:var(--color-secondary)\">",
+            "nodeLabel": "Guías Clínicas",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.42 (foreground color: #2c709b, background color: #133447, font size: 11.4pt (15.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "1-1-FOOTER",
+                  "path": "1,HTML,1,BODY,1,DIV,4,FOOTER",
+                  "selector": "body > div.app-container > footer.footer",
+                  "boundingRect": {
+                    "top": 7810,
+                    "bottom": 9048,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 1238
+                  },
+                  "snippet": "<footer class=\"footer\" style=\"background-color: var(--color-primary); color: white; padding-top: 5rem;\">",
+                  "nodeLabel": "Ortodoncia Rajevic\n\nCriterio clínico superior. Especialistas en diagnóstico, pl…"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    }
+  },
+  "unused-javascript": {
+    "id": "unused-javascript",
+    "title": "Reduce unused JavaScript",
+    "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+    "score": 0.5,
+    "scoreDisplayMode": "metricSavings",
+    "numericValue": 0,
+    "numericUnit": "millisecond",
+    "displayValue": "Est savings of 35 KiB",
+    "metricSavings": {
+      "FCP": 0,
+      "LCP": 0
+    },
+    "details": {
+      "type": "opportunity",
+      "headings": [
+        {
+          "key": "url",
+          "valueType": "url",
+          "subItemsHeading": {
+            "key": "source",
+            "valueType": "code"
+          },
+          "label": "URL"
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "subItemsHeading": {
+            "key": "sourceBytes"
+          },
+          "label": "Transfer Size"
+        },
+        {
+          "key": "wastedBytes",
+          "valueType": "bytes",
+          "subItemsHeading": {
+            "key": "sourceWastedBytes"
+          },
+          "label": "Est Savings"
+        }
+      ],
+      "items": [
+        {
+          "url": "http://localhost:3001/_next/static/chunks/521-c9d07babe2be263b.js",
+          "totalBytes": 35873,
+          "wastedBytes": 35832,
+          "wastedPercent": 99.88598832737637
+        }
+      ],
+      "overallSavingsMs": 0,
+      "overallSavingsBytes": 35832,
+      "sortedBy": [
+        "wastedBytes"
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "metricSavings": {
+          "FCP": 0,
+          "LCP": 0
+        }
+      }
+    },
+    "guidanceLevel": 1
+  },
+  "network-dependency-tree-insight": {
+    "id": "network-dependency-tree-insight",
+    "title": "Network dependency tree",
+    "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+    "score": 0,
+    "scoreDisplayMode": "numeric",
+    "metricSavings": {
+      "LCP": 0
+    },
+    "details": {
+      "type": "list",
+      "items": [
+        {
+          "type": "list-section",
+          "value": {
+            "type": "network-tree",
+            "chains": {
+              "707E3BE9EF9722DA5C3D8AD21576AC7A": {
+                "url": "http://localhost:3001/",
+                "navStartToEndTime": 112,
+                "transferSize": 18808,
+                "isLongest": true,
+                "children": {
+                  "42006.5": {
+                    "url": "http://localhost:3001/_next/static/css/b58c956e6aaf6b58.css",
+                    "navStartToEndTime": 122,
+                    "transferSize": 3081,
+                    "isLongest": true,
+                    "children": {}
+                  }
+                }
+              }
+            },
+            "longestChain": {
+              "duration": 122
+            }
+          }
+        },
+        {
+          "type": "list-section",
+          "title": "Preconnected origins",
+          "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+          "value": {
+            "type": "text",
+            "value": "no origins were preconnected"
+          }
+        },
+        {
+          "type": "list-section",
+          "title": "Preconnect candidates",
+          "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+          "value": {
+            "type": "text",
+            "value": "No additional origins are good candidates for preconnecting"
+          }
+        }
+      ]
+    },
+    "guidanceLevel": 1
+  },
+  "render-blocking-insight": {
+    "id": "render-blocking-insight",
+    "title": "Render blocking requests",
+    "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+    "score": 0,
+    "scoreDisplayMode": "metricSavings",
+    "displayValue": "Est savings of 70 ms",
+    "metricSavings": {
+      "FCP": 50,
+      "LCP": 0
+    },
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "url",
+          "valueType": "url",
+          "label": "URL"
+        },
+        {
+          "key": "totalBytes",
+          "valueType": "bytes",
+          "label": "Transfer Size"
+        },
+        {
+          "key": "wastedMs",
+          "valueType": "timespanMs",
+          "label": "Duration"
+        }
+      ],
+      "items": [
+        {
+          "url": "http://localhost:3001/_next/static/css/b58c956e6aaf6b58.css",
+          "totalBytes": 3081,
+          "wastedMs": 176
+        }
+      ]
+    },
+    "guidanceLevel": 3
+  }
+}

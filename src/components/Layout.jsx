@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BsTelephone, BsGeoAlt, BsClock, BsList, BsX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
 import Logo from './Logo';
-import WhatsAppButton from './WhatsAppButton';
-import MegaMenu from './MegaMenu';
-import CookieConsent from './CookieConsent';
+import CalendlyPopupButton from './CalendlyPopupButton';
+
+const WhatsAppButton = dynamic(() => import('./WhatsAppButton'), { ssr: false });
+const MegaMenu = dynamic(() => import('./MegaMenu'), { ssr: false });
+const CookieConsent = dynamic(() => import('./CookieConsent'), { ssr: false });
 
 const Layout = ({ children }) => {
     const pathname = usePathname();
@@ -117,9 +120,9 @@ const Layout = ({ children }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
+                                <CalendlyPopupButton style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
                                     Agenda tu diagnóstico
-                                </Link>
+                                </CalendlyPopupButton>
                             </li>
                         </ul>
                     </nav>
@@ -151,9 +154,13 @@ const Layout = ({ children }) => {
 
                     <Link href="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
                     <Link href="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
-                    <Link href="/contacto" onClick={closeMobileMenu} className="mobile-nav-link" style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem' }}>
+                    <CalendlyPopupButton 
+                        onClickExtra={closeMobileMenu} 
+                        className="mobile-nav-link" 
+                        style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem', display: 'inline-block' }}
+                    >
                         Agenda tu hora
-                    </Link>
+                    </CalendlyPopupButton>
                 </nav>
             </div>
 
@@ -201,31 +208,31 @@ const Layout = ({ children }) => {
                         <div>
                             <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Especialidades</h4>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.95rem' }}>
-                                <li><Link href="/ortodoncia-infantil-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Infantil</Link></li>
-                                <li><Link href="/ortodoncia-adultos-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Ortodoncia Adultos</Link></li>
-                                <li><Link href="/invisalign-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Invisalign</Link></li>
-                                <li><Link href="/bruxismo-planos-relajacion-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Bruxismo y ATM</Link></li>
-                                <li><Link href="/rehabilitacion-oral-vitacura" style={{ color: 'rgba(255,255,255,0.7)' }}>Rehabilitación Oral</Link></li>
+                                <li><Link href="/ortodoncia-infantil-vitacura" style={{ color: 'rgba(255,255,255,0.85)' }}>Ortodoncia Infantil</Link></li>
+                                <li><Link href="/ortodoncia-adultos-vitacura" style={{ color: 'rgba(255,255,255,0.85)' }}>Ortodoncia Adultos</Link></li>
+                                <li><Link href="/invisalign-vitacura" style={{ color: 'rgba(255,255,255,0.85)' }}>Invisalign</Link></li>
+                                <li><Link href="/bruxismo-planos-relajacion-vitacura" style={{ color: 'rgba(255,255,255,0.85)' }}>Bruxismo y ATM</Link></li>
+                                <li><Link href="/rehabilitacion-oral-vitacura" style={{ color: 'rgba(255,255,255,0.85)' }}>Rehabilitación Oral</Link></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '1.5rem' }}>Contacto</h4>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.95rem' }}>
-                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
-                                    <BsGeoAlt style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
+                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
+                                    <BsGeoAlt style={{ marginTop: '0.3rem', color: 'var(--color-accent)' }} />
                                     <a href="https://maps.app.goo.gl/t1X3mC4w5Yd6nZ4W6" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                                         Las Hualtatas 8999. Vitacura. Santiago.
                                     </a>
                                 </li>
-                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
-                                    <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
+                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
+                                    <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-accent)' }} />
                                     <a href="https://wa.me/56988897033" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                                         +56 9 8889 7033
                                     </a>
                                 </li>
-                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.7)' }}>
-                                    <BsClock style={{ marginTop: '0.3rem', color: 'var(--color-secondary)' }} />
+                                <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
+                                    <BsClock style={{ marginTop: '0.3rem', color: 'var(--color-accent)' }} />
                                     Lun - Vie: 9:00 - 19:00
                                 </li>
                             </ul>

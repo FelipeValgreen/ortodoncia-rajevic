@@ -86,9 +86,22 @@ const Contact = () => {
                             }}>
                                 <h3 style={{ marginBottom: '0.8rem', fontSize: '1.4rem', color: 'var(--color-primary)' }}>Reserva Directa</h3>
                                 <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-light)', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                                    Conozca la disponibilidad en tiempo real y agende su diagnóstico sin esperas a través de nuestra plataforma de Doctoralia.
+                                    Conozca la disponibilidad en tiempo real y agende su evaluación sin esperas a través de Calendly o de nuestra plataforma en Doctoralia.
                                 </p>
-                                <DoctoraliaWidget />
+                                
+                                <div style={{ marginBottom: '2rem' }}>
+                                    <h4 style={{ marginBottom: '1rem', color: 'var(--color-primary)', fontSize: '1.1rem' }}>Calendario de Horas (Recomendado)</h4>
+                                    <div 
+                                        className="calendly-inline-widget" 
+                                        data-url="https://calendly.com/ortodonciarajevic/consulta-control" 
+                                        style={{ minWidth: '320px', height: '700px', border: '1px solid var(--color-border)', borderRadius: '8px', overflow: 'hidden' }}
+                                    ></div>
+                                </div>
+
+                                <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '1.5rem' }}>
+                                    <h4 style={{ marginBottom: '1rem', color: 'var(--color-primary)', fontSize: '1.1rem' }}>Reserva Alternativa (Doctoralia)</h4>
+                                    <DoctoraliaWidget />
+                                </div>
                             </div>
 
                             <div style={{ marginBottom: '2rem' }}>

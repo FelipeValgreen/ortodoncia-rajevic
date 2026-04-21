@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import heroSecondOpinion from '../assets/hero_second_opinion.webp';
+import heroSecondOpinion from '../assets/hero_complex_cases.png';
 import drRajevicImg from '../assets/dr-rajevic.webp';
 import { BsCheckCircle, BsStarFill } from 'react-icons/bs';
 import FAQSection from '../components/FAQSection';
