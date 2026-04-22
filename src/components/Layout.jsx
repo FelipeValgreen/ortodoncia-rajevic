@@ -220,7 +220,7 @@ const Layout = ({ children }) => {
                                 <li><Link href="/dr-zdenko-rajevic" style={{ color: 'rgba(255,255,255,0.7)' }}>Dr. Rajevic</Link></li>
 
                                 <li style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                                    <span style={{ color: 'var(--color-secondary)' }}>Guías Clínicas</span>
+                                    <span style={{ color: 'var(--color-accent)', fontWeight: '600' }}>Guías Clínicas</span>
                                 </li>
                                 <li><Link href="/guia-invisalign-chile" style={{ color: 'rgba(255,255,255,0.7)' }}>Guía Completa Invisalign</Link></li>
                             </ul>

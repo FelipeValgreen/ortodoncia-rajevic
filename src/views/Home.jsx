@@ -8,6 +8,7 @@ import heroHome from '../assets/hero_home_v2.webp';
 import dynamic from 'next/dynamic';
 const FAQSection = dynamic(() => import('../components/FAQSection'), { ssr: false });
 const TestimonialCarousel = dynamic(() => import('../components/TestimonialCarousel'), { ssr: false });
+const BeforeAfterGallery = dynamic(() => import('../components/BeforeAfterGallery'), { ssr: false });
 
 import navChild from '../assets/nav_child.webp';
 import navAdult from '../assets/nav_adult.webp';
@@ -72,6 +73,21 @@ const Home = () => {
       text: "Sufría de dolores cervicales y bruxismo. No buscaba estética, buscaba salud. El diagnóstico del Dr. Rajevic fue certero: mi mordida estaba causando todo. Ahora duermo sin dolor y mis dientes están alineados. Un cambio de vida.",
       image: navAdult,
       date: "Hace 6 meses en Google"
+    }
+  ];
+
+  const clinicalCases = [
+    {
+      beforeImage: heroChild.src,
+      afterImage: heroAdult.src,
+      label: 'Corrección Funcional y Estética',
+      description: 'Evolución del tratamiento ortodóncico asegurando la salud de la articulación y un encaje perfecto de la mordida.'
+    },
+    {
+      beforeImage: navAdult.src,
+      afterImage: heroComplex.src,
+      label: 'Casos Complejos y Rehabilitación',
+      description: 'Corrección de apiñamiento severo combinado con desgaste dental, tratado con enfoque biológico.'
     }
   ];
 
@@ -262,6 +278,20 @@ const Home = () => {
           </div>
         </div>
       </section >
+
+      {/* BEFORE / AFTER CASES SECTION */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '4rem' }}>
+            <span className="uppercase-tracking text-secondary">Resultados Clínicos</span>
+            <h2 style={{ marginTop: '0.5rem' }}>El valor de un buen diagnóstico</h2>
+            <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--color-text-light)' }}>
+              No se trata solo de tener dientes rectos, sino de lograr una mordida funcional y estable en el tiempo. Estos son algunos resultados de aplicar nuestra filosofía.
+            </p>
+          </div>
+          <BeforeAfterGallery cases={clinicalCases} />
+        </div>
+      </section>
 
       {/* TESTIMONIALS SECTION */}
       <section className="section" style={{ backgroundColor: '#f8fafc' }}>
