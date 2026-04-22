@@ -6,7 +6,6 @@ import { BsTelephone, BsGeoAlt, BsClock, BsList, BsX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from 'react-icons/fa';
 import dynamic from 'next/dynamic';
 import Logo from './Logo';
-import CalendlyPopupButton from './CalendlyPopupButton';
 
 const WhatsAppButton = dynamic(() => import('./WhatsAppButton'), { ssr: false });
 const MegaMenu = dynamic(() => import('./MegaMenu'), { ssr: false });
@@ -132,17 +131,9 @@ const Layout = ({ children }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="/contacto"
-                                    className={`nav-link ${pathname && pathname.includes('contacto') ? 'active' : ''}`}
-                                >
-                                    Contacto
+                                <Link href="/contacto" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '0.9rem', color: 'white', textDecoration: 'none' }}>
+                                    Agenda tu evaluación
                                 </Link>
-                            </li>
-                            <li>
-                                <CalendlyPopupButton style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
-                                    Agenda tu diagnóstico
-                                </CalendlyPopupButton>
                             </li>
                         </ul>
                     </nav>
@@ -174,14 +165,14 @@ const Layout = ({ children }) => {
 
                     <Link href="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
                     <Link href="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
-                    <Link href="/contacto" onClick={closeMobileMenu} className="mobile-nav-link">Contacto</Link>
-                    <CalendlyPopupButton 
-                        onClickExtra={closeMobileMenu} 
-                        className="mobile-nav-link" 
-                        style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem', display: 'inline-block' }}
+                    <Link
+                        href="/contacto"
+                        onClick={closeMobileMenu}
+                        className="mobile-nav-link"
+                        style={{ marginTop: '1rem', border: '1px solid white', padding: '0.5rem 2rem', borderRadius: '50px', fontSize: '1.5rem', display: 'inline-block', textDecoration: 'none' }}
                     >
-                        Agenda tu hora
-                    </CalendlyPopupButton>
+                        Agenda tu evaluación
+                    </Link>
                 </nav>
             </div>
 
