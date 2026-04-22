@@ -117,8 +117,9 @@ export default function RootLayout({ children }) {
                         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                     })(window,document,"clarity","script","vg0t3ukpiw");`}
                 </Script>
-                {/* Calendly script */}
-                <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+                {/* Calendly integration */}
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+                <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
             </head>
             <body>
                 <ScrollToTop />
