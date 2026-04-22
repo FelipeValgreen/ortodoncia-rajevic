@@ -22,8 +22,20 @@ const Layout = ({ children }) => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
+        
+        const handleMessage = (e) => {
+            if (e.data && e.data.event === 'calendly.event_scheduled') {
+                window.location.href = '/gracias';
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('message', handleMessage);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('message', handleMessage);
+        };
     }, []);
 
     const toggleMobileMenu = () => {
@@ -120,6 +132,14 @@ const Layout = ({ children }) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link
+                                    href="/contacto"
+                                    className={`nav-link ${pathname && pathname.includes('contacto') ? 'active' : ''}`}
+                                >
+                                    Contacto
+                                </Link>
+                            </li>
+                            <li>
                                 <CalendlyPopupButton style={{ padding: '0.8rem 2rem', fontSize: '0.9rem' }}>
                                     Agenda tu diagnóstico
                                 </CalendlyPopupButton>
@@ -154,6 +174,7 @@ const Layout = ({ children }) => {
 
                     <Link href="/dr-zdenko-rajevic" onClick={closeMobileMenu} className="mobile-nav-link">Dr. Rajevic</Link>
                     <Link href="/blog" onClick={closeMobileMenu} className="mobile-nav-link">Blog</Link>
+                    <Link href="/contacto" onClick={closeMobileMenu} className="mobile-nav-link">Contacto</Link>
                     <CalendlyPopupButton 
                         onClickExtra={closeMobileMenu} 
                         className="mobile-nav-link" 
