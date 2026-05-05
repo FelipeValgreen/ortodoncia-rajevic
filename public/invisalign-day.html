@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invisalign Day — 29 de Mayo</title>
+<link rel="icon" type="image/png" href="isotype.png">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#133447;--blue:#2C709B;--blue-light:#A6C6DF;--blue-pale:#D4E5F2;
+  --white:#ffffff;--off:#f7fafb;--muted:#133447;--border:#d0e4ef;
+  --gold:#A6C6DF;--gold-l:#D4E5F2;
+  --serif:'Lora',Georgia,serif;--sans:'Source Sans 3','Source Sans Pro',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:var(--dark);line-height:1.6;overflow-x:hidden}
+.topbar{background:var(--dark);color:rgba(255,255,255,.6);font-size:11.5px;letter-spacing:.04em;padding:9px 0;text-align:center}
+.topbar a{color:var(--gold-l);text-decoration:none}
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:54px}
+.logo{font-family:var(--serif);font-size:15px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--dark);text-decoration:none}
+.logo span{color:var(--blue)}
+.nav-cta{background:var(--dark);color:#fff;font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--blue)}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;overflow:hidden}
+.hero-l{background:var(--dark);padding:9% 7% 9% 8%;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-l::after{content:'';position:absolute;bottom:-180px;left:-80px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(44,112,155,.22) 0%,transparent 68%);pointer-events:none}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.eyebrow-line{width:32px;height:1px;background:var(--blue-light)}
+.eyebrow span{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-light)}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5vw,66px);font-weight:700;line-height:1.07;color:#fff;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.75;margin-bottom:38px;max-width:400px}
+.hero-sub strong{color:#fff;font-weight:500}
+.cta-stack{display:flex;flex-direction:column;gap:11px;max-width:290px}
+.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--gold);color:var(--dark);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:15px 26px;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.btn-gold:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.5);font-size:12px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:3px;transition:all .2s;width:fit-content}
+.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.45)}
+.hero-proof{margin-top:46px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:18px}
+.stars-sm{color:var(--gold);font-size:13px;letter-spacing:2px}
+.proof-txt{font-size:15px;color:rgba(255,255,255,.75);line-height:1.55}
+.proof-txt strong{color:rgba(255,255,255,.95);display:block;font-size:16px;font-weight:500}
+.hero-r{position:relative;overflow:hidden}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.hero-r-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(20,52,71,.45) 0%,transparent 55%)}
+.hero-badge{position:absolute;bottom:32px;right:32px;background:rgba(20,52,71,.9);backdrop-filter:blur(8px);border:1px solid rgba(44,112,155,.4);padding:18px 22px;color:#fff;max-width:210px}
+.badge-n{font-family:var(--serif);font-size:40px;font-weight:300;color:var(--gold-l);line-height:1}
+.badge-l{font-size:11px;color:rgba(255,255,255,.5);margin-top:5px;line-height:1.5}
+.alert{background:var(--blue-pale);border-top:3px solid var(--blue);padding:22px 8%;text-align:center}
+.alert p{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--dark);max-width:720px;margin:0 auto;line-height:1.65}
+.alert strong{font-style:normal;font-weight:600;color:var(--blue)}
+section{padding:96px 8%}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
+.sec-dot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+h2{font-family:var(--serif);font-size:clamp(30px,3.8vw,50px);font-weight:600;line-height:1.1;color:var(--dark);margin-bottom:18px}
+h2 em{font-style:italic;color:var(--blue)}
+.sec-intro{font-size:18px;font-weight:300;color:var(--muted);max-width:560px;line-height:1.8;margin-bottom:52px}
+.problem{background:var(--dark)}
+.problem h2{color:#fff}
+.problem h2 em{color:var(--gold-l)}
+.problem .sec-intro{color:rgba(255,255,255,.85)}
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:56px}
+.prob-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:34px 26px;transition:background .25s}
+.prob-card:hover{background:rgba(255,255,255,.07)}
+.prob-icon{width:38px;height:38px;border:1px solid rgba(166,198,223,.35);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-family:var(--serif);font-size:17px;color:var(--blue-light)}
+.prob-card h3{font-family:var(--serif);font-size:19px;font-weight:400;color:#fff;margin-bottom:10px}
+.prob-card p{font-size:16.5px;color:rgba(255,255,255,.8);line-height:1.72}
+.prob-quote{border-left:3px solid var(--blue-light);padding-left:26px;max-width:640px}
+.prob-quote blockquote{font-family:var(--serif);font-size:19px;font-weight:300;font-style:italic;color:rgba(255,255,255,.9);line-height:1.65;margin-bottom:10px}
+.prob-quote cite{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:.1em;font-style:normal;text-transform:uppercase}
+.protocol{background:var(--white)}
+.prot-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.steps{display:flex;flex-direction:column}
+.step{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.snum{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--blue-pale);line-height:1;min-width:52px;user-select:none}
+.sbody h3{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--dark);margin-bottom:7px;margin-top:5px}
+.sbody p{font-size:16.5px;color:var(--muted);line-height:1.75}
+.diag-sticky{position:sticky;top:96px}
+.diag-img{position:relative;overflow:hidden;margin-bottom:22px}
+.diag-img img{width:100%;height:360px;object-fit:cover;display:block}
+.diag-tag{position:absolute;top:18px;left:18px;background:var(--dark);color:var(--gold-l);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px}
+.offer-box{background:var(--dark);padding:30px;border-left:4px solid var(--blue)}
+.offer-title{font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--blue-light);margin-bottom:14px}
+.isapre-note{display:flex;align-items:center;gap:9px;background:rgba(44,112,155,.15);border:1px solid rgba(44,112,155,.3);padding:9px 13px;margin-bottom:14px;font-size:12px;color:rgba(255,255,255,.65);line-height:1.45}
+.isapre-note svg{color:var(--blue-light);flex-shrink:0}
+.offer-list{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.offer-row{display:flex;align-items:flex-start;gap:9px;font-size:16px;color:rgba(255,255,255,.85);line-height:1.5}
+.chk{width:15px;height:15px;border:1px solid var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;color:var(--blue-light);font-size:9px}
+.price-row{display:flex;align-items:baseline;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);margin-bottom:18px}
+.price-num{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--gold-l)}
+.price-note{font-size:11px;color:rgba(255,255,255,.38);line-height:1.6}
+.price-note strong{color:rgba(255,255,255,.85);display:block;font-size:13px;margin-bottom:2px}
+.btn-offer{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--blue);color:#fff;font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:14px 22px;text-decoration:none;border:none;cursor:pointer;width:100%;transition:all .2s}
+.btn-offer:hover{background:var(--blue-light);transform:translateY(-1px)}
+.photo-div{height:460px;position:relative;overflow:hidden}
+.photo-div img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block;filter:brightness(.48)}
+.photo-div-cnt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 8%}
+.photo-div-cnt p{font-family:var(--serif);font-size:clamp(24px,3.2vw,44px);font-weight:300;color:#fff;line-height:1.22;max-width:780px;margin-bottom:30px}
+.photo-div-cnt p em{font-style:italic;color:var(--gold-l)}
+.doctor{background:var(--off)}
+.doc-grid{display:grid;grid-template-columns:320px 1fr;gap:60px;align-items:start}
+.doc-img-wrap{position:relative}
+.doc-img-wrap img{width:100%;height:380px;object-fit:cover;object-position:center 8%;display:block}
+.doc-creds{position:absolute;bottom:-18px;right:-18px;background:var(--dark);padding:22px 24px;border-top:3px solid var(--blue);max-width:215px}
+.cred-item{font-size:11px;color:rgba(255,255,255,.45);margin-bottom:8px;line-height:1.5}
+.cred-item:last-child{margin-bottom:0}
+.cred-item strong{display:block;color:rgba(255,255,255,.82);font-weight:500;font-size:11.5px}
+.doc-content{padding-top:8px}
+.doc-title{font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:24px}
+.doc-bio{font-size:18px;font-weight:300;color:var(--dark);line-height:1.82;margin-bottom:28px}
+.pillars{display:flex;flex-direction:column;gap:14px}
+.pillar{display:flex;gap:16px;padding:16px 18px;background:var(--white);border-left:3px solid var(--blue)}
+.pillar-n{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--border);line-height:1;min-width:26px;margin-top:3px}
+.pillar h4{font-family:var(--serif);font-size:15.5px;font-weight:400;color:var(--dark);margin-bottom:3px}
+.pillar p{font-size:16.5px;color:var(--muted);line-height:1.6}
+.testi-section{background:var(--dark);padding:96px 6%}
+.testi-section h2{color:#fff}
+.testi-section h2 em{color:var(--gold-l)}
+.testi-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+.rating-big{display:flex;align-items:center;gap:16px}
+.rating-num{font-family:var(--serif);font-size:56px;font-weight:300;color:var(--gold-l);line-height:1}
+.rating-detail{display:flex;flex-direction:column;gap:4px}
+.rating-stars{color:var(--gold);font-size:18px;letter-spacing:3px}
+.rating-count{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.04em}
+.google-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:8px 14px;font-size:12px;color:rgba(255,255,255,.5)}
+.google-badge svg{flex-shrink:0}
+.carousel-wrap{position:relative;overflow:hidden}.carousel-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}.twall-card{flex:0 0 calc(33.333% - 10px);margin-right:15px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:28px 24px;box-sizing:border-box}
+
+.twall-card:hover{background:rgba(255,255,255,.09)}
+.twall-stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:10px}
+.twall-txt{font-family:var(--sans);font-size:16.5px;font-weight:400;color:rgba(255,255,255,.9);line-height:1.62;margin-bottom:14px}
+.twall-author{display:flex;align-items:center;gap:9px;padding-top:12px;border-top:1px solid rgba(255,255,255,.15)}
+.twall-av{width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:14px;color:rgba(255,255,255,.9);font-weight:500;flex-shrink:0}
+.twall-name{font-size:13px;font-weight:500;color:rgba(255,255,255,.95)}
+.twall-date{font-size:12px;color:rgba(255,255,255,.6)}
+.twall-card.feat{background:rgba(44,112,155,.2);border-color:rgba(44,112,155,.4)}
+.twall-card.feat .twall-txt{font-size:17.5px;color:rgba(255,255,255,.95)}
+.twall-card.feat .twall-av{background:var(--gold);color:var(--dark)}
+.testi-collage { columns: 3 300px; gap: 20px; }
+.testi-collage .twall-card { break-inside: avoid; margin-bottom: 20px; display: inline-block; width: 100%; flex: none; margin-right: 0; }
+.who-section{background:var(--white)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.who-list{display:flex;flex-direction:column}
+.who-item{display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-bottom:1px solid var(--border)}
+.who-item:first-child{padding-top:0}
+.who-item:last-child{border-bottom:none}
+.who-ico{width:40px;height:40px;background:var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.who-ico svg{color:var(--blue-light)}
+.who-item h3{font-family:var(--serif);font-size:17.5px;font-weight:400;color:var(--dark);margin-bottom:5px;margin-top:7px}
+.who-item p{font-size:16.5px;color:var(--muted);line-height:1.7}
+.who-img-col{position:relative}
+.who-img-col img{width:100%;height:480px;object-fit:cover;object-position:center 30%;display:block}
+.who-tag{position:absolute;bottom:-14px;left:-14px;background:var(--blue);padding:18px 22px;max-width:200px}
+.who-tag p{font-family:var(--serif);font-size:13.5px;font-style:italic;color:#fff;line-height:1.5}
+.faq{background:var(--off)}
+.faq-grid{display:grid;grid-template-columns:280px 1fr;gap:72px}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 0;cursor:pointer;font-family:var(--serif);font-size:17px;font-weight:400;color:var(--dark);gap:14px}
+.faq-q:hover{color:var(--blue)}
+.faq-ico{width:20px;height:20px;flex-shrink:0;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);transition:transform .28s}
+.faq-item.open .faq-ico{transform:rotate(45deg);color:var(--blue);border-color:var(--blue)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s ease,padding .28s;font-size:17px;color:var(--muted);line-height:1.78}
+.faq-item.open .faq-a{max-height:280px;padding-bottom:20px}
+/* ── CTA CALENDLY ── */
+.cta-final{background:var(--dark);padding:96px 8%;text-align:center;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;top:-200px;left:20%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(44,112,155,.12) 0%,transparent 65%);pointer-events:none}
+.cta-final h2{color:#fff;margin-bottom:16px}
+.cta-final h2 em{color:var(--gold-l)}
+.cta-final .cta-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.8);max-width:520px;margin:0 auto 40px;line-height:1.75}
+.cta-contact-strip{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:40px}
+.contact-row{display:flex;align-items:center;gap:9px;font-size:16px;color:rgba(255,255,255,.65)}
+.contact-row svg{color:var(--blue-light);flex-shrink:0}
+.cta-btn-group{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:48px 8% 28px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.foot-brand .logo{color:rgba(255,255,255,.75);display:block;margin-bottom:11px}
+.foot-brand p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.7}
+.foot-col h4{font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:13px}
+.foot-col p,.foot-col a{font-size:14.5px;color:rgba(255,255,255,.48);text-decoration:none;display:block;margin-bottom:5px;line-height:1.5}
+.foot-col a:hover{color:var(--gold-l)}
+.foot-bottom{padding:18px 8% 0;background:var(--dark);border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center}
+.foot-bottom p{font-size:11px;color:rgba(255,255,255,.22)}
+.wa{position:fixed;bottom:26px;right:26px;z-index:300;background:#25D366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.carousel-controls{display:flex;align-items:center;justify-content:space-between;margin-top:28px}.carousel-dots{display:flex;gap:8px;align-items:center}.c-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .25s;border:none;padding:0}.c-dot.active{width:22px;border-radius:3px;background:var(--gold)}.carousel-arrows{display:flex;gap:10px}.c-arrow{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}.c-arrow:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}.c-arrow:disabled{opacity:.25;cursor:default}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-l>*{animation:fadeUp .75s ease both}
+.eyebrow{animation-delay:.1s}.hero h1{animation-delay:.25s}.hero-sub{animation-delay:.4s}.cta-stack{animation-delay:.52s}.hero-proof{animation-delay:.65s}
+@media(max-width:920px){
+  nav { flex-direction: column; height: auto; padding: 14px 6%; gap: 14px; }
+  .logo { font-size: 13px; }
+  .logo img { width: 30px !important; height: 30px !important; }
+  .nav-cta { width: 100%; text-align: center; }
+  .hero,.prot-grid,.doc-grid,.who-grid,.faq-grid{grid-template-columns:1fr}
+  .cta-final{padding:72px 6%}
+  .hero-r{height:340px}
+  .prob-grid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr}
+  .doc-creds{position:static;margin-top:14px}
+  .who-img-col{display:none}
+  .cta-contact-strip{gap:16px}
+  .carousel-controls{flex-direction:column-reverse;gap:24px}
+  .carousel-dots{flex-wrap:wrap;justify-content:center}
+  .diag-img { width: 100% !important; max-width: none !important; }
+}
+
+/* INLINE FORM CSS */
+.form-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 40px; text-align: left;
+  max-width: 500px; margin: 0 auto;
+}
+.form-label { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-l); margin-bottom: 7px; }
+.form-input, .form-select {
+  width: 100%; padding: 16px 18px; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px;
+  font-family: var(--sans); font-size: 16px; color: #fff; background: rgba(0,0,0,0.15); outline: none; margin-bottom: 18px; transition: border-color 0.2s;
+}
+.form-select option { color: #000; background: #fff; }
+.form-input:focus, .form-select:focus { border-color: var(--blue); }
+.form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A6C6DF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+.btn-submit {
+  display: flex; align-items: center; justify-content: center; width: 100%; gap: 9px;
+  background: var(--blue); color: #fff; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 16px 22px; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; margin-top: 10px;
+}
+.btn-submit:hover { background: var(--blue-light); color: var(--dark); }
+.form-micro { text-align: center; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 16px; }
+.form-success { display: none; text-align: center; padding: 30px 0; }
+.success-icon { width: 52px; height: 52px; background: rgba(44,112,155,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--gold-l); margin: 0 auto 16px; border: 1px solid var(--blue); }
+.placeholder-img { width: 100%; height: 100%; background: #e6edf2; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 15px; font-weight: 500; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; border: 1px dashed var(--blue-light); box-sizing: border-box; }
+.placeholder-img-dark { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); border: 1px dashed rgba(255,255,255,0.2); }
+</style>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MBF6FVWM');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+<svg style="display:none;">
+  <symbol id="tooth-icon" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M18.8 4.2C17.4 3 15.6 3 14 3.7c-.5.2-1 .3-1.5.3s-1-.1-1.5-.3C9.4 3 7.6 3 6.2 4.2c-1.2 1-1.7 2.6-1.7 4.1 0 2.1.8 4.3 2.1 6 .8 1.1 1.6 2.1 2 3.4.2.8.2 1.6.4 2.4.2.7.9 1.2 1.6 1.2.6 0 1.2-.4 1.4-.9.2-.6.4-1.3.5-1.9.1-.5.3-.8.8-.8s.6.3.8.8c.1.6.2 1.3.5 1.9.2.6.8.9 1.4.9.7 0 1.4-.5 1.6-1.2.1-.8.2-1.6.4-2.4.4-1.3 1.2-2.3 2-3.4 1.3-1.7 2.1-3.9 2.1-6 0-1.5-.5-3.1-1.7-4.1z"/>
+  </symbol>
+</svg>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBF6FVWM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="topbar">
+  Lun – Vie 9:00–19:00 &nbsp;·&nbsp; <a href="tel:+56988897033">+56 9 8889 7033</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps" target="_blank">Las Hualtatas 8999, Vitacura</a>
+</div>
+
+<nav>
+  <a href="#" class="logo" style="display: flex; align-items: center; gap: 8px;">
+    <img src="isotype.png" alt="Ortodoncia Rajevic" style="width: 36px; height: 36px; object-fit: contain; border-radius: 4px;">
+    <div>Ortodoncia <span>Rajevic</span></div>
+  </a>
+  <a href="#formulario" class="nav-cta">Reservar mi lugar</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-l">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>Invisalign Day · 29 de Mayo</span></div>
+    <h1>Escáner 3D gratuito<br>para saber si Invisalign<br><em>es para ti.</em></h1>
+    <h2 style="font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue-light); margin-bottom:20px; line-height:1.4;">Un solo día · Vitacura</h2>
+    <p class="hero-sub">
+      El 29 de mayo abro mi clínica para hacer escáneres iTero 3D sin costo. <strong>Verás tu sonrisa simulada en pantalla</strong>, sabrás si eres candidato y tendrás un presupuesto real. Sin compromiso.
+    </p>
+    <div class="cta-stack">
+      <a href="#formulario" class="btn-gold">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reserva tu lugar gratis
+      </a>
+      <a href="#detalles" class="btn-ghost">Saber más sobre el evento →</a>
+    </div>
+    <div class="hero-proof">
+      <div style="display:flex;gap:3px;color:var(--gold);">
+        <svg width="15" height="15"><use href="#tooth-icon"></use></svg>
+        <svg width="15" height="15"><use href="#tooth-icon"></use></svg>
+        <svg width="15" height="15"><use href="#tooth-icon"></use></svg>
+        <svg width="15" height="15"><use href="#tooth-icon"></use></svg>
+        <svg width="15" height="15"><use href="#tooth-icon"></use></svg>
+      </div>
+      <p class="proof-txt">
+        <strong>5.0 en Google · 25 opiniones</strong>
+        Dr. Zdenko Rajevic · Invisalign Doctor
+      </p>
+    </div>
+  </div>
+  <div class="hero-r">
+    <img src="imagenes%20landing%20rajevic/img%201.png" alt="Invisalign Day Ortodoncia Rajevic" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;">
+  </div>
+</div>
+
+
+
+<!-- COMPARISON / POR QUE RAJEVIC -->
+<section class="protocol">
+  <div class="sec-eyebrow"><div class="sec-dot"></div><span>Invisalign en Ortodoncia Rajevic</span></div>
+  <div class="prot-grid">
+    <div>
+      <h2>La sonrisa que querías tener,<br><em>sin que nadie lo note.</em></h2>
+      <p class="sec-intro" style="margin-bottom:32px">Sin brackets, sin alambres, sin interrumpir tu vida. Yo diseño personalmente cada movimiento antes de que te pongas el primer alineador.</p>
+
+      <div class="isapre-note" style="background:#fff; color:var(--dark); border-radius:4px; padding: 12px 18px; margin-bottom: 42px; display:inline-flex; align-items:center; gap: 12px; border:1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <img src="imagenes%20landing%20rajevic/img%205.png" alt="Partner Oficial" style="height:32px; object-fit:contain;">
+        <span style="font-weight:600; letter-spacing:0.05em; font-size:14px;">Invisalign Certified Doctor — Partner Oficial</span>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="snum">01</div>
+          <div class="sbody">
+            <h3>Escáner iTero Element 3D</h3>
+            <p>Sin moldes, sin incomodidad. Obtendrás una imagen digital de alta precisión de tu boca en un par de minutos, completamente gratis ese día.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="snum">02</div>
+          <div class="sbody">
+            <h3>Simulación de tu sonrisa en 3D</h3>
+            <p>Antes de empezar, te mostraré en pantalla cómo quedarán tus dientes alineados. Sin suposiciones, sin sorpresas al final del tratamiento.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="snum">03</div>
+          <div class="sbody">
+            <h3>Diseño clínico personal</h3>
+            <p>El algoritmo genera una propuesta, pero yo la reviso, ajusto y apruebo minuciosamente. Lo que ves en pantalla es exactamente lo que ocurrirá en tu boca, basándome en una mordida estable.</p>
+          </div>
+        </div>
+        <div class="step" style="border-bottom:none;">
+          <div class="snum">04</div>
+          <div class="sbody">
+            <h3>Presupuesto cerrado y transparente</h3>
+            <p>Conocerás el costo exacto, facilidades de pago y cobertura Isapre. Y si Invisalign no es para ti, te lo diré con total honestidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-sticky" style="position: sticky; top: 96px; display: flex; flex-direction: column; align-items: center;">
+      <div class="diag-img" style="margin-bottom: 42px; width: 100%; max-width: 440px;">
+        <img src="imagenes%20landing%20rajevic/img%202.png" alt="Invisalign Aligners" style="width: 100%; height: auto; object-fit: contain; display: block; border-radius: 8px;">
+      </div>
+      <div class="offer-box" style="width: 100%; box-sizing: border-box;">
+        <div class="offer-title">Lo que incluye tu tratamiento Invisalign aquí</div>
+        <div class="offer-list">
+          <div class="offer-row"><div class="chk">✓</div><span>Diagnóstico completo de mordida y articulación antes de iniciar</span></div>
+          <div class="offer-row"><div class="chk">✓</div><span>Simulación 3D de tu resultado final — antes del primer alineador</span></div>
+          <div class="offer-row"><div class="chk">✓</div><span>Cada movimiento diseñado y aprobado personalmente por mí</span></div>
+          <div class="offer-row"><div class="chk">✓</div><span>Controles directos conmigo durante todo el proceso</span></div>
+          <div class="offer-row"><div class="chk">✓</div><span>Trabajo con todas las Isapres · Bono electrónico</span></div>
+        </div>
+        <a href="#formulario" class="btn-offer" style="margin-top:24px;">Quiero ver cómo quedaría mi sonrisa →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIEN ES -->
+<section class="who-section">
+  <div class="sec-eyebrow"><div class="sec-dot"></div><span>¿Es para ti?</span></div>
+  <h2 style="margin-bottom:48px;">Te reconocerás<br>en <em>alguno</em> de estos casos</h2>
+  <div class="who-grid">
+    <div class="who-list">
+      <div class="who-item">
+        <div class="who-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+        <div>
+          <h3>Llevas meses pensándolo y no te decides</h3>
+          <p>El 29 de mayo verás tu propio caso en 3D. Eso resuelve la duda que ninguna web puede resolver.</p>
+        </div>
+      </div>
+      <div class="who-item">
+        <div class="who-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg></div>
+        <div>
+          <h3>Hiciste ortodoncia antes y se enchuecaron</h3>
+          <p>Puedo revisar tu caso, identificar qué salió mal en la retención y decirte la solución.</p>
+        </div>
+      </div>
+      <div class="who-item">
+        <div class="who-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div>
+          <h3>Quieres saber si calificas</h3>
+          <p>No todos los casos se resuelven con alineadores invisibles. Ese día te digo la verdad clínica sobre el tuyo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="who-img-col">
+      <img src="imagenes%20landing%20rajevic/img%203.png" alt="Invisalign es para adolescentes y adultos" style="width: 100%; height: 480px; object-fit: cover; object-position: center 30%; display: block;">
+      <div class="who-tag">
+        <p>Invisalign es para adolescentes y adultos de todas las edades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doctor">
+  <div class="doc-grid">
+    <div class="doc-img-wrap">
+      <img src="imagenes%20landing%20rajevic/img%204.png" alt="Dr. Zdenko Rajevic" style="width: 100%; height: 380px; object-fit: cover; object-position: center 8%; display: block; border-radius: 8px;">
+    </div>
+    <div class="doc-content">
+      <div class="sec-eyebrow"><div class="sec-dot"></div><span>Tu Ortodoncista Especialista</span></div>
+      <h2>Dr. Zdenko <em>Rajevic.</em><br></h2>
+      <div class="doc-title" style="margin-bottom: 8px;">Invisalign Doctor · Especialista en Ortodoncia y Ortopedia Dento Maxilar</div>
+      <div style="font-size: 14.5px; font-weight: 500; color: var(--muted); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);">
+        35 años de experiencia clínica &nbsp;·&nbsp; +5.000 casos resueltos
+      </div>
+      <p class="doc-bio">
+        En 35 años he resuelto decenas de casos de Invisalign que no funcionaron en otras clínicas. Mi enfoque no es solo enderezar dientes — es revisar cómo funciona toda tu boca para que el resultado dure de verdad.
+      </p>
+      <p class="doc-bio">
+        <strong>El 29 de mayo estaré yo personalmente en cada consulta.</strong> Seré yo quien revise tu simulación y apruebe tu plan de tratamiento. No un asistente, no un interno.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi-section">
+  <div class="testi-header">
+    <div>
+      <div class="sec-eyebrow" style="margin-bottom:12px"><div class="sec-dot" style="background:var(--gold)"></div><span style="color:var(--gold)">Lo que dicen mis pacientes</span></div>
+      <h2 style="margin-bottom:0">25 experiencias <em>reales</em></h2>
+    </div>
+    <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+      <div class="rating-big">
+        <div class="rating-num">5.0</div>
+        <div class="rating-detail">
+          <div class="rating-stars" style="display:flex;gap:4px">
+            <svg width="18" height="18"><use href="#tooth-icon"></use></svg>
+            <svg width="18" height="18"><use href="#tooth-icon"></use></svg>
+            <svg width="18" height="18"><use href="#tooth-icon"></use></svg>
+            <svg width="18" height="18"><use href="#tooth-icon"></use></svg>
+            <svg width="18" height="18"><use href="#tooth-icon"></use></svg>
+          </div>
+          <div class="rating-count">25 opiniones en Google</div>
+        </div>
+      </div>
+      <div class="google-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Business
+      </div>
+    </div>
+  </div>
+  <div class="testi-collage">
+    <div class="twall-card feat">
+      <div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div>
+      <p class="twall-txt">"Me atiendo con el Dr. Rajevic desde los 14 años y hoy tengo 31. Su trabajo y dedicación siempre han sido impecables. A pesar de que soy de región, me ha acompañado durante todo mi proceso de ortodoncia y, años más tarde, en una cirugía. Es un profesional y una persona excepcional."</p>
+      <div class="twall-author"><div class="twall-av">S</div><div><div class="twall-name">Sofía Álvarez</div></div></div>
+    </div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente atención, muy dedicado el doctor y por sobretodo amoroso. Atiende a mi hija y sus dientes y paladar cambiaron del cielo a la tierra. Muy agradecidos con el doctor Zdenko."</p><div class="twall-author"><div class="twall-av">C</div><div><div class="twall-name">Carolina Muñoz</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente atención. Cálida, muy profesional. Muy buen diagnóstico y programación del tratamiento. Explicación clara de pasos, tiempo, resultados esperados, controles y costos. Muy confiable. Totalmente recomendable."</p><div class="twall-author"><div class="twall-av">D</div><div><div class="twall-name">Dobrila Sapag</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Solo puedo decir que el profesionalismo y la empatía de estar siempre preocupados de la evolución de los tratamientos ha significado nuestra total confianza. Recomiendo esta clínica a todos."</p><div class="twall-author"><div class="twall-av">R</div><div><div class="twall-name">Ricardo Gómez Lobos</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Mis 3 hijos se han atendido con el Doctor Rajevic. La experiencia de cada uno ha sido fantástica — análisis profundo de la mordida y el espacio para una sonrisa hermosa y saludable."</p><div class="twall-author"><div class="twall-av">L</div><div><div class="twall-name">Lorena Zamora Araya</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Mi experiencia con la clínica y el Dr. Zdenko ha sido realmente excelente. Desde lo administrativo hasta explicarme y acompañarme en cada parte de mi tratamiento."</p><div class="twall-author"><div class="twall-av">C</div><div><div class="twall-name">Catalina Izcue</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"La mejor decisión que hemos tomado. Fue tratamiento para mis 5 hijos, siempre claro, sin sorpresas, bien explicado y con facilidad de pago."</p><div class="twall-author"><div class="twall-av">A</div><div><div class="twall-name">Alejandra Irarrazaval</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente servicio, claridad en la información respecto del tratamiento y sus objetivos, calidad en la atención y seguimiento. Muy profesional."</p><div class="twall-author"><div class="twall-av">J</div><div><div class="twall-name">José Aldunate</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Atención personalizada según la necesidad del paciente. Explicación y seguimiento continuo. Los niños van súper tranquilos. Zdenko, Solange y todo el equipo un diez."</p><div class="twall-author"><div class="twall-av">F</div><div><div class="twall-name">Francisca Muñoz</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Muy profesionales, excelente trabajo. La clínica está inmejorablemente ubicada y es preciosa. Muy recomendable."</p><div class="twall-author"><div class="twall-av">A</div><div><div class="twall-name">Andrea Fernández</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente servicio, la atención del personal es increíble, siempre buscando lo mejor para sus pacientes."</p><div class="twall-author"><div class="twall-av">A</div><div><div class="twall-name">Álvaro Stipo Sapag</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"El tratamiento es personalizado y muy profesional. Se preocupan por ti."</p><div class="twall-author"><div class="twall-av">L</div><div><div class="twall-name">Luis Ignacio Montalva</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"100% recomendado. Profesionalismo, grato ambiente y trato muy amable. Excelente ubicación."</p><div class="twall-author"><div class="twall-av">N</div><div><div class="twall-name">Nataly Rojas</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente atención, puntualidad y amabilidad. Muy recomendable."</p><div class="twall-author"><div class="twall-av">A</div><div><div class="twall-name">Alejandra Musalem</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelentes profesionales. Los recomiendo totalmente."</p><div class="twall-author"><div class="twall-av">S</div><div><div class="twall-name">Solange Benavente</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Maravillosa la atención, profesionales muy responsables."</p><div class="twall-author"><div class="twall-av">J</div><div><div class="twall-name">Jenifer Luengo</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente atención y resultados con el Dr. Zdenko."</p><div class="twall-author"><div class="twall-av">K</div><div><div class="twall-name">Karim Fajardin Khamis</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Tremenda experiencia. Muy preocupados de todos los detalles."</p><div class="twall-author"><div class="twall-av">S</div><div><div class="twall-name">Sebastián Khamis</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Atención profesional y personalizada."</p><div class="twall-author"><div class="twall-av">M</div><div><div class="twall-name">Mauricio Villalobos</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente tratamiento."</p><div class="twall-author"><div class="twall-av">L</div><div><div class="twall-name">Lorena Peña Hinojosa</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Muy profesionales."</p><div class="twall-author"><div class="twall-av">M</div><div><div class="twall-name">María Paz Iñiguez García</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Excelente atención."</p><div class="twall-author"><div class="twall-av">S</div><div><div class="twall-name">Soraya Kassis</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Alejandra Demaria Averill confió en el Dr. Rajevic para su tratamiento."</p><div class="twall-author"><div class="twall-av">A</div><div><div class="twall-name">Alejandra Demaria Averill</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Blanca Valdés confió en el Dr. Rajevic para su tratamiento."</p><div class="twall-author"><div class="twall-av">B</div><div><div class="twall-name">Blanca Valdés</div></div></div></div>
+    <div class="twall-card"><div class="twall-stars" style="display:flex;gap:3px"><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg><svg width="14" height="14"><use href="#tooth-icon"></use></svg></div><p class="twall-txt">"Cristian Carter confió en el Dr. Rajevic para su tratamiento."</p><div class="twall-author"><div class="twall-av">C</div><div><div class="twall-name">Cristian Carter</div></div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="https://www.google.com/search?q=ortodoncia+rajevic+vitacura#lrd=0x9662cbe8b2c4d8e5:0x52482e1eef45cda1,1" target="_blank" class="btn-gold" style="display:inline-flex">Ver todas las reseñas en Google →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="sec-eyebrow"><div class="sec-dot"></div><span>Preguntas frecuentes</span></div>
+  <div class="faq-grid">
+    <div>
+      <h2>Lo que necesitas saber<br><em>antes de decidir.</em></h2>
+      <p class="sec-intro">Transparencia total antes de que inviertas un peso en tu salud dental.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿El escáner realmente es gratis el 29 de mayo?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Sí. El escáner iTero Element tiene valor habitual de <strong>$60.000–$100.000</strong>. Ese día: sin costo, sin letra chica, sin obligación de continuar. Solo tienes que reservar tu cupo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Invisalign funciona igual que los brackets?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Para la mayoría de los casos, sí — y en algunos los supera. Al ser removible, puedes mantener una higiene perfecta durante el tratamiento, lo que reduce el riesgo de caries y problemas de encías. La clave no está en el aparato sino en quién planifica los movimientos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Es solo para casos simples?<div class="faq-ico">+</div></div>
+        <div class="faq-a">No. Invisalign hoy resuelve casos de alta complejidad: apiñamiento severo, mordidas abiertas, sobremordidas profundas y preparación para implantes. Lo que determina si es viable para ti es la evaluación clínica, no el aparato.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Cuánto tiempo tendré que usarlos?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Casos simples: entre 6 y 9 meses. Casos moderados: 12 a 18 meses. Casos complejos: hasta 24 meses. En la primera consulta sabrás exactamente cuánto tiempo tomará tu caso específico.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Duele?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Es normal sentir presión los primeros días de cada alineador nuevo — es señal de que está funcionando. No es dolor agudo ni constante. La mayoría de los pacientes se adapta rápido y lo describe como molestia leve y pasajera.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Qué pasa si me lo olvido puesto al comer?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Nada grave una vez, pero el protocolo es retirarlo siempre antes de comer o beber algo con color. Usarlo con comida caliente puede deformarlo. La disciplina de uso — mínimo 22 horas al día — es lo que determina que el tratamiento avance en los tiempos proyectados.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Se nota?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Prácticamente no. Está diseñado para ser transparente sobre el diente. La mayoría de los pacientes reporta que sus colegas y cercanos no se dieron cuenta hasta que ellos mismos lo contaron.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Qué pasa si pierdo o rompo un alineador?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Se repone. Al trabajar con Invisalign como partner oficial, tenemos acceso directo al protocolo de reposición. No es una emergencia — se gestiona sin interrumpir tu tratamiento.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">¿Es para mí o necesito brackets?<div class="faq-ico">+</div></div>
+        <div class="faq-a">Eso se determina en el escáner del 29 de mayo. Hay casos donde los brackets son la mejor opción clínica — y si ese es tu caso, te lo diré con honestidad. Lo que no haré es recomendarte Invisalign si no es lo correcto para ti.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FORMULARIO MAKE -->
+<section class="cta-final" id="formulario">
+  <div class="sec-eyebrow" style="margin-bottom:12px"><div class="sec-dot" style="background:var(--gold)"></div><span style="color:var(--gold)">Reservar mi lugar</span></div>
+  <h2>Los cupos se agotan.<br><em>Asegura el tuyo ahora.</em></h2>
+  <p class="cta-sub">Escáner iTero 3D, simulación de tu sonrisa y diagnóstico honesto. Sin costo, sin compromiso.</p>
+  
+  <div class="form-card">
+    <div id="form-content">
+      <label class="form-label">Nombre completo</label>
+      <input type="text" class="form-input" placeholder="Tu nombre" id="inp-nombre" autocomplete="name">
+      
+      <label class="form-label">Correo electrónico</label>
+      <input type="email" class="form-input" placeholder="tu@email.com" id="inp-email" autocomplete="email">
+      
+      <label class="form-label">Teléfono (WhatsApp)</label>
+      <input type="tel" class="form-input" placeholder="+56 9 XXXX XXXX" id="inp-tel" autocomplete="tel">
+      
+      <label class="form-label">Horario preferido</label>
+      <select class="form-select" id="inp-horario">
+        <option value="" disabled selected>Selecciona tu horario</option>
+        <option value="manana">Mañana (9:00 – 13:00)</option>
+        <option value="tarde">Tarde (13:00 – 19:00)</option>
+      </select>
+      
+      <button class="btn-submit" onclick="submitForm()">
+        Reserva tu lugar en el Invisalign Day
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      
+      <div class="form-micro">
+        Sin costo · Sin compromiso · Cupos por orden de inscripción
+      </div>
+    </div>
+    
+    <div class="form-success" id="form-success">
+      <div class="success-icon">✓</div>
+      <h3 style="color:#fff; font-family:var(--serif); font-size:24px; margin-bottom:8px;">Lugar reservado</h3>
+      <p style="color:rgba(255,255,255,0.6); font-size:14px; line-height:1.6;">Te contactaremos pronto por WhatsApp para confirmar tu hora exacta para el evento del 29 de Mayo.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <span class="logo" style="display: flex; align-items: center; gap: 8px;"><img src="isotype.png" alt="Ortodoncia Rajevic" style="width: 32px; height: 32px; object-fit: contain; border-radius: 4px;">Ortodoncia <span>Rajevic</span></span>
+    <p>Diagnóstico de precisión.<br>Ortodoncia con criterio clínico.</p>
+  </div>
+  <div class="foot-col">
+    <h4>Contacto</h4>
+    <p>Las Hualtatas 8999, Vitacura</p>
+    <a href="tel:+56988897033">+56 9 8889 7033</a>
+    <p style="margin-top:14px">Lunes a Viernes<br>9:00 a 19:00 hrs</p>
+  </div>
+</footer>
+<div class="foot-bottom">
+  <p>© 2026 Ortodoncia Rajevic. Todos los derechos reservados.</p>
+</div>
+
+<a href="https://wa.me/56988897033?text=Hola%20quiero%20mas%20informacion%20de%20invisaling%20para%20el%2029%20de%20mayo" target="_blank" class="wa">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+function submitForm(){
+  const n=document.getElementById('inp-nombre').value.trim();
+  const e=document.getElementById('inp-email').value.trim();
+  const t=document.getElementById('inp-tel').value.trim();
+  const h=document.getElementById('inp-horario').value;
+  if(!n||!e||!t||!h){alert('Por favor completa todos los campos para reservar tu lugar.');return;}
+  
+  const submitBtn = document.querySelector('.btn-submit');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = 'Enviando...';
+  submitBtn.disabled = true;
+
+  fetch('https://hook.us2.make.com/nvaeijqv1opo4lyvfe17mbgpdesh2eh7', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nombre: n, correo: e, telefono: t, horario: h, source: 'invisalign_day' })
+  }).then(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'lead_submitted',
+      'lead_type': 'invisalign_day',
+      'form_name': 'reserva_invisalign_day',
+      'email': e
+    });
+    document.getElementById('form-content').style.display='none';
+    document.getElementById('form-success').style.display='block';
+  }).catch(err => {
+    console.error(err);
+    alert('Ocurrió un error al enviar tu solicitud. Por favor intenta de nuevo.');
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  });
+}
+</script>
+</body>
+</html>
