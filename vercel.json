@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/invisalign-day",
+      "destination": "/invisalign-day.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
