@@ -670,6 +670,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </a>
 
 <script>
+// Guardar la URL inicial de la sesión para conservar parámetros de campaña
+if (!sessionStorage.getItem('landing_session_url')) {
+  sessionStorage.setItem('landing_session_url', window.location.href);
+}
+
 function submitForm(){
   const n=document.getElementById('inp-nombre').value.trim();
   const e=document.getElementById('inp-email').value.trim();
@@ -682,10 +687,12 @@ function submitForm(){
   submitBtn.innerHTML = 'Enviando...';
   submitBtn.disabled = true;
 
+  const url = sessionStorage.getItem('landing_session_url') || window.location.href;
+
   fetch('https://hook.us2.make.com/nvaeijqv1opo4lyvfe17mbgpdesh2eh7', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ nombre: n, correo: e, telefono: t, horario: h, source: 'invisalign_day', url: window.location.href })
+    body: JSON.stringify({ nombre: n, correo: e, telefono: t, horario: h, source: 'invisalign_day', url: url })
   }).then(() => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
