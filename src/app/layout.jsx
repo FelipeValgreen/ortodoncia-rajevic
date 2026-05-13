@@ -40,10 +40,10 @@ export const metadata = {
         siteName: 'Ortodoncia Rajevic',
         images: [
             {
-                url: '/assets/hero_home_v2.webp',
-                width: 1200,
-                height: 630,
-                alt: 'Ortodoncia Rajevic Vitacura',
+                url: '/isotype.png',
+                width: 1024,
+                height: 1024,
+                alt: 'Ortodoncia Rajevic Isotipo',
             },
         ],
         locale: 'es-CL',
