@@ -44,7 +44,7 @@ export const metadata = {
   openGraph: {
     title: 'Todo sobre Invisalign en Chile | Guía Completa de Alineadores Invisibles',
     description: 'Descubra precios, tiempos de tratamiento, cuidados y comparativas exhaustivas sobre Invisalign. Respuestas directas preparadas por el Dr. Zdenko Rajevic.',
-    images: ['/assets/hero_invisalign.webp'],
+
   },
 };
 

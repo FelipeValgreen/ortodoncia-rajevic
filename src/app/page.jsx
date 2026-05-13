@@ -36,14 +36,7 @@ export const metadata = {
   openGraph: {
     title: 'Ortodoncia en Vitacura | Dr. Zdenko Rajevic | Invisalign y Estética Dental',
     description: 'Más de 35 años de experiencia en ortodoncia estética y funcional en Vitacura. Especialistas en Invisalign y casos complejos. ¡Sonría con confianza!',
-    images: [
-      {
-        url: '/assets/hero_home_v2.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Clínica Ortodoncia Rajevic',
-      },
-    ],
+
   },
 };
 

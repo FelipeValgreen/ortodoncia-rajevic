@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: 'Tratamiento Bruxismo Vitacura | Plano de Relajación Míchigan',
     description: 'Clínica experta en bruxismo y dolor de ATM en Vitacura. Detenga el desgaste dental y el dolor de cabeza con un plano de relajación médico a medida.',
-    images: ['/assets/hero_bruxism.webp'],
+
   },
 };
 

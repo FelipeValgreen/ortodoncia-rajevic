@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: 'Blog de Ortodoncia y Salud Dental | Artículos Especializados Vitacura',
     description: 'Infórmese con nuestros artículos clínicos sobre Invisalign, ortodoncia estética, bruxismo y más. Guías redactadas por especialistas de Ortodoncia Rajevic.',
-    images: ['/assets/hero_home_v2.webp'],
+
   },
 };
 

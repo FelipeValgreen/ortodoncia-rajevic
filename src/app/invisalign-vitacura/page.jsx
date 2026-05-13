@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     title: 'Invisalign Vitacura | Ortodoncia Invisible Certificada | Clínica Rajevic',
     description: 'Especialista Invisalign en Vitacura. Alineadores transparentes planificados 3D para máxima estética y rapidez sin metales. Agende su simulación de sonrisa.',
-    images: ['/assets/hero_invisalign.webp'],
+
   },
 };
 

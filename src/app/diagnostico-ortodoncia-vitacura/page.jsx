@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: 'Diagnóstico Clínico de Precisión en Ortodoncia | Vitacura',
     description: 'Lo invisible no se cura. Realizamos un análisis articular, periodontal y cefalométrico exhaustivo antes de colocar aparatos. Evite sorpresas y dolores futuros.',
-    images: ['/assets/hero_diagnosis_real.webp'],
+
   },
 };
 

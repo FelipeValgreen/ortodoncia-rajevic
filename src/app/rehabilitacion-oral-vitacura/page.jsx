@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: 'Rehabilitación Oral e Implantes Vitacura | Ortodoncia Pre-Protésica',
     description: 'Trabajo interdisciplinario para casos complejos en Vitacura. Ortodoncia para preparar espacios antes de implantes o carillas. Recupere la función de su boca.',
-    images: ['/assets/hero_rehab.webp'],
+
   },
 };
 

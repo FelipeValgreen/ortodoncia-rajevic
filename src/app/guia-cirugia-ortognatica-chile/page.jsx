@@ -48,7 +48,7 @@ export const metadata = {
   openGraph: {
     title: 'Guía de Cirugía Ortognática en Chile | Tratamiento y Costos',
     description: 'Lo que nadie le dice sobre la ortodoncia pre y post quirúrgica. Guía clínica para casos complejos, labio leporino y asimetrías maxilares con el Dr. Rajevic.',
-    images: ['/assets/dr-rajevic.webp'],
+
   },
 };
 

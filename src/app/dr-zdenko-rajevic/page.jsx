@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: 'Dr. Zdenko Rajevic | Especialista en Ortodoncia y Ortopedia Maxilar',
     description: 'Conozca al Dr. Rajevic. Más de 35 años resolviendo casos complejos de ortodoncia, cirugía ortognática e Invisalign en Vitacura con enfoque biológico.',
-    images: ['/assets/dr-rajevic.webp'],
+
   },
 };
 

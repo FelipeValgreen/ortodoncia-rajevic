@@ -41,7 +41,7 @@ export const metadata = {
   openGraph: {
     title: 'Contacto y Reservas | Clínica Ortodoncia Rajevic Vitacura',
     description: 'Agende su evaluación con el Dr. Zdenko Rajevic en Vitacura. Ortodoncia estética, invisible e infantil. Envíenos un mensaje o contáctenos por WhatsApp.',
-    images: ['/assets/dr-rajevic.webp'],
+
   },
 };
 

@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     title: 'Ortodoncia Infantil Vitacura | Ortopedia Maxilar | Clínica Rajevic',
     description: 'Especialistas en ortodoncia infantil en Vitacura. Tratamiento temprano y ortopedia maxilar para guiar el crecimiento correctivo y evitar cirugías futuras. Agende la evaluación de su hijo.',
-    images: ['/assets/hero_child.webp'],
+
   },
 };
 
