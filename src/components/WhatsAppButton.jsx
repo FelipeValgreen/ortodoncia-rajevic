@@ -3,7 +3,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
-    const message = "Hola Clínica Rajevic, quisiera información para agendar un diagnóstico de ortodoncia.";
+    const message = "Hola Dr. Rajevic, me gustaría contarle mi caso para ver cómo me puede ayudar a solucionarlo.";
     const encodedMessage = encodeURIComponent(message);
 
     return (
@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
                 position: 'fixed',
                 bottom: '2.5rem',
                 right: '2.5rem',
-                backgroundColor: 'var(--color-secondary)',
+                backgroundColor: '#25D366',
                 color: 'white',
                 width: '65px',
                 height: '65px',

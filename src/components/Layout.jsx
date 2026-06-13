@@ -51,6 +51,17 @@ const Layout = ({ children }) => {
         document.body.style.overflow = 'auto';
     };
 
+    if (pathname === '/diagnostico-de-precision') {
+        return (
+            <div className="app-container">
+                <main>
+                    {children}
+                </main>
+                <WhatsAppButton />
+            </div>
+        );
+    }
+
     return (
         <div className="app-container">
             {/* Top Bar */}
