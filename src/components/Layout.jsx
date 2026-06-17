@@ -21,20 +21,22 @@ const Layout = ({ children }) => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
-        
-        const handleMessage = (e) => {
-            if (e.data && e.data.event === 'calendly.event_scheduled') {
-                window.location.href = '/gracias';
-            }
-        };
 
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('message', handleMessage);
         
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('message', handleMessage);
         };
+    }, []);
+
+    useEffect(() => {
+        try {
+            if (typeof window !== 'undefined' && !sessionStorage.getItem('entryUrl')) {
+                sessionStorage.setItem('entryUrl', window.location.href);
+            }
+        } catch (e) {
+            console.error('SessionStorage not supported:', e);
+        }
     }, []);
 
     const toggleMobileMenu = () => {
@@ -69,7 +71,7 @@ const Layout = ({ children }) => {
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', gap: '2rem' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsGeoAlt /> Las Hualtatas 8999. Vitacura. Santiago.</span>
-                        <a href="tel:+56988897033" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 8889 7033</a>
+                        <a href="tel:+56937784243" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 3778 4243</a>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsClock /> Lun - Vie: 9:00 - 19:00</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1rem' }}>
@@ -250,8 +252,8 @@ const Layout = ({ children }) => {
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
                                     <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-accent)' }} />
-                                    <a href="https://wa.me/56988897033" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                                        +56 9 8889 7033
+                                    <a href="https://wa.me/56937784243" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        +56 9 3778 4243
                                     </a>
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>

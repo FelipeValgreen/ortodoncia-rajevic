@@ -239,6 +239,91 @@ const getServiceIcon = (index) => {
 
 const PrecisionDiagnosis = () => {
   const [openServiceIdx, setOpenServiceIdx] = useState(0);
+  
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    telefono: '',
+    situacion: 'Diagnóstico Clínico',
+    fechaEstimada: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Format the date to DD/MM/YYYY for the WhatsApp message
+    let formattedDate = formData.fechaEstimada;
+    if (formData.fechaEstimada) {
+        const [year, month, day] = formData.fechaEstimada.split('-');
+        formattedDate = `${day}/${month}/${year}`;
+    }
+
+    let entryUrl = '';
+    if (typeof window !== 'undefined') {
+        try {
+            entryUrl = sessionStorage.getItem('entryUrl') || window.location.href;
+        } catch (err) {
+            entryUrl = window.location.href;
+        }
+    }
+
+    // 1. Send data to webhook (Make)
+    fetch('https://hook.us2.make.com/znvdh5kxhgc1ouyn1o6631ykxacz1kp3', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nombre: formData.nombre,
+            apellido: formData.apellido,
+            email: formData.email,
+            telefono: formData.telefono,
+            situacion: formData.situacion,
+            fechaEstimada: formattedDate,
+            pageUrl: entryUrl
+        })
+    }).catch(err => console.error('Error sending webhook:', err));
+
+    // 2. Push to dataLayer for GTM
+    if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'whatsapp_form_submitted',
+            formName: 'diagnostico_precision',
+            formData: {
+                nombre: formData.nombre,
+                apellido: formData.apellido,
+                email: formData.email,
+                telefono: formData.telefono,
+                situacion: formData.situacion,
+                fechaEstimada: formattedDate,
+                pageUrl: entryUrl
+            }
+        });
+    }
+
+    // 3. Open WhatsApp redirect
+    const message = `Hola Dr. Rajevic, me gustaría solicitar más información. Estos son mis datos:
+- Nombre: ${formData.nombre} ${formData.apellido}
+- Correo: ${formData.email}
+- Teléfono: ${formData.telefono}
+- Situación/Servicio: ${formData.situacion}
+- Fecha estimada de visita: ${formattedDate}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/56937784243?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
 
   // Scroll to section helper
   const scrollToSection = (id) => {
@@ -1065,10 +1150,8 @@ const PrecisionDiagnosis = () => {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                <a 
-                  href="https://wa.me/56988897033?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => scrollToSection("cta-reserva")}
                   className="btn"
                   style={{ 
                     width: "100%", 
@@ -1083,11 +1166,12 @@ const PrecisionDiagnosis = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "0.5rem",
-                    boxShadow: "0 6px 18px rgba(37, 211, 102, 0.2)"
+                    boxShadow: "0 6px 18px rgba(37, 211, 102, 0.25)",
+                    cursor: "pointer"
                   }}
                 >
                   <FaWhatsapp style={{ fontSize: "1.3rem" }} /> Agendar mi turno
-                </a>
+                </button>
               </div>
 
             </div>
@@ -1506,75 +1590,278 @@ const PrecisionDiagnosis = () => {
       <section id="cta-reserva" className="responsive-section" style={{
         background: "#133447",
         color: "#FFFFFF",
-        position: "relative"
+        position: "relative",
+        padding: "4rem 0"
       }}>
-        <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", maxWidth: "800px", margin: "0 auto", padding: "2rem 0" }}>
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
           
-          <span style={{
-            fontSize: "0.9rem",
-            fontWeight: "700",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "#C8A96E",
-            marginBottom: "1rem",
-            display: "block"
-          }}>
-            Agenda tu hora de evaluación
-          </span>
-          <h2 style={{
-            fontFamily: "var(--font-heading)",
-            fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
-            color: "#FFFFFF",
-            lineHeight: "1.15",
-            marginBottom: "1.5rem"
-          }}>
-            Comencemos con <span style={{ fontStyle: "italic", color: "#C8A96E" }}>certeza clínica.</span>
-          </h2>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.2rem", lineHeight: "1.7", marginBottom: "3rem", maxWidth: "60ch" }}>
-            Una evaluación clínica presencial de 45 minutos. Si determinamos que no necesitas ortodoncia, te lo diremos abiertamente en esa misma cita.
-          </p>
-
-          <div className="cta-info-row">
+          <div className="grid-2" style={{ alignItems: 'start', gap: '3rem' }}>
             
-            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
-              <BsGeoAlt style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
-              <span>Las Hualtatas 8999, Oficina 402, Santiago</span>
+            {/* LEFT COLUMN: Info */}
+            <div style={{ textAlign: "left" }}>
+              <span style={{
+                fontSize: "0.9rem",
+                fontWeight: "700",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#C8A96E",
+                marginBottom: "1rem",
+                display: "block"
+              }}>
+                Agenda tu hora de evaluación
+              </span>
+              <h2 style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(2.2rem, 3.8vw, 3.2rem)",
+                color: "#FFFFFF",
+                lineHeight: "1.15",
+                marginBottom: "1.5rem"
+              }}>
+                Comencemos con <span style={{ fontStyle: "italic", color: "#C8A96E" }}>certeza clínica.</span>
+              </h2>
+              <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.15rem", lineHeight: "1.7", marginBottom: "2.5rem", maxWidth: "55ch" }}>
+                Una evaluación clínica presencial de 45 minutos. Si determinamos que no necesitas ortodoncia, te lo diremos abiertamente en esa misma cita.
+              </p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem", marginBottom: "2rem" }}>
+                
+                <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
+                  <BsGeoAlt style={{ color: "#C8A96E", fontSize: "1.3rem", flexShrink: 0 }} />
+                  <span>Las Hualtatas 8999, Oficina 402, Vitacura, Santiago</span>
+                </div>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
+                  <BsClock style={{ color: "#C8A96E", fontSize: "1.3rem", flexShrink: 0 }} />
+                  <span>Lunes a Viernes · 9:00 a 19:00 hrs.</span>
+                </div>
+
+                <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
+                  <BsTelephone style={{ color: "#C8A96E", fontSize: "1.3rem", flexShrink: 0 }} />
+                  <a href="tel:+56937784243" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 3778 4243</a>
+                </div>
+
+              </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
-              <BsClock style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
-              <span>Lunes a Viernes · 9:00 a 19:00 hrs.</span>
-            </div>
+            {/* RIGHT COLUMN: WhatsApp Reservation Form */}
+            <div style={{ width: '100%' }}>
+              <div style={{
+                backgroundColor: 'white',
+                padding: '2rem',
+                borderRadius: '12px',
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                width: '100%',
+                color: 'var(--color-primary)'
+              }}>
+                <p style={{ 
+                  marginBottom: '1.5rem', 
+                  color: 'var(--color-text-light)', 
+                  fontSize: '0.95rem', 
+                  lineHeight: '1.5',
+                  textAlign: 'center'
+                }}>
+                  Completa tus datos en el siguiente formulario para coordinar tu cita directamente por WhatsApp.
+                </p>
+                
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="nombre" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Nombre *</label>
+                      <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        required 
+                        value={formData.nombre} 
+                        onChange={handleChange} 
+                        placeholder="Ej. Juan"
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          outline: 'none',
+                          width: '100%',
+                          color: 'var(--color-text)',
+                          minHeight: '44px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="apellido" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Apellido *</label>
+                      <input 
+                        type="text" 
+                        id="apellido" 
+                        name="apellido" 
+                        required 
+                        value={formData.apellido} 
+                        onChange={handleChange} 
+                        placeholder="Ej. Pérez"
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          outline: 'none',
+                          width: '100%',
+                          color: 'var(--color-text)',
+                          minHeight: '44px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                  </div>
+                  
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="email" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Correo Electrónico *</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        value={formData.email} 
+                        onChange={handleChange} 
+                        placeholder="Ej. juan.perez@email.com"
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          outline: 'none',
+                          width: '100%',
+                          color: 'var(--color-text)',
+                          minHeight: '44px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="telefono" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Teléfono *</label>
+                      <input 
+                        type="tel" 
+                        id="telefono" 
+                        name="telefono" 
+                        required 
+                        value={formData.telefono} 
+                        onChange={handleChange} 
+                        placeholder="Ej. +56 9 1234 5678"
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          outline: 'none',
+                          width: '100%',
+                          color: 'var(--color-text)',
+                          minHeight: '44px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                  </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
-              <BsTelephone style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
-              <a href="tel:+56988897033" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 8889 7033</a>
+                  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="situacion" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Servicio requerido *</label>
+                      <select 
+                        id="situacion" 
+                        name="situacion" 
+                        required 
+                        value={formData.situacion} 
+                        onChange={handleChange}
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          backgroundColor: 'white',
+                          outline: 'none',
+                          width: '100%',
+                          cursor: 'pointer',
+                          color: 'var(--color-text)',
+                          minHeight: '44px',
+                          boxSizing: 'border-box'
+                        }}
+                      >
+                        <option value="Diagnóstico Clínico">Diagnóstico Clínico</option>
+                        <option value="Ortodoncia Infantil">Ortodoncia Infantil</option>
+                        <option value="Ortodoncia Adultos">Ortodoncia Adultos</option>
+                        <option value="Invisalign">Invisalign (Ortodoncia Invisible)</option>
+                        <option value="Bruxismo y ATM">Bruxismo y ATM (Planos de Relajación)</option>
+                        <option value="Rehabilitación Oral">Rehabilitación Oral</option>
+                        <option value="Segunda Opinión">Segunda Opinión</option>
+                      </select>
+                    </div>
+                    <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                      <label htmlFor="fechaEstimada" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Fecha estimada de visita *</label>
+                      <input 
+                        type="date" 
+                        id="fechaEstimada" 
+                        name="fechaEstimada" 
+                        required 
+                        min={new Date().toISOString().split('T')[0]}
+                        value={formData.fechaEstimada} 
+                        onChange={handleChange}
+                        style={{
+                          padding: '0.7rem 0.9rem',
+                          borderRadius: '4px',
+                          border: '1px solid var(--color-border)',
+                          fontSize: '16px',
+                          fontFamily: 'var(--font-body)',
+                          outline: 'none',
+                          width: '100%',
+                          color: 'var(--color-text)',
+                          backgroundColor: 'white',
+                          minHeight: '44px',
+                          cursor: 'pointer',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    style={{
+                      marginTop: '0.8rem',
+                      padding: '1rem 2rem',
+                      borderRadius: '4px',
+                      backgroundColor: '#25D366',
+                      color: 'white',
+                      border: 'none',
+                      fontSize: '1.05rem',
+                      fontWeight: '700',
+                      cursor: 'pointer',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '0.8rem',
+                      transition: 'background-color 0.2s, transform 0.1s',
+                      fontFamily: 'var(--font-body)',
+                      width: '100%',
+                      minHeight: '48px'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#128C7E'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#25D366'}
+                    onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.98)'}
+                    onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  >
+                    <FaWhatsapp size={24} />
+                    Solicitar evaluación vía WhatsApp
+                  </button>
+                </form>
+              </div>
             </div>
 
           </div>
-
-          <a 
-            href="https://wa.me/56988897033?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo." 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.8rem",
-              backgroundColor: "#25D366",
-              color: "#FFFFFF",
-              padding: "1.2rem 2.8rem",
-              borderRadius: "6px",
-              fontWeight: "700",
-              fontSize: "1.05rem",
-              border: "none",
-              boxShadow: "0 6px 20px rgba(37, 211, 102, 0.25)",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease"
-            }}
-          >
-            <FaWhatsapp style={{ fontSize: "1.4rem" }} /> Agendar mi turno
-          </a>
 
         </div>
       </section>
