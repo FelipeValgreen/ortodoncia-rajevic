@@ -240,7 +240,7 @@ const getServiceIcon = (index) => {
 
 const PrecisionDiagnosis = () => {
   const [openServiceIdx, setOpenServiceIdx] = useState(0);
-  const [countryCode, setCountryCode] = useState('+56');
+  const [selectedCountryCode, setSelectedCountryCode] = useState('CL');
   
   const [formData, setFormData] = useState({
     nombre: '',
@@ -280,7 +280,8 @@ const PrecisionDiagnosis = () => {
 
     // Clean and combine country code + phone number for GA4 standard format
     let cleanPhone = formData.telefono.trim().replace(/^\+/, '');
-    const dialCodeClean = countryCode.replace(/^\+/, '');
+    const selectedCountry = countryCodes.find(c => c.code === selectedCountryCode) || { dial_code: '+56' };
+    const dialCodeClean = selectedCountry.dial_code.replace(/^\+/, '');
     if (cleanPhone.startsWith(dialCodeClean)) {
         cleanPhone = cleanPhone.slice(dialCodeClean.length);
     }
@@ -1755,31 +1756,54 @@ const PrecisionDiagnosis = () => {
                     <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                       <label htmlFor="telefono" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Teléfono *</label>
                       <div style={{ display: 'flex', gap: '0.5rem', width: '100%' }}>
-                        <select
-                          value={countryCode}
-                          onChange={(e) => setCountryCode(e.target.value)}
-                          style={{
+                        <div style={{ position: 'relative', width: '90px', flexShrink: 0 }}>
+                          {/* Elemento visual que se muestra (solo bandera y código) */}
+                          <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
                             padding: '0.7rem 0.5rem',
                             borderRadius: '4px',
                             border: '1px solid var(--color-border)',
                             fontSize: '16px',
                             fontFamily: 'var(--font-body)',
                             backgroundColor: 'white',
-                            outline: 'none',
                             color: 'var(--color-text)',
-                            minHeight: '44px',
+                            pointerEvents: 'none',
                             boxSizing: 'border-box',
-                            width: '110px',
-                            flexShrink: 0,
-                            cursor: 'pointer'
-                          }}
-                        >
-                          {countryCodes.map((c) => (
-                            <option key={`${c.code}-${c.dial_code}`} value={c.dial_code}>
-                              {getFlagEmoji(c.code)} {c.dial_code} ({c.name})
-                            </option>
-                          ))}
-                        </select>
+                            minHeight: '44px'
+                          }}>
+                            <span>{getFlagEmoji(selectedCountryCode)} {(countryCodes.find(c => c.code === selectedCountryCode) || { dial_code: '+56' }).dial_code}</span>
+                            <span style={{ fontSize: '0.5rem', color: 'var(--color-text-muted)', marginLeft: '2px' }}>▼</span>
+                          </div>
+                          
+                          {/* El select real invisible encima */}
+                          <select
+                            value={selectedCountryCode}
+                            onChange={(e) => setSelectedCountryCode(e.target.value)}
+                            style={{
+                              position: 'absolute',
+                              top: 0,
+                              left: 0,
+                              width: '100%',
+                              height: '100%',
+                              opacity: 0,
+                              cursor: 'pointer',
+                              fontSize: '16px'
+                            }}
+                          >
+                            {countryCodes.map((c) => (
+                              <option key={`${c.code}-${c.dial_code}`} value={c.code}>
+                                {getFlagEmoji(c.code)} {c.dial_code} ({c.name})
+                              </option>
+                            ))}
+                          </select>
+                        </div>
                         <input 
                           type="tel" 
                           id="telefono" 
