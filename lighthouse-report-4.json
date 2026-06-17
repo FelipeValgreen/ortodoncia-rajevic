@@ -2588,7 +2588,7 @@
                 "width": 49,
                 "height": 60
               },
-              "snippet": "<a href=\"tel:+56988897033\" style=\"display: flex; align-items: center; gap: 0.5rem; text-decoration: none;\">",
+              "snippet": "<a href=\"tel:+56937784243\" style=\"display: flex; align-items: center; gap: 0.5rem; text-decoration: none;\">",
               "nodeLabel": "+56 9 8889 7033",
               "explanation": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
             },

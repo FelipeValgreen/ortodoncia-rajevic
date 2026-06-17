@@ -1548,7 +1548,7 @@ const PrecisionDiagnosis = () => {
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
               <BsTelephone style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
-              <a href="tel:+56988897033" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 8889 7033</a>
+              <a href="tel:+56937784243" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 8889 7033</a>
             </div>
 
           </div>

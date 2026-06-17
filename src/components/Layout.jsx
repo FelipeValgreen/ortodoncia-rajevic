@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', gap: '2rem' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsGeoAlt /> Las Hualtatas 8999. Vitacura. Santiago.</span>
-                        <a href="tel:+56988897033" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 8889 7033</a>
+                        <a href="tel:+56937784243" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 8889 7033</a>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsClock /> Lun - Vie: 9:00 - 19:00</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1rem' }}>
