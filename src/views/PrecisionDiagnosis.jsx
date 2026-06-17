@@ -1066,7 +1066,7 @@ const PrecisionDiagnosis = () => {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
                 <a 
-                  href="https://wa.me/56988897033?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo."
+                  href="https://wa.me/56937784243?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -1548,13 +1548,13 @@ const PrecisionDiagnosis = () => {
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.05rem", color: "rgba(255,255,255,0.85)" }}>
               <BsTelephone style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
-              <a href="tel:+56937784243" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 8889 7033</a>
+              <a href="tel:+56937784243" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 3778 4243</a>
             </div>
 
           </div>
 
           <a 
-            href="https://wa.me/56988897033?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo." 
+            href="https://wa.me/56937784243?text=Hola%20Dr.%20Rajevic%2C%20me%20gustar%C3%ADa%20contarle%20mi%20caso%20para%20ver%20c%C3%B3mo%20me%20puede%20ayudar%20a%20solucionarlo." 
             target="_blank"
             rel="noopener noreferrer"
             className="btn"

@@ -1,0 +1,79 @@
+# Query: +569
+# ContextLines: 1
+
+16 resultados - Archivos de 11
+
+lighthouse-report-3.json:
+  2515                },
+  2516:               "snippet": "<a href=\"tel:+56937784243\" style=\"display: flex; align-items: center; gap: 0.5rem; text-decoration: none;\">",
+  2517                "nodeLabel": "+56 9 3778 4243",
+
+lighthouse-report-4.json:
+  2590                },
+  2591:               "snippet": "<a href=\"tel:+56937784243\" style=\"display: flex; align-items: center; gap: 0.5rem; text-decoration: none;\">",
+  2592                "nodeLabel": "+56 9 3778 4243",
+
+public/diagnostico-inicial.html:
+  230  <div class="topbar">
+  231:   Lun – Vie 9:00–19:00 &nbsp;·&nbsp; <a href="tel:+56937784243">+56 9 3778 4243</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps?sca_esv=10c09f1b9a931559&sxsrf=ANbL-n6dPyg0GwW_d-rwDiUO_s6x5PKvng:1775785227830&lsig=AB86z5WIX8lUI3cuhv_qE1WKMQ3u&biw=1920&bih=963&dpr=1&um=1&ie=UTF-8&fb=1&gl=cl&sa=X&geocode=KU_ufrUkyWKWMaKtWMBQldLJ&daddr=Las+Hualtatas+8999,+7630000+Vitacura,+Regi%C3%B3n+Metropolitana" target="_blank">Las Hualtatas 8999, Vitacura</a>
+  232  </div>
+
+  579      <div class="contact-row"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Lunes a Viernes · 9:00 a 19:00</div>
+  580:     <div class="contact-row"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91A16 16 0 0 0 14 14.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg><a href="tel:+56937784243" style="color:inherit; text-decoration:underline;">+56 9 3778 4243</a></div>
+  581    </div>
+
+  604      <p><a href="https://www.google.com/maps?sca_esv=10c09f1b9a931559&sxsrf=ANbL-n6dPyg0GwW_d-rwDiUO_s6x5PKvng:1775785227830&lsig=AB86z5WIX8lUI3cuhv_qE1WKMQ3u&biw=1920&bih=963&dpr=1&um=1&ie=UTF-8&fb=1&gl=cl&sa=X&geocode=KU_ufrUkyWKWMaKtWMBQldLJ&daddr=Las+Hualtatas+8999,+7630000+Vitacura,+Regi%C3%B3n+Metropolitana" target="_blank" style="color:inherit; text-decoration:underline;">Las Hualtatas 8999, Vitacura</a></p>
+  605:     <a href="tel:+56937784243">+56 9 3778 4243</a>
+  606      <p>Lun – Vie: 9:00 – 19:00</p>
+
+public/gracias-diagnostico.html:
+   93  <div class="topbar">
+   94:   Lun – Vie 9:00–19:00 &nbsp;·&nbsp; <a href="tel:+56937784243">+56 9 3778 4243</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps?sca_esv=10c09f1b9a931559&sxsrf=ANbL-n6dPyg0GwW_d-rwDiUO_s6x5PKvng:1775785227830&lsig=AB86z5WIX8lUI3cuhv_qE1WKMQ3u&biw=1920&bih=963&dpr=1&um=1&ie=UTF-8&fb=1&gl=cl&sa=X&geocode=KU_ufrUkyWKWMaKtWMBQldLJ&daddr=Las+Hualtatas+8999,+7630000+Vitacura,+Regi%C3%B3n+Metropolitana" target="_blank">Las Hualtatas 8999, Vitacura</a>
+   95  </div>
+
+  159      <p><a href="https://www.google.com/maps?sca_esv=10c09f1b9a931559&sxsrf=ANbL-n6dPyg0GwW_d-rwDiUO_s6x5PKvng:1775785227830&lsig=AB86z5WIX8lUI3cuhv_qE1WKMQ3u&biw=1920&bih=963&dpr=1&um=1&ie=UTF-8&fb=1&gl=cl&sa=X&geocode=KU_ufrUkyWKWMaKtWMBQldLJ&daddr=Las+Hualtatas+8999,+7630000+Vitacura,+Regi%C3%B3n+Metropolitana" target="_blank" style="color:inherit; text-decoration:underline;">Las Hualtatas 8999, Vitacura</a></p>
+  160:     <a href="tel:+56937784243">+56 9 3778 4243</a>
+  161      <p>Lun – Vie: 9:00 – 19:00</p>
+
+public/invisalign-day.html:
+   54      "url": "https://ortodonciarajevic.cl",
+   55:     "telephone": "+56937784243"
+   56    },
+
+  325  <div class="topbar">
+  326:   Lun – Vie 9:00–19:00 &nbsp;·&nbsp; <a href="tel:+56937784243">+56 9 3778 4243</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps" target="_blank">Las Hualtatas 8999, Vitacura</a>
+  327  </div>
+
+  659      <p>Las Hualtatas 8999, Vitacura</p>
+  660:     <a href="tel:+56937784243">+56 9 3778 4243</a>
+  661      <p style="margin-top:14px">Lunes a Viernes<br>9:00 a 19:00 hrs</p>
+
+src/app/page.jsx:
+   9    "url": "https://www.ortodonciarajevic.cl",
+  10:   "telephone": "+56937784243",
+  11    "priceRange": "$$$",
+
+src/app/contacto/page.jsx:
+  8    "url": "https://ortodonciarajevic.cl",
+  9:   "telephone": "+56937784243",
+  10    "address": {
+
+src/components/Layout.jsx:
+  71                          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsGeoAlt /> Las Hualtatas 8999. Vitacura. Santiago.</span>
+  72:                         <a href="tel:+56937784243" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}><BsTelephone /> +56 9 3778 4243</a>
+  73                          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><BsClock /> Lun - Vie: 9:00 - 19:00</span>
+
+src/views/Contact.jsx:
+  27                                  <ul style={{ listStyle: 'none', padding: 0 }}>
+  28:                                     <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Teléfono:</strong> <a href="tel:+56937784243" className="text-light" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 3778 4243</a></li>
+  29                                      <li style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>WhatsApp:</strong> <a href="https://wa.me/56937784243" target="_blank" rel="noopener noreferrer" className="text-light" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 3778 4243</a></li>
+
+src/views/PrecisionDiagnosis.jsx:
+  1550                <BsTelephone style={{ color: "#C8A96E", fontSize: "1.2rem", flexShrink: 0 }} />
+  1551:               <a href="tel:+56937784243" style={{ color: "inherit", textDecoration: "none" }}>Teléfono directo: +56 9 3778 4243</a>
+  1552              </div>
+
+src/views/RefundPolicy.jsx:
+  59                                  Email: contacto@ortodonciarajevic.cl<br />
+  60:                                 Teléfono: <a href="tel:+56937784243" style={{ textDecoration: 'none', color: 'inherit' }}>+56 9 3778 4243</a>
+  61                              </p>

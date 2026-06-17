@@ -2589,7 +2589,7 @@
                 "height": 60
               },
               "snippet": "<a href=\"tel:+56937784243\" style=\"display: flex; align-items: center; gap: 0.5rem; text-decoration: none;\">",
-              "nodeLabel": "+56 9 8889 7033",
+              "nodeLabel": "+56 9 3778 4243",
               "explanation": "Fix all of the following:\n  Check that links have the same purpose, or are intentionally ambiguous."
             },
             "subItems": {
@@ -2609,8 +2609,8 @@
                       "width": 104,
                       "height": 20
                     },
-                    "snippet": "<a href=\"https://wa.me/56988897033\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:none\">",
-                    "nodeLabel": "+56 9 8889 7033"
+                    "snippet": "<a href=\"https://wa.me/56937784243\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:inherit;text-decoration:none\">",
+                    "nodeLabel": "+56 9 3778 4243"
                   }
                 }
               ]
