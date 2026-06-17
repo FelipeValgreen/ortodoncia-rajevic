@@ -18,6 +18,7 @@ import {
   BsChevronDown
 } from "react-icons/bs";
 import { FaWhatsapp, FaTooth } from "react-icons/fa";
+import { countryCodes, getFlagEmoji } from "../utils/countryCodes";
 
 // Import local assets
 import drRajevicImg from "../assets/img_4.png";
@@ -239,6 +240,7 @@ const getServiceIcon = (index) => {
 
 const PrecisionDiagnosis = () => {
   const [openServiceIdx, setOpenServiceIdx] = useState(0);
+  const [countryCode, setCountryCode] = useState('+56');
   
   const [formData, setFormData] = useState({
     nombre: '',
@@ -276,6 +278,15 @@ const PrecisionDiagnosis = () => {
         }
     }
 
+    // Clean and combine country code + phone number for GA4 standard format
+    let cleanPhone = formData.telefono.trim().replace(/^\+/, '');
+    const dialCodeClean = countryCode.replace(/^\+/, '');
+    if (cleanPhone.startsWith(dialCodeClean)) {
+        cleanPhone = cleanPhone.slice(dialCodeClean.length);
+    }
+    cleanPhone = cleanPhone.replace(/^0+/, '').replace(/\s+/g, '');
+    const combinedPhone = `+${dialCodeClean}${cleanPhone}`;
+
     // 1. Send data to webhook (Make)
     fetch('https://hook.us2.make.com/znvdh5kxhgc1ouyn1o6631ykxacz1kp3', {
         method: 'POST',
@@ -286,7 +297,7 @@ const PrecisionDiagnosis = () => {
             nombre: formData.nombre,
             apellido: formData.apellido,
             email: formData.email,
-            telefono: formData.telefono,
+            telefono: combinedPhone,
             situacion: formData.situacion,
             fechaEstimada: formattedDate,
             pageUrl: entryUrl
@@ -303,7 +314,7 @@ const PrecisionDiagnosis = () => {
                 nombre: formData.nombre,
                 apellido: formData.apellido,
                 email: formData.email,
-                telefono: formData.telefono,
+                telefono: combinedPhone,
                 situacion: formData.situacion,
                 fechaEstimada: formattedDate,
                 pageUrl: entryUrl
@@ -315,7 +326,7 @@ const PrecisionDiagnosis = () => {
     const message = `Hola Dr. Rajevic, me gustaría solicitar más información. Estos son mis datos:
 - Nombre: ${formData.nombre} ${formData.apellido}
 - Correo: ${formData.email}
-- Teléfono: ${formData.telefono}
+- Teléfono: ${combinedPhone}
 - Situación/Servicio: ${formData.situacion}
 - Fecha estimada de visita: ${formattedDate}`;
 
@@ -1743,27 +1754,54 @@ const PrecisionDiagnosis = () => {
                     </div>
                     <div style={{ flex: '1 1 180px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                       <label htmlFor="telefono" style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--color-primary)' }}>Teléfono *</label>
-                      <input 
-                        type="tel" 
-                        id="telefono" 
-                        name="telefono" 
-                        required 
-                        value={formData.telefono} 
-                        onChange={handleChange} 
-                        placeholder="Ej. +56 9 1234 5678"
-                        style={{
-                          padding: '0.7rem 0.9rem',
-                          borderRadius: '4px',
-                          border: '1px solid var(--color-border)',
-                          fontSize: '16px',
-                          fontFamily: 'var(--font-body)',
-                          outline: 'none',
-                          width: '100%',
-                          color: 'var(--color-text)',
-                          minHeight: '44px',
-                          boxSizing: 'border-box'
-                        }}
-                      />
+                      <div style={{ display: 'flex', gap: '0.5rem', width: '100%' }}>
+                        <select
+                          value={countryCode}
+                          onChange={(e) => setCountryCode(e.target.value)}
+                          style={{
+                            padding: '0.7rem 0.5rem',
+                            borderRadius: '4px',
+                            border: '1px solid var(--color-border)',
+                            fontSize: '16px',
+                            fontFamily: 'var(--font-body)',
+                            backgroundColor: 'white',
+                            outline: 'none',
+                            color: 'var(--color-text)',
+                            minHeight: '44px',
+                            boxSizing: 'border-box',
+                            width: '110px',
+                            flexShrink: 0,
+                            cursor: 'pointer'
+                          }}
+                        >
+                          {countryCodes.map((c) => (
+                            <option key={`${c.code}-${c.dial_code}`} value={c.dial_code}>
+                              {getFlagEmoji(c.code)} {c.dial_code} ({c.name})
+                            </option>
+                          ))}
+                        </select>
+                        <input 
+                          type="tel" 
+                          id="telefono" 
+                          name="telefono" 
+                          required 
+                          value={formData.telefono} 
+                          onChange={handleChange} 
+                          placeholder="9 1234 5678"
+                          style={{
+                            padding: '0.7rem 0.9rem',
+                            borderRadius: '4px',
+                            border: '1px solid var(--color-border)',
+                            fontSize: '16px',
+                            fontFamily: 'var(--font-body)',
+                            outline: 'none',
+                            width: '100%',
+                            color: 'var(--color-text)',
+                            minHeight: '44px',
+                            boxSizing: 'border-box'
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
 
