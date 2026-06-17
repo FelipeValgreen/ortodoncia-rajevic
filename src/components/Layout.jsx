@@ -250,7 +250,7 @@ const Layout = ({ children }) => {
                                 </li>
                                 <li style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.85)' }}>
                                     <BsTelephone style={{ marginTop: '0.3rem', color: 'var(--color-accent)' }} />
-                                    <a href="https://wa.me/56988897033" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                    <a href="https://wa.me/56937784243" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                                         +56 9 3778 4243
                                     </a>
                                 </li>
