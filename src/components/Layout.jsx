@@ -31,13 +31,20 @@ const Layout = ({ children }) => {
 
     useEffect(() => {
         try {
-            if (typeof window !== 'undefined' && !sessionStorage.getItem('entryUrl')) {
-                sessionStorage.setItem('entryUrl', window.location.href);
+            if (typeof window !== 'undefined') {
+                const currentUrl = window.location.href;
+                const hasParams = window.location.search && window.location.search.length > 1;
+                const savedUrl = sessionStorage.getItem('entryUrl');
+                
+                // If there's no saved URL, or if the current URL has query parameters and the saved one doesn't
+                if (!savedUrl || (hasParams && !savedUrl.includes('?'))) {
+                    sessionStorage.setItem('entryUrl', currentUrl);
+                }
             }
         } catch (e) {
             console.error('SessionStorage not supported:', e);
         }
-    }, []);
+    }, [pathname]);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);

@@ -40,7 +40,16 @@ const Contact = () => {
         let entryUrl = '';
         if (typeof window !== 'undefined') {
             try {
-                entryUrl = sessionStorage.getItem('entryUrl') || window.location.href;
+                const currentUrl = window.location.href;
+                const hasParams = window.location.search && window.location.search.length > 1;
+                const savedUrl = sessionStorage.getItem('entryUrl');
+                
+                if (hasParams) {
+                    entryUrl = currentUrl;
+                    sessionStorage.setItem('entryUrl', currentUrl);
+                } else {
+                    entryUrl = savedUrl || currentUrl;
+                }
             } catch (err) {
                 entryUrl = window.location.href;
             }
